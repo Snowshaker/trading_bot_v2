@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="d63f7b03-5d5b-48a2-b8d7-f04c42c4a150" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/PythonProject6.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Roadmap.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/core/api/binance_client/info_fetcher.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/core/api/binance_client/trading_history_fetcher.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/core/api/binance_client/transactions_executor.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/core/api/tradingview_client/analysis_collector.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/core/api/tradingview_client/analysis_fetcher.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/core/api/tradingview_client/analysis_saver.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/core/settings/config.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/core/utils/analysis_printer.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/tests/analysis_collector_test.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/tests/analysis_fetcher.test.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/tests/analysis_saver.test.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/tests/info_fetcher_test.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/tests/tradeview_client_test.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/tests/trading_history_fetcher_test.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/tests/transactions_executor_test.py" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 2
+}</component>
+  <component name="ProjectId" id="2wBEnwnse7Ank8aCPFZRgI3OBqj" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Python tests.Python tests in analysis_collector_test.py.executor": "Run",
+    "Python.analysis_collector.executor": "Run",
+    "Python.analysis_collector_test.executor": "Run",
+    "Python.analysis_fetcher.executor": "Run",
+    "Python.analysis_fetcher.test.executor": "Run",
+    "Python.analysis_printer.executor": "Run",
+    "Python.analysis_saver.test.executor": "Run",
+    "Python.info_fetcher.executor": "Run",
+    "Python.info_fetcher_test.executor": "Run",
+    "Python.tradeview_client_test.executor": "Run",
+    "Python.trading_history_fetcher.executor": "Run",
+    "Python.trading_history_fetcher_test.executor": "Run",
+    "Python.transactions_executor_test.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "master",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.sourceCode.Python",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-d6986cc7102b-1632447f56bf-JavaScript-PY-243.26053.29" />
+        <option value="bundled-python-sdk-b1dbf8ef85a6-4df51de95216-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-243.26053.29" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="d63f7b03-5d5b-48a2-b8d7-f04c42c4a150" name="Changes" comment="" />
+      <created>1745506736425</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1745506736425</updated>
+      <workItem from="1745506737514" duration="18726000" />
+      <workItem from="1745662597978" duration="2917000" />
+      <workItem from="1745708971347" duration="1107000" />
+      <workItem from="1745710289796" duration="3101000" />
+      <workItem from="1745748810119" duration="48000" />
+      <workItem from="1745748883433" duration="1192000" />
+      <workItem from="1745758152435" duration="410000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/PythonProject6$transactions_executor_test.coverage" NAME="transactions_executor_test Coverage Results" MODIFIED="1745711746716" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/tests" />
+    <SUITE FILE_PATH="coverage/PythonProject6$.coverage" NAME=" Coverage Results" MODIFIED="1745516229031" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/tests" />
+    <SUITE FILE_PATH="coverage/PythonProject6$trading_history_fetcher.coverage" NAME="trading_history_fetcher Coverage Results" MODIFIED="1745710822489" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/core/api/binance_client" />
+    <SUITE FILE_PATH="coverage/PythonProject6$analysis_fetcher_test.coverage" NAME="analysis_fetcher.test Coverage Results" MODIFIED="1745520397482" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/tests" />
+    <SUITE FILE_PATH="coverage/PythonProject6$analysis_fetcher.coverage" NAME="analysis_fetcher Coverage Results" MODIFIED="1745518238575" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/core/api/tradingview_client" />
+    <SUITE FILE_PATH="coverage/PythonProject6$analysis_collector.coverage" NAME="analysis_collector Coverage Results" MODIFIED="1745520202335" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/core/api/tradingview_client" />
+    <SUITE FILE_PATH="coverage/PythonProject6$info_fetcher.coverage" NAME="info_fetcher Coverage Results" MODIFIED="1745709451704" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/core/api/binance_client" />
+    <SUITE FILE_PATH="coverage/PythonProject6$analysis_printer.coverage" NAME="analysis_printer Coverage Results" MODIFIED="1745526411936" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/core/utils" />
+    <SUITE FILE_PATH="coverage/PythonProject6$tradeview_client_test.coverage" NAME="tradeview_client_test Coverage Results" MODIFIED="1745712325265" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/tests" />
+    <SUITE FILE_PATH="coverage/PythonProject6$trading_history_fetcher_test.coverage" NAME="trading_history_fetcher_test Coverage Results" MODIFIED="1745711059194" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/tests" />
+    <SUITE FILE_PATH="coverage/PythonProject6$info_fetcher_test.coverage" NAME="info_fetcher_test Coverage Results" MODIFIED="1745709482452" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/tests" />
+    <SUITE FILE_PATH="coverage/PythonProject6$analysis_collector_test.coverage" NAME="analysis_collector_test Coverage Results" MODIFIED="1745520719712" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/tests" />
+    <SUITE FILE_PATH="coverage/PythonProject6$analysis_saver_test.coverage" NAME="analysis_saver.test Coverage Results" MODIFIED="1745520614557" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/tests" />
+  </component>
+</project>
