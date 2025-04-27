@@ -4,29 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d63f7b03-5d5b-48a2-b8d7-f04c42c4a150" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/PythonProject6.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Roadmap.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/core/api/binance_client/info_fetcher.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/core/api/binance_client/trading_history_fetcher.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/core/api/binance_client/transactions_executor.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/core/api/tradingview_client/analysis_collector.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/core/api/tradingview_client/analysis_fetcher.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/core/api/tradingview_client/analysis_saver.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/core/settings/config.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/core/utils/analysis_printer.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/tests/analysis_collector_test.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/tests/analysis_fetcher.test.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/tests/analysis_saver.test.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/tests/info_fetcher_test.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/tests/tradeview_client_test.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/tests/trading_history_fetcher_test.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/tests/transactions_executor_test.py" afterDir="false" />
-    </list>
+    <list default="true" id="d63f7b03-5d5b-48a2-b8d7-f04c42c4a150" name="Changes" comment="first save" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -74,7 +52,7 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.sourceCode.Python",
+    "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -100,12 +78,25 @@
       <workItem from="1745710289796" duration="3101000" />
       <workItem from="1745748810119" duration="48000" />
       <workItem from="1745748883433" duration="1192000" />
-      <workItem from="1745758152435" duration="410000" />
+      <workItem from="1745758152435" duration="1380000" />
     </task>
+    <task id="LOCAL-00001" summary="first save">
+      <option name="closed" value="true" />
+      <created>1745758599173</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1745758599173</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="first save" />
+    <option name="LAST_COMMIT_MESSAGE" value="first save" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/PythonProject6$transactions_executor_test.coverage" NAME="transactions_executor_test Coverage Results" MODIFIED="1745711746716" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/tests" />
