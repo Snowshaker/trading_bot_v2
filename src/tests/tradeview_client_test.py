@@ -5,6 +5,9 @@ from src.core.utils.analysis_printer import AnalysisPrinter
 from pathlib import Path
 import json
 
+from rich.console import Console
+console = Console(force_terminal=True, color_system="truecolor")
+
 def test_full_flow():
     print("=== ТЕСТ ПОЛНОГО ЦИКЛА ===")
 

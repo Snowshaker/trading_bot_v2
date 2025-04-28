@@ -18,7 +18,13 @@ Core:
     --Data Logic
         timeframe_weights_calculator - считает распределение весов для переданных временных промежутков
         score_processor - рассчет score пл tw_analysis
-        decision_processor - принятие решение по score
+
+        --Decision Processor - принятие решение по score
+            position_manager.py - создание, редактирование и просмотр записей об открытых позициях
+            risk_engine.py - управление стоп-лоссами и тейк-профитами с помощью position manager
+            allocation_strategy.py - рассчет объема сделки в зависимости от score
+            decision_maker.py - получает валюту и score, вызывает функции из остальных файлов,
+                                отправляет решения в transactions_executor, проверяет, что сделка выполнилась
 
     --Settings
         config

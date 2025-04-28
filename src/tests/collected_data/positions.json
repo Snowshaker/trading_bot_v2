@@ -1,0 +1,14 @@
+[
+  {
+    "id": "4eedc0ee-2b33-495e-a99e-504216e9287e",
+    "symbol": "BTCUSDT",
+    "status": "open",
+    "entry_price": 50000.0,
+    "quantity": 0.5,
+    "position_type": "LONG",
+    "trailing_stop": null,
+    "entry_time": "2025-04-28T16:46:18.279374",
+    "profit_levels": [],
+    "current_price": 50000.0
+  }
+]

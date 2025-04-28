@@ -1,4 +1,6 @@
 # src/core/api/binance_client/info_fetcher.py
+import logging
+
 from binance import Client, exceptions
 from decimal import Decimal
 from typing import Dict, Optional
@@ -40,19 +42,25 @@ class BinanceInfoFetcher:
         except exceptions.BinanceAPIException as e:
             raise BinanceConnectionError(f"Price fetch failed: {e}")
 
-    def get_asset_balance(self, asset: str) -> Dict[str, float]:
-        """Возвращает баланс по конкретному ассету"""
+    def get_current_price(self, symbol: str) -> float:
+        """Получение текущей цены для конкретного символа"""
+        prices = self.get_current_prices([symbol])
+        return prices.get(symbol, 0.0)
+
+    def get_asset_balance(self, asset: str) -> Dict[str, Decimal]:
+        """Возвращает баланс в Decimal формате"""
         try:
             account = self._client.get_account()
             for balance in account['balances']:
                 if balance['asset'] == asset:
                     return {
-                        'free': float(balance['free']),
-                        'locked': float(balance['locked'])
+                        'free': Decimal(balance['free']),
+                        'locked': Decimal(balance['locked'])
                     }
-            return {'free': 0.0, 'locked': 0.0}
-        except exceptions.BinanceAPIException as e:
-            raise BinanceConnectionError(f"Balance fetch failed: {e}")
+            return {'free': Decimal(0), 'locked': Decimal(0)}
+        except Exception as e:
+            logging.error(f"Balance error: {str(e)}")
+            return {'free': Decimal(0), 'locked': Decimal(0)}
 
     def get_symbol_info(self, symbol: str) -> Dict:
         """Возвращает информацию о торговой паре"""
