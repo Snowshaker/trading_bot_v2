@@ -661,3 +661,20 @@ NameError: name 'logging' is not defined. Did you forget to import 'logging'?
 2025-04-28 23:31:01,263 - root - INFO - Sleeping for 0.0 seconds
 2025-04-28 23:31:45,514 - root - INFO - Bot stopped by user
 2025-04-28 23:31:45,514 - root - INFO - Trading bot stopped
+2025-04-28 23:58:22,932 - root - INFO - Starting trading bot
+2025-04-28 23:59:27,208 - root - INFO - BTCUSDT | Score: 1.25 | Signal: BUY
+2025-04-28 23:59:28,598 - root - INFO - Available USDT balance: 5.56937350
+2025-04-28 23:59:28,598 - root - WARNING - Risk amount 0.3488377091724999790264272193 < min order 10.0
+2025-04-28 23:59:28,598 - src.core.data_logic.decision_processor.decision_maker - INFO - No allocation calculated
+2025-04-28 23:59:29,175 - root - INFO - ETHUSDT | Score: -0.13 | Signal: NEUTRAL
+2025-04-28 23:59:29,755 - root - INFO - BNBUSDT | Score: 0.97 | Signal: NEUTRAL
+2025-04-28 23:59:29,755 - root - INFO - Sleeping for 0.0 seconds
+2025-04-29 00:00:33,499 - root - INFO - BTCUSDT | Score: 1.25 | Signal: BUY
+2025-04-29 00:00:34,079 - root - INFO - Available USDT balance: 5.56937350
+2025-04-29 00:00:34,079 - root - WARNING - Risk amount 0.3488377091724999790264272193 < min order 10.0
+2025-04-29 00:00:34,079 - src.core.data_logic.decision_processor.decision_maker - INFO - No allocation calculated
+2025-04-29 00:00:34,654 - root - INFO - ETHUSDT | Score: -0.19 | Signal: NEUTRAL
+2025-04-29 00:00:35,228 - root - INFO - BNBUSDT | Score: 0.30 | Signal: NEUTRAL
+2025-04-29 00:00:35,228 - root - INFO - Sleeping for 0.0 seconds
+2025-04-29 00:01:23,372 - root - INFO - Bot stopped by user
+2025-04-29 00:01:23,372 - root - INFO - Trading bot stopped

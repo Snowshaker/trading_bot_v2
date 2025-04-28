@@ -1,5 +1,9 @@
 from decimal import Decimal
 
+TELEGRAM_BOT_TOKEN = "your_telegram_bot_token"
+TELEGRAM_ADMINS = [123456789]  # Список ID администраторов
+BOT_ENABLED = True  # Флаг активности основного бота
+
 # Временные интервалы
 BOT_SLEEP_INTERVAL = 0.5          # Основной интервал между итерациями (минуты) 5.0
 BOT_SLEEP_BUFFER_SEC = 2.0        # Буфер между итерациями (секунды) 5.0
