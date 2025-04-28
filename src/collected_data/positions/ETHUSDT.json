@@ -346,5 +346,41 @@
     "entry_time": "2025-04-28T20:31:00.113154",
     "profit_levels": [],
     "current_price": 1799.7109063214014
+  },
+  {
+    "id": "90e545a0-c331-44eb-b5b2-ef1fdb7d71b7",
+    "symbol": "ETHUSDT",
+    "status": "open",
+    "entry_price": 1799.7109063214014,
+    "quantity": 2.8382,
+    "position_type": "LONG",
+    "trailing_stop": null,
+    "entry_time": "2025-04-28T20:58:22.351629",
+    "profit_levels": [],
+    "current_price": 1799.7109063214014
+  },
+  {
+    "id": "16677edb-c97a-4d91-8575-8a288c148713",
+    "symbol": "ETHUSDT",
+    "status": "open",
+    "entry_price": 1799.7109063214014,
+    "quantity": 2.8382,
+    "position_type": "LONG",
+    "trailing_stop": null,
+    "entry_time": "2025-04-28T20:59:29.172748",
+    "profit_levels": [],
+    "current_price": 1799.7109063214014
+  },
+  {
+    "id": "ba4a6ea1-dd5e-4000-a1ee-2396c05cd201",
+    "symbol": "ETHUSDT",
+    "status": "open",
+    "entry_price": 1799.7109063214014,
+    "quantity": 2.8382,
+    "position_type": "LONG",
+    "trailing_stop": null,
+    "entry_time": "2025-04-28T21:00:34.653067",
+    "profit_levels": [],
+    "current_price": 1799.7109063214014
   }
 ]

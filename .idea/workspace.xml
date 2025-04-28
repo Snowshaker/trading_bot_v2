@@ -7,16 +7,12 @@
     <list default="true" id="d63f7b03-5d5b-48a2-b8d7-f04c42c4a150" name="Changes" comment="may be the first stable version">
       <changelist_data name="Виктор Павлов" email="pavlov.vp@phystech.edu" automatic="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bot.log" beforeDir="false" afterPath="$PROJECT_DIR$/src/bot.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/collected_data/positions/BTCUSDT.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/collected_data/positions/BTCUSDT.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/collected_data/positions/ETHUSDT.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/collected_data/positions/ETHUSDT.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/collected_data/tradingview_analysis/BNBUSDT.jsonl" beforeDir="false" afterPath="$PROJECT_DIR$/src/collected_data/tradingview_analysis/BNBUSDT.jsonl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/collected_data/tradingview_analysis/BTCUSDT.jsonl" beforeDir="false" afterPath="$PROJECT_DIR$/src/collected_data/tradingview_analysis/BTCUSDT.jsonl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/collected_data/tradingview_analysis/ETHUSDT.jsonl" beforeDir="false" afterPath="$PROJECT_DIR$/src/collected_data/tradingview_analysis/ETHUSDT.jsonl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/core/api/binance_client/info_fetcher.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/api/binance_client/info_fetcher.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/core/api/tradingview_client/analysis_fetcher.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/api/tradingview_client/analysis_fetcher.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Roadmap.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/Roadmap.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/core/settings/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/settings/config.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tests/collected_data/positions.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tests/collected_data/positions/BTCUSDT/BTCUSDT.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tests/collected_data/positions/BTCUSDT/positions.bak.2025-04-28T00:51:33.698643" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tests/collected_data/positions/BTCUSDT/positions.json" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -140,7 +136,7 @@
       <workItem from="1745748883433" duration="1192000" />
       <workItem from="1745758152435" duration="1380000" />
       <workItem from="1745761271535" duration="37818000" />
-      <workItem from="1745871308096" duration="1000000" />
+      <workItem from="1745871308096" duration="2429000" />
     </task>
     <task id="LOCAL-00001" summary="first save">
       <option name="closed" value="true" />
