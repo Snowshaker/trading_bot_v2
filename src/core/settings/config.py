@@ -1,9 +1,18 @@
 from decimal import Decimal
 
+# Временные интервалы
+BOT_SLEEP_INTERVAL = 0.5          # Основной интервал между итерациями (минуты) 5.0
+BOT_SLEEP_BUFFER_SEC = 2.0        # Буфер между итерациями (секунды) 5.0
+ERROR_RETRY_DELAY = 10.0         # Задержка при ошибках (секунды) 60.0
+API_RATE_LIMIT_DELAY = 1.0        # Задержка между API запросами (секунды) 1.0
+INIT_SYNC_DELAY = 3.0             # Задержка при стартовой синхронизации (секунды) 3.0
+
+# TradingView
+TV_FETCH_DELAY = 2.0              # Задержка между запросами к TradingView (секунды)
+
 # Основные настройки
 SYMBOLS = ["BTCUSDT", "ETHUSDT", "BNBUSDT"]
 TIMEFRAMES = ["1m", "5m", "15m", "30m", "1h", "2h", "4h"]
-BOT_SLEEP_INTERVAL = 5  # Интервал между итерациями в минутах
 DATA_STALE_MINUTES = 10  # Время устаревания данных в минутах
 MIN_SCORE_FOR_EXECUTION = Decimal('0.5')  # Минимальный порог для исполнения
 

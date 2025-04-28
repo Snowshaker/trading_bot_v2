@@ -1,18 +1,25 @@
+# src/core/api/tradingview_client/analysis_fetcher.py
+import logging
+import time
 from typing import Dict, Optional
 from tradingview_ta import TA_Handler, Exchange
-import time
-from src.core.settings.config import SYMBOLS, TIMEFRAMES, RECOMMENDATION_SCORE_MAP
+from src.core.settings.config import (
+  SYMBOLS,
+  TIMEFRAMES,
+  RECOMMENDATION_SCORE_MAP,
+  TV_FETCH_DELAY
+)
 
 
 class TradingViewFetcher:
-  def __init__(self, rate_limit_delay: float = 2.0):  # Уменьшил дефолтную задержку
+  def __init__(self, rate_limit_delay: float = TV_FETCH_DELAY):
     self.rate_limit_delay = rate_limit_delay
+    self.logger = logging.getLogger(__name__)
 
-  def _fetch_single(self, symbol: str, timeframe: str, retries: int = 2) -> Optional[dict]:  # Меньше ретраев
-    """Упрощенный метод без RSI"""
-    for attempt in range(retries):
+  def _fetch_single(self, symbol: str, timeframe: str) -> Optional[dict]:
+    """Получение данных для одного символа и таймфрейма"""
+    for attempt in range(3):
       try:
-        # Упрощенная инициализация
         analysis = TA_Handler(
           symbol=symbol,
           screener="crypto",
@@ -21,41 +28,30 @@ class TradingViewFetcher:
         ).get_analysis()
 
         recommendation = analysis.summary.get("RECOMMENDATION", "NEUTRAL").upper()
-
         return {
           "timeframe": timeframe,
           "recommendation": recommendation,
           "score": RECOMMENDATION_SCORE_MAP.get(recommendation, 0)
         }
-
       except Exception as e:
-        if attempt == retries - 1:  # Выводим ошибку только на последней попытке
-          print(f"Failed to fetch {symbol} {timeframe}: {str(e)}")
-        time.sleep(1.5 ** attempt)  # Уменьшил время ожидания
-
+        self.logger.error(f"Failed to fetch {symbol} {timeframe}: {str(e)}")
+        time.sleep(1.5 ** attempt)
     return None
 
   def fetch_all_data(self) -> Dict[str, Dict[str, dict]]:
-    """Оптимизированный сбор данных"""
+    """Основной метод получения данных"""
     results = {}
-
-    # Пакетная обработка символов
-    for idx, symbol in enumerate(SYMBOLS):
+    for symbol in SYMBOLS:
       symbol_data = {}
-
-      # Параллельная обработка таймфреймов (если нужно ускорить - можно через threading)
       for timeframe in TIMEFRAMES:
         if data := self._fetch_single(symbol, timeframe):
           symbol_data[timeframe] = data
-        time.sleep(self.rate_limit_delay / 2)  # Уменьшил задержку между запросами
+        time.sleep(self.rate_limit_delay)
 
       if symbol_data:
         results[symbol] = symbol_data
       else:
-        print(f"Skipping {symbol} - no data")
+        self.logger.warning(f"No data for {symbol}")
 
-      # Добавляем паузу между символами
-      if idx < len(SYMBOLS) - 1:
-        time.sleep(self.rate_limit_delay)
-
+      time.sleep(self.rate_limit_delay * 2)
     return results

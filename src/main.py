@@ -7,7 +7,7 @@ import os
 import time
 import logging
 from datetime import datetime, timedelta
-from decimal import Decimal, ROUND_HALF_UP
+from decimal import Decimal
 from typing import Dict, Optional
 
 # Добавление корневой директории в PYTHONPATH
@@ -26,8 +26,11 @@ from src.core.data_logic.decision_processor.position_manager import PositionMana
 from src.core.settings.config import (
     SYMBOLS,
     TIMEFRAMES,
-    BOT_SLEEP_INTERVAL,
     LOGGING_CONFIG,
+    BOT_SLEEP_INTERVAL,
+    BOT_SLEEP_BUFFER_SEC,
+    ERROR_RETRY_DELAY,
+    INIT_SYNC_DELAY,
     MIN_SCORE_FOR_EXECUTION,
     DATA_STALE_MINUTES
 )
@@ -90,7 +93,8 @@ class TradingBot:
 
         self.score_processor: Optional[ScoreProcessor] = None
 
-        # Синхронизация позиций при старте
+        # Синхронизация позиций при старте с задержкой
+        time.sleep(INIT_SYNC_DELAY)
         for symbol in SYMBOLS:
             self.position_managers[symbol].sync_with_exchange()
 
@@ -105,13 +109,11 @@ class TradingBot:
     def _fetch_and_process_data(self) -> Optional[Dict]:
         """Полный цикл обработки данных"""
         try:
-            # Получение данных с TradingView
             raw_data = self.analysis_fetcher.fetch_all_data()
             if not raw_data:
                 logging.warning("No data from TradingView")
                 return None
 
-            # Сохранение и чтение данных
             self.analysis_saver.batch_save(raw_data)
             processed_data = self.analysis_collector.get_all_latest()
             self.last_data_update = datetime.now()
@@ -125,25 +127,19 @@ class TradingBot:
     def _process_symbol(self, symbol: str, processed_data: Dict):
         """Обработка одного символа"""
         try:
-            # Синхронизация позиций
             self.position_managers[symbol].sync_with_exchange()
 
-            # Извлечение данных
             symbol_data = processed_data.get(symbol)
             if not symbol_data:
                 logging.debug(f"No data for {symbol}")
                 return
 
-            # Расчет сигнала
             result = self.score_processor.process(symbol_data['timeframes'])
             logging.info(f"{symbol} | Score: {result['score']:.2f} | Signal: {result['signal']}")
 
-            # Проверка порога
-            if result['signal'] == 'NEUTRAL' or \
-               abs(result['score']) < MIN_SCORE_FOR_EXECUTION:
+            if result['signal'] == 'NEUTRAL' or abs(result['score']) < MIN_SCORE_FOR_EXECUTION:
                 return
 
-            # Исполнение ордера
             decision_maker = self.decision_makers[symbol]
             if decision_maker.process_signal(
                 score=Decimal(result['score']),
@@ -160,38 +156,37 @@ class TradingBot:
         try:
             while True:
                 start_time = datetime.now()
-
-                # Обработка данных
                 processed_data = self._fetch_and_process_data()
+
                 if not processed_data:
                     logging.warning("Skipping iteration - no data")
-                    time.sleep(5)
+                    time.sleep(ERROR_RETRY_DELAY)
                     continue
 
-                # Инициализация процессора
                 timeframes = list(processed_data[next(iter(SYMBOLS))]['timeframes'].keys())
                 self.score_processor = ScoreProcessor(
                     calculate_timeframe_weights(timeframes)
                 )
 
-                # Обработка символов
                 for symbol in SYMBOLS:
                     self._process_symbol(symbol, processed_data)
 
-                # Управление временем
                 self._sleep_until_next_iteration(start_time)
 
         except KeyboardInterrupt:
             logging.info("Bot stopped by user")
         except Exception as e:
             logging.critical(f"Critical error: {str(e)}", exc_info=True)
+            time.sleep(ERROR_RETRY_DELAY)
         finally:
             logging.info("Trading bot stopped")
 
     def _sleep_until_next_iteration(self, start_time: datetime):
         """Контроль временных интервалов"""
         elapsed = (datetime.now() - start_time).total_seconds()
-        sleep_time = max(0, BOT_SLEEP_INTERVAL * 60 - elapsed - 5)
+
+        sleep_time = max(0, BOT_SLEEP_INTERVAL * 60 - elapsed - BOT_SLEEP_BUFFER_SEC)
+        print(sleep_time, BOT_SLEEP_INTERVAL * 60, BOT_SLEEP_BUFFER_SEC)
         logging.info(f"Sleeping for {sleep_time:.1f} seconds")
         time.sleep(sleep_time)
 
