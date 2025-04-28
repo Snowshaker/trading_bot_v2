@@ -546,3 +546,118 @@ NameError: name 'logging' is not defined. Did you forget to import 'logging'?
 2025-04-28 22:45:59,638 - root - INFO - Sleeping for 255.7 seconds
 2025-04-28 22:49:10,563 - root - INFO - Bot stopped by user
 2025-04-28 22:49:10,563 - root - INFO - Trading bot stopped
+2025-04-28 23:03:50,126 - root - INFO - Starting trading bot
+2025-04-28 23:04:03,961 - root - INFO - Bot stopped by user
+2025-04-28 23:04:03,961 - root - INFO - Trading bot stopped
+2025-04-28 23:06:14,373 - root - INFO - Starting trading bot
+2025-04-28 23:07:20,333 - root - INFO - BTCUSDT | Score: 1.25 | Signal: BUY
+2025-04-28 23:07:21,332 - root - INFO - Available USDT balance: 5.56937350
+2025-04-28 23:07:21,332 - root - WARNING - Risk amount 0.3482250780874999846655482028 < min order 10.0
+2025-04-28 23:07:21,332 - src.core.data_logic.decision_processor.decision_maker - INFO - No allocation calculated
+2025-04-28 23:07:21,920 - root - INFO - ETHUSDT | Score: 0.32 | Signal: NEUTRAL
+2025-04-28 23:07:22,515 - root - INFO - BNBUSDT | Score: 1.76 | Signal: BUY
+2025-04-28 23:07:23,089 - root - INFO - Available USDT balance: 5.56937350
+2025-04-28 23:07:23,090 - root - WARNING - Risk amount 0.4901327148674999994064083175 < min order 10.0
+2025-04-28 23:07:23,090 - src.core.data_logic.decision_processor.decision_maker - INFO - No allocation calculated
+2025-04-28 23:07:23,090 - root - INFO - Sleeping for 229.3 seconds
+2025-04-28 23:12:17,313 - root - INFO - BTCUSDT | Score: 1.25 | Signal: BUY
+2025-04-28 23:12:18,121 - root - INFO - Available USDT balance: 5.56937350
+2025-04-28 23:12:18,122 - root - WARNING - Risk amount 0.3482250780874999846655482028 < min order 10.0
+2025-04-28 23:12:18,122 - src.core.data_logic.decision_processor.decision_maker - INFO - No allocation calculated
+2025-04-28 23:12:18,932 - root - INFO - ETHUSDT | Score: -0.12 | Signal: NEUTRAL
+2025-04-28 23:12:19,740 - root - INFO - BNBUSDT | Score: 1.76 | Signal: BUY
+2025-04-28 23:12:20,314 - root - INFO - Available USDT balance: 5.56937350
+2025-04-28 23:12:20,315 - root - WARNING - Risk amount 0.4901327148674999994064083175 < min order 10.0
+2025-04-28 23:12:20,315 - src.core.data_logic.decision_processor.decision_maker - INFO - No allocation calculated
+2025-04-28 23:12:20,315 - root - INFO - Sleeping for 230.1 seconds
+2025-04-28 23:13:01,110 - root - INFO - Bot stopped by user
+2025-04-28 23:13:01,110 - root - INFO - Trading bot stopped
+2025-04-28 23:13:17,396 - root - INFO - Starting trading bot
+2025-04-28 23:14:21,673 - root - INFO - BTCUSDT | Score: 1.25 | Signal: BUY
+2025-04-28 23:14:23,283 - root - INFO - Available USDT balance: 5.56937350
+2025-04-28 23:14:23,283 - root - WARNING - Risk amount 0.3482250780874999846655482028 < min order 10.0
+2025-04-28 23:14:23,283 - src.core.data_logic.decision_processor.decision_maker - INFO - No allocation calculated
+2025-04-28 23:14:23,862 - root - INFO - ETHUSDT | Score: -0.00 | Signal: NEUTRAL
+2025-04-28 23:14:24,450 - root - INFO - BNBUSDT | Score: 1.76 | Signal: BUY
+2025-04-28 23:14:25,032 - root - INFO - Available USDT balance: 5.56937350
+2025-04-28 23:14:25,032 - root - WARNING - Risk amount 0.4907174990849999968341776935 < min order 10.0
+2025-04-28 23:14:25,032 - src.core.data_logic.decision_processor.decision_maker - INFO - No allocation calculated
+2025-04-28 23:14:25,032 - root - INFO - Sleeping for 230.4 seconds
+2025-04-28 23:14:43,717 - root - INFO - Bot stopped by user
+2025-04-28 23:14:43,717 - root - INFO - Trading bot stopped
+2025-04-28 23:15:27,199 - root - INFO - Starting trading bot
+2025-04-28 23:16:31,386 - root - INFO - BTCUSDT | Score: 1.25 | Signal: BUY
+2025-04-28 23:16:32,386 - root - INFO - Available USDT balance: 5.56937350
+2025-04-28 23:16:32,386 - root - WARNING - Risk amount 0.3482250780874999846655482028 < min order 10.0
+2025-04-28 23:16:32,386 - src.core.data_logic.decision_processor.decision_maker - INFO - No allocation calculated
+2025-04-28 23:16:32,965 - root - INFO - ETHUSDT | Score: -0.12 | Signal: NEUTRAL
+2025-04-28 23:16:33,543 - root - INFO - BNBUSDT | Score: 0.99 | Signal: NEUTRAL
+2025-04-28 23:16:33,544 - root - INFO - Sleeping for 231.7 seconds
+2025-04-28 23:17:26,542 - root - INFO - Bot stopped by user
+2025-04-28 23:17:26,543 - root - INFO - Trading bot stopped
+2025-04-28 23:17:46,822 - root - INFO - Starting trading bot
+2025-04-28 23:18:51,236 - root - INFO - BTCUSDT | Score: 1.25 | Signal: BUY
+2025-04-28 23:18:52,630 - root - INFO - Available USDT balance: 5.56937350
+2025-04-28 23:18:52,631 - root - WARNING - Risk amount 0.3482250780874999846655482028 < min order 10.0
+2025-04-28 23:18:52,631 - src.core.data_logic.decision_processor.decision_maker - INFO - No allocation calculated
+2025-04-28 23:18:53,211 - root - INFO - ETHUSDT | Score: 0.87 | Signal: NEUTRAL
+2025-04-28 23:18:53,800 - root - INFO - BNBUSDT | Score: 1.76 | Signal: BUY
+2025-04-28 23:18:54,382 - root - INFO - Available USDT balance: 5.56937350
+2025-04-28 23:18:54,382 - root - WARNING - Risk amount 0.4907174990849999968341776935 < min order 10.0
+2025-04-28 23:18:54,382 - src.core.data_logic.decision_processor.decision_maker - INFO - No allocation calculated
+2025-04-28 23:18:54,382 - root - INFO - Sleeping for 230.4 seconds
+2025-04-28 23:23:46,573 - root - INFO - Bot stopped by user
+2025-04-28 23:23:46,574 - root - INFO - Trading bot stopped
+2025-04-28 23:23:58,118 - root - INFO - Starting trading bot
+2025-04-28 23:25:03,552 - root - INFO - BTCUSDT | Score: 1.25 | Signal: BUY
+2025-04-28 23:25:05,383 - root - INFO - Available USDT balance: 5.56937350
+2025-04-28 23:25:05,384 - root - WARNING - Risk amount 0.3494224933899999764541965952 < min order 10.0
+2025-04-28 23:25:05,384 - src.core.data_logic.decision_processor.decision_maker - INFO - No allocation calculated
+2025-04-28 23:25:05,962 - root - INFO - ETHUSDT | Score: 0.87 | Signal: NEUTRAL
+2025-04-28 23:25:06,544 - root - INFO - BNBUSDT | Score: 1.76 | Signal: BUY
+2025-04-28 23:25:07,127 - root - INFO - Available USDT balance: 5.56937350
+2025-04-28 23:25:07,127 - root - WARNING - Risk amount 0.4913022833024999942619470694 < min order 10.0
+2025-04-28 23:25:07,127 - src.core.data_logic.decision_processor.decision_maker - INFO - No allocation calculated
+2025-04-28 23:25:07,127 - root - INFO - Sleeping for 229.0 seconds
+2025-04-28 23:26:11,282 - root - INFO - Bot stopped by user
+2025-04-28 23:26:11,282 - root - INFO - Trading bot stopped
+2025-04-28 23:26:35,892 - root - INFO - Starting trading bot
+2025-04-28 23:27:40,101 - root - INFO - BTCUSDT | Score: 1.25 | Signal: BUY
+2025-04-28 23:27:41,265 - root - INFO - Available USDT balance: 5.56937350
+2025-04-28 23:27:41,265 - root - WARNING - Risk amount 0.3494224933899999764541965952 < min order 10.0
+2025-04-28 23:27:41,265 - src.core.data_logic.decision_processor.decision_maker - INFO - No allocation calculated
+2025-04-28 23:27:41,852 - root - INFO - ETHUSDT | Score: -0.13 | Signal: NEUTRAL
+2025-04-28 23:27:42,432 - root - INFO - BNBUSDT | Score: 0.99 | Signal: NEUTRAL
+2025-04-28 23:27:42,433 - root - INFO - Sleeping for 0.0 seconds
+2025-04-28 23:28:46,287 - root - INFO - BTCUSDT | Score: 1.25 | Signal: BUY
+2025-04-28 23:28:46,864 - root - INFO - Available USDT balance: 5.56937350
+2025-04-28 23:28:46,865 - root - WARNING - Risk amount 0.3482250780874999846655482028 < min order 10.0
+2025-04-28 23:28:46,865 - src.core.data_logic.decision_processor.decision_maker - INFO - No allocation calculated
+2025-04-28 23:28:47,471 - root - INFO - ETHUSDT | Score: -0.20 | Signal: NEUTRAL
+2025-04-28 23:28:48,048 - root - INFO - BNBUSDT | Score: 1.75 | Signal: BUY
+2025-04-28 23:28:48,627 - root - INFO - Available USDT balance: 5.56937350
+2025-04-28 23:28:48,627 - root - WARNING - Risk amount 0.4871809469125000153344517972 < min order 10.0
+2025-04-28 23:28:48,627 - src.core.data_logic.decision_processor.decision_maker - INFO - No allocation calculated
+2025-04-28 23:28:48,628 - root - INFO - Sleeping for 0.0 seconds
+2025-04-28 23:29:52,572 - root - INFO - BTCUSDT | Score: 1.25 | Signal: BUY
+2025-04-28 23:29:53,145 - root - INFO - Available USDT balance: 5.56937350
+2025-04-28 23:29:53,145 - root - WARNING - Risk amount 0.3494224933899999764541965952 < min order 10.0
+2025-04-28 23:29:53,146 - src.core.data_logic.decision_processor.decision_maker - INFO - No allocation calculated
+2025-04-28 23:29:53,737 - root - INFO - ETHUSDT | Score: -0.13 | Signal: NEUTRAL
+2025-04-28 23:29:54,311 - root - INFO - BNBUSDT | Score: 1.24 | Signal: BUY
+2025-04-28 23:29:54,888 - root - INFO - Available USDT balance: 5.56937350
+2025-04-28 23:29:54,889 - root - WARNING - Risk amount 0.3452733101325000005935916825 < min order 10.0
+2025-04-28 23:29:54,889 - src.core.data_logic.decision_processor.decision_maker - INFO - No allocation calculated
+2025-04-28 23:29:54,889 - root - INFO - Sleeping for 0.0 seconds
+2025-04-28 23:30:58,949 - root - INFO - BTCUSDT | Score: 1.25 | Signal: BUY
+2025-04-28 23:30:59,525 - root - INFO - Available USDT balance: 5.56937350
+2025-04-28 23:30:59,525 - root - WARNING - Risk amount 0.3488377091724999790264272193 < min order 10.0
+2025-04-28 23:30:59,525 - src.core.data_logic.decision_processor.decision_maker - INFO - No allocation calculated
+2025-04-28 23:31:00,115 - root - INFO - ETHUSDT | Score: -0.10 | Signal: NEUTRAL
+2025-04-28 23:31:00,689 - root - INFO - BNBUSDT | Score: 1.76 | Signal: BUY
+2025-04-28 23:31:01,263 - root - INFO - Available USDT balance: 5.56937350
+2025-04-28 23:31:01,263 - root - WARNING - Risk amount 0.4901327148674999994064083175 < min order 10.0
+2025-04-28 23:31:01,263 - src.core.data_logic.decision_processor.decision_maker - INFO - No allocation calculated
+2025-04-28 23:31:01,263 - root - INFO - Sleeping for 0.0 seconds
+2025-04-28 23:31:45,514 - root - INFO - Bot stopped by user
+2025-04-28 23:31:45,514 - root - INFO - Trading bot stopped

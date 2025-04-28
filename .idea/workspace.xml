@@ -6,45 +6,17 @@
   <component name="ChangeListManager">
     <list default="true" id="d63f7b03-5d5b-48a2-b8d7-f04c42c4a150" name="Changes" comment="may be the first stable version">
       <changelist_data name="Виктор Павлов" email="pavlov.vp@phystech.edu" automatic="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/bot.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/collected_data/positions/BTCUSDT.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/collected_data/positions/ETHUSDT.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/collected_data/tradingview_analysis/BNBUSDT.jsonl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/collected_data/tradingview_analysis/BTCUSDT.jsonl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/collected_data/tradingview_analysis/ETHUSDT.jsonl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/core/data_logic/decision_processor/allocation_strategy.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/core/data_logic/decision_processor/decision_maker.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/core/data_logic/decision_processor/position_manager.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/core/data_logic/decision_processor/risk_engine.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/core/data_logic/score_processor.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/core/data_logic/timeframe_weights_calculator.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/core/utils/check_balance.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/core/utils/positions_sync.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/tests/allocation_strategy_test.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/tests/collected_data/positions.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/tests/collected_data/positions/BTCUSDT/BTCUSDT.lock" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/tests/collected_data/positions/BTCUSDT/positions.bak.2025-04-28T00:51:33.698643" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/tests/collected_data/positions/BTCUSDT/positions.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/tests/decision_maker_test.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/tests/position_manager_test.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/tests/risk_engine_test.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/tests/sandplace.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/tests/score_processor_test.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/tests/test_data/BNBUSDT.jsonl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/tests/test_data/BTCUSDT.jsonl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/tests/test_data/ETHUSDT.jsonl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/tests/timeframe_weights_calculator_test.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/tests/timeframes_fetch.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/PythonProject6.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/PythonProject6.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Roadmap.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/Roadmap.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bot.log" beforeDir="false" afterPath="$PROJECT_DIR$/src/bot.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/collected_data/positions/BTCUSDT.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/collected_data/positions/BTCUSDT.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/collected_data/positions/ETHUSDT.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/collected_data/positions/ETHUSDT.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/collected_data/tradingview_analysis/BNBUSDT.jsonl" beforeDir="false" afterPath="$PROJECT_DIR$/src/collected_data/tradingview_analysis/BNBUSDT.jsonl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/collected_data/tradingview_analysis/BTCUSDT.jsonl" beforeDir="false" afterPath="$PROJECT_DIR$/src/collected_data/tradingview_analysis/BTCUSDT.jsonl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/collected_data/tradingview_analysis/ETHUSDT.jsonl" beforeDir="false" afterPath="$PROJECT_DIR$/src/collected_data/tradingview_analysis/ETHUSDT.jsonl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/core/api/binance_client/info_fetcher.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/api/binance_client/info_fetcher.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/core/api/tradingview_client/analysis_collector.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/api/tradingview_client/analysis_collector.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/core/api/tradingview_client/analysis_saver.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/api/tradingview_client/analysis_saver.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/core/api/tradingview_client/analysis_fetcher.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/api/tradingview_client/analysis_fetcher.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/core/settings/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/settings/config.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tests/tradeview_client_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/tests/tradeview_client_test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,18 +38,18 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "Snowshaker"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Snowshaker&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "git@github.com:Snowshaker/trading_bot_v2.git",
-    "accountId": "be771758-f46a-4841-80aa-5b79ee17f276"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;git@github.com:Snowshaker/trading_bot_v2.git&quot;,
+    &quot;accountId&quot;: &quot;be771758-f46a-4841-80aa-5b79ee17f276&quot;
   }
-}]]></component>
+}</component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 2
 }</component>
@@ -86,57 +58,58 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Python tests.Python tests in allocation_strategy_test.py.executor": "Run",
-    "Python tests.Python tests in analysis_collector_test.py.executor": "Run",
-    "Python tests.Python tests in analysis_saver.test.py.executor": "Run",
-    "Python tests.Python tests in decision_maker_test.py.executor": "Run",
-    "Python tests.Python tests in position_manager_test.py.executor": "Run",
-    "Python tests.Python tests in risk_engine_test.py.executor": "Run",
-    "Python.allocation_strategy.executor": "Run",
-    "Python.analysis_collector.executor": "Run",
-    "Python.analysis_collector_test.executor": "Run",
-    "Python.analysis_fetcher.executor": "Run",
-    "Python.analysis_fetcher.test.executor": "Run",
-    "Python.analysis_printer.executor": "Run",
-    "Python.analysis_saver.executor": "Run",
-    "Python.analysis_saver.test.executor": "Run",
-    "Python.binance_reset.executor": "Run",
-    "Python.check_balance.executor": "Run",
-    "Python.decision_maker.executor": "Run",
-    "Python.full_reset.executor": "Run",
-    "Python.info_fetcher.executor": "Run",
-    "Python.info_fetcher_test.executor": "Run",
-    "Python.main.executor": "Run",
-    "Python.position_manager.executor": "Run",
-    "Python.position_manager_test.executor": "Run",
-    "Python.positions_sync.executor": "Run",
-    "Python.risk_engine.executor": "Run",
-    "Python.sandbox.executor": "Run",
-    "Python.sandplace.executor": "Run",
-    "Python.score_processor.executor": "Run",
-    "Python.score_processor_test.executor": "Run",
-    "Python.timeframe_weights_calculator.executor": "Run",
-    "Python.timeframe_weights_calculator_test.executor": "Run",
-    "Python.timeframes_fetch.executor": "Run",
-    "Python.tradeview_client_test.executor": "Run",
-    "Python.trading_history_fetcher.executor": "Run",
-    "Python.trading_history_fetcher_test.executor": "Run",
-    "Python.transactions_executor_test.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "master",
-    "last_opened_file_path": "/home/viktor/trading_bot_v2",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Python tests.Python tests in allocation_strategy_test.py.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests in analysis_collector_test.py.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests in analysis_saver.test.py.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests in decision_maker_test.py.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests in position_manager_test.py.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests in risk_engine_test.py.executor&quot;: &quot;Run&quot;,
+    &quot;Python.allocation_strategy.executor&quot;: &quot;Run&quot;,
+    &quot;Python.analysis_collector.executor&quot;: &quot;Run&quot;,
+    &quot;Python.analysis_collector_test.executor&quot;: &quot;Run&quot;,
+    &quot;Python.analysis_fetcher.executor&quot;: &quot;Run&quot;,
+    &quot;Python.analysis_fetcher.test.executor&quot;: &quot;Run&quot;,
+    &quot;Python.analysis_printer.executor&quot;: &quot;Run&quot;,
+    &quot;Python.analysis_saver.executor&quot;: &quot;Run&quot;,
+    &quot;Python.analysis_saver.test.executor&quot;: &quot;Run&quot;,
+    &quot;Python.binance_reset.executor&quot;: &quot;Run&quot;,
+    &quot;Python.check_balance.executor&quot;: &quot;Run&quot;,
+    &quot;Python.config.executor&quot;: &quot;Run&quot;,
+    &quot;Python.decision_maker.executor&quot;: &quot;Run&quot;,
+    &quot;Python.full_reset.executor&quot;: &quot;Run&quot;,
+    &quot;Python.info_fetcher.executor&quot;: &quot;Run&quot;,
+    &quot;Python.info_fetcher_test.executor&quot;: &quot;Run&quot;,
+    &quot;Python.main.executor&quot;: &quot;Run&quot;,
+    &quot;Python.position_manager.executor&quot;: &quot;Run&quot;,
+    &quot;Python.position_manager_test.executor&quot;: &quot;Run&quot;,
+    &quot;Python.positions_sync.executor&quot;: &quot;Run&quot;,
+    &quot;Python.risk_engine.executor&quot;: &quot;Run&quot;,
+    &quot;Python.sandbox.executor&quot;: &quot;Run&quot;,
+    &quot;Python.sandplace.executor&quot;: &quot;Run&quot;,
+    &quot;Python.score_processor.executor&quot;: &quot;Run&quot;,
+    &quot;Python.score_processor_test.executor&quot;: &quot;Run&quot;,
+    &quot;Python.timeframe_weights_calculator.executor&quot;: &quot;Run&quot;,
+    &quot;Python.timeframe_weights_calculator_test.executor&quot;: &quot;Run&quot;,
+    &quot;Python.timeframes_fetch.executor&quot;: &quot;Run&quot;,
+    &quot;Python.tradeview_client_test.executor&quot;: &quot;Run&quot;,
+    &quot;Python.trading_history_fetcher.executor&quot;: &quot;Run&quot;,
+    &quot;Python.trading_history_fetcher_test.executor&quot;: &quot;Run&quot;,
+    &quot;Python.transactions_executor_test.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/viktor/trading_bot_v2&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;org.jetbrains.plugins.github.ui.GithubSettingsConfigurable&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/tests" />
@@ -166,7 +139,8 @@
       <workItem from="1745748810119" duration="48000" />
       <workItem from="1745748883433" duration="1192000" />
       <workItem from="1745758152435" duration="1380000" />
-      <workItem from="1745761271535" duration="36549000" />
+      <workItem from="1745761271535" duration="37818000" />
+      <workItem from="1745871308096" duration="1000000" />
     </task>
     <task id="LOCAL-00001" summary="first save">
       <option name="closed" value="true" />
@@ -199,6 +173,7 @@
     <option name="LAST_COMMIT_MESSAGE" value="may be the first stable version" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/trading_bot_v2$config.coverage" NAME="config Coverage Results" MODIFIED="1745871183129" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/core/settings" />
     <SUITE FILE_PATH="coverage/PythonProject6$analysis_fetcher_test.coverage" NAME="analysis_fetcher.test Coverage Results" MODIFIED="1745520397482" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/tests" />
     <SUITE FILE_PATH="coverage/PythonProject6$analysis_fetcher.coverage" NAME="analysis_fetcher Coverage Results" MODIFIED="1745518238575" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/core/api/tradingview_client" />
     <SUITE FILE_PATH="coverage/PythonProject6$analysis_collector_test.coverage" NAME="analysis_collector_test Coverage Results" MODIFIED="1745520719712" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/tests" />
@@ -217,7 +192,7 @@
     <SUITE FILE_PATH="coverage/trading_bot_v2$timeframes_fetch.coverage" NAME="timeframes_fetch Coverage Results" MODIFIED="1745764012121" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/tests" />
     <SUITE FILE_PATH="coverage/trading_bot_v2$analysis_saver.coverage" NAME="analysis_saver Coverage Results" MODIFIED="1745863911761" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/core/api/tradingview_client" />
     <SUITE FILE_PATH="coverage/PythonProject6$info_fetcher_test.coverage" NAME="info_fetcher_test Coverage Results" MODIFIED="1745709482452" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/tests" />
-    <SUITE FILE_PATH="coverage/trading_bot_v2$main.coverage" NAME="main Coverage Results" MODIFIED="1745869218832" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
+    <SUITE FILE_PATH="coverage/trading_bot_v2$main.coverage" NAME="main Coverage Results" MODIFIED="1745871986578" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
     <SUITE FILE_PATH="coverage/trading_bot_v2$score_processor_test.coverage" NAME="score_processor_test Coverage Results" MODIFIED="1745768675024" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/tests" />
     <SUITE FILE_PATH="coverage/trading_bot_v2$analysis_collector.coverage" NAME="analysis_collector Coverage Results" MODIFIED="1745863416807" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/core/api/tradingview_client" />
     <SUITE FILE_PATH="coverage/PythonProject6$analysis_collector.coverage" NAME="analysis_collector Coverage Results" MODIFIED="1745520202335" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/core/api/tradingview_client" />
@@ -228,7 +203,7 @@
     <SUITE FILE_PATH="coverage/PythonProject6$tradeview_client_test.coverage" NAME="tradeview_client_test Coverage Results" MODIFIED="1745712325265" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/tests" />
     <SUITE FILE_PATH="coverage/PythonProject6$analysis_printer.coverage" NAME="analysis_printer Coverage Results" MODIFIED="1745526411936" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/core/utils" />
     <SUITE FILE_PATH="coverage/trading_bot_v2$position_manager.coverage" NAME="position_manager Coverage Results" MODIFIED="1745867764012" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/core/data_logic/decision_processor" />
-    <SUITE FILE_PATH="coverage/trading_bot_v2$info_fetcher.coverage" NAME="info_fetcher Coverage Results" MODIFIED="1745868385569" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/core/api/binance_client" />
+    <SUITE FILE_PATH="coverage/trading_bot_v2$info_fetcher.coverage" NAME="info_fetcher Coverage Results" MODIFIED="1745870611627" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/core/api/binance_client" />
     <SUITE FILE_PATH="coverage/PythonProject6$.coverage" NAME=" Coverage Results" MODIFIED="1745516229031" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/tests" />
     <SUITE FILE_PATH="coverage/trading_bot_v2$full_reset.coverage" NAME="full_reset Coverage Results" MODIFIED="1745860712398" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/core/utils" />
     <SUITE FILE_PATH="coverage/PythonProject6$analysis_saver_test.coverage" NAME="analysis_saver.test Coverage Results" MODIFIED="1745520614557" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/tests" />
