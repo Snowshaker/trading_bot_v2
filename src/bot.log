@@ -1,0 +1,548 @@
+2025-04-28 20:46:45,134 - root - INFO - Starting trading bot
+2025-04-28 20:47:21,505 - root - ERROR - Data processing failed: 'AnalysisCollector' object has no attribute 'batch_save'
+Traceback (most recent call last):
+  File "/home/viktor/trading_bot_v2/src/main.py", line 106, in _fetch_and_process_data
+    self.analysis_collector.batch_save(raw_data)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'AnalysisCollector' object has no attribute 'batch_save'
+2025-04-28 20:47:21,506 - root - CRITICAL - Main loop error: No valid data available
+Traceback (most recent call last):
+  File "/home/viktor/trading_bot_v2/src/main.py", line 165, in run
+    raise ValueError("No valid data available")
+ValueError: No valid data available
+2025-04-28 20:48:57,933 - root - ERROR - Data processing failed: 'AnalysisCollector' object has no attribute 'batch_save'
+Traceback (most recent call last):
+  File "/home/viktor/trading_bot_v2/src/main.py", line 106, in _fetch_and_process_data
+    self.analysis_collector.batch_save(raw_data)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'AnalysisCollector' object has no attribute 'batch_save'
+2025-04-28 20:48:57,934 - root - CRITICAL - Main loop error: No valid data available
+Traceback (most recent call last):
+  File "/home/viktor/trading_bot_v2/src/main.py", line 165, in run
+    raise ValueError("No valid data available")
+ValueError: No valid data available
+2025-04-28 20:50:32,457 - root - ERROR - Data processing failed: 'AnalysisCollector' object has no attribute 'batch_save'
+Traceback (most recent call last):
+  File "/home/viktor/trading_bot_v2/src/main.py", line 106, in _fetch_and_process_data
+    self.analysis_collector.batch_save(raw_data)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'AnalysisCollector' object has no attribute 'batch_save'
+2025-04-28 20:50:32,458 - root - CRITICAL - Main loop error: No valid data available
+Traceback (most recent call last):
+  File "/home/viktor/trading_bot_v2/src/main.py", line 165, in run
+    raise ValueError("No valid data available")
+ValueError: No valid data available
+2025-04-28 20:52:06,708 - root - ERROR - Data processing failed: 'AnalysisCollector' object has no attribute 'batch_save'
+Traceback (most recent call last):
+  File "/home/viktor/trading_bot_v2/src/main.py", line 106, in _fetch_and_process_data
+    self.analysis_collector.batch_save(raw_data)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'AnalysisCollector' object has no attribute 'batch_save'
+2025-04-28 20:52:06,709 - root - CRITICAL - Main loop error: No valid data available
+Traceback (most recent call last):
+  File "/home/viktor/trading_bot_v2/src/main.py", line 165, in run
+    raise ValueError("No valid data available")
+ValueError: No valid data available
+2025-04-28 20:53:41,112 - root - ERROR - Data processing failed: 'AnalysisCollector' object has no attribute 'batch_save'
+Traceback (most recent call last):
+  File "/home/viktor/trading_bot_v2/src/main.py", line 106, in _fetch_and_process_data
+    self.analysis_collector.batch_save(raw_data)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'AnalysisCollector' object has no attribute 'batch_save'
+2025-04-28 20:53:41,112 - root - CRITICAL - Main loop error: No valid data available
+Traceback (most recent call last):
+  File "/home/viktor/trading_bot_v2/src/main.py", line 165, in run
+    raise ValueError("No valid data available")
+ValueError: No valid data available
+2025-04-28 20:54:23,085 - root - INFO - Trading bot shutdown complete
+2025-04-28 21:06:19,176 - root - INFO - Starting trading bot
+2025-04-28 21:06:54,945 - root - ERROR - Data processing failed: Object of type Decimal is not JSON serializable
+Traceback (most recent call last):
+  File "/home/viktor/trading_bot_v2/src/main.py", line 113, in _fetch_and_process_data
+    self.analysis_saver.batch_save(raw_data)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "/home/viktor/trading_bot_v2/src/core/api/tradingview_client/analysis_saver.py", line 39, in batch_save
+    self.save_symbol_data(symbol, data)
+    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "/home/viktor/trading_bot_v2/src/core/api/tradingview_client/analysis_saver.py", line 32, in save_symbol_data
+    f.write(json.dumps(transformed) + "\n")
+            ~~~~~~~~~~^^^^^^^^^^^^^
+  File "/usr/lib64/python3.13/json/__init__.py", line 231, in dumps
+    return _default_encoder.encode(obj)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "/usr/lib64/python3.13/json/encoder.py", line 200, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "/usr/lib64/python3.13/json/encoder.py", line 261, in iterencode
+    return _iterencode(o, 0)
+  File "/usr/lib64/python3.13/json/encoder.py", line 180, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+                    f'is not JSON serializable')
+TypeError: Object of type Decimal is not JSON serializable
+2025-04-28 21:06:54,950 - root - CRITICAL - Main loop error: No valid data available
+Traceback (most recent call last):
+  File "/home/viktor/trading_bot_v2/src/main.py", line 174, in run
+    raise ValueError("No valid data available")
+ValueError: No valid data available
+2025-04-28 21:08:31,998 - root - ERROR - Data processing failed: Object of type Decimal is not JSON serializable
+Traceback (most recent call last):
+  File "/home/viktor/trading_bot_v2/src/main.py", line 113, in _fetch_and_process_data
+    self.analysis_saver.batch_save(raw_data)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "/home/viktor/trading_bot_v2/src/core/api/tradingview_client/analysis_saver.py", line 39, in batch_save
+    self.save_symbol_data(symbol, data)
+    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "/home/viktor/trading_bot_v2/src/core/api/tradingview_client/analysis_saver.py", line 32, in save_symbol_data
+    f.write(json.dumps(transformed) + "\n")
+            ~~~~~~~~~~^^^^^^^^^^^^^
+  File "/usr/lib64/python3.13/json/__init__.py", line 231, in dumps
+    return _default_encoder.encode(obj)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "/usr/lib64/python3.13/json/encoder.py", line 200, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "/usr/lib64/python3.13/json/encoder.py", line 261, in iterencode
+    return _iterencode(o, 0)
+  File "/usr/lib64/python3.13/json/encoder.py", line 180, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+                    f'is not JSON serializable')
+TypeError: Object of type Decimal is not JSON serializable
+2025-04-28 21:08:31,999 - root - CRITICAL - Main loop error: No valid data available
+Traceback (most recent call last):
+  File "/home/viktor/trading_bot_v2/src/main.py", line 174, in run
+    raise ValueError("No valid data available")
+ValueError: No valid data available
+2025-04-28 21:10:06,461 - root - ERROR - Data processing failed: Object of type Decimal is not JSON serializable
+Traceback (most recent call last):
+  File "/home/viktor/trading_bot_v2/src/main.py", line 113, in _fetch_and_process_data
+    self.analysis_saver.batch_save(raw_data)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "/home/viktor/trading_bot_v2/src/core/api/tradingview_client/analysis_saver.py", line 39, in batch_save
+    self.save_symbol_data(symbol, data)
+    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "/home/viktor/trading_bot_v2/src/core/api/tradingview_client/analysis_saver.py", line 32, in save_symbol_data
+    f.write(json.dumps(transformed) + "\n")
+            ~~~~~~~~~~^^^^^^^^^^^^^
+  File "/usr/lib64/python3.13/json/__init__.py", line 231, in dumps
+    return _default_encoder.encode(obj)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "/usr/lib64/python3.13/json/encoder.py", line 200, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "/usr/lib64/python3.13/json/encoder.py", line 261, in iterencode
+    return _iterencode(o, 0)
+  File "/usr/lib64/python3.13/json/encoder.py", line 180, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+                    f'is not JSON serializable')
+TypeError: Object of type Decimal is not JSON serializable
+2025-04-28 21:10:06,463 - root - CRITICAL - Main loop error: No valid data available
+Traceback (most recent call last):
+  File "/home/viktor/trading_bot_v2/src/main.py", line 174, in run
+    raise ValueError("No valid data available")
+ValueError: No valid data available
+2025-04-28 21:11:42,390 - root - ERROR - Data processing failed: Object of type Decimal is not JSON serializable
+Traceback (most recent call last):
+  File "/home/viktor/trading_bot_v2/src/main.py", line 113, in _fetch_and_process_data
+    self.analysis_saver.batch_save(raw_data)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "/home/viktor/trading_bot_v2/src/core/api/tradingview_client/analysis_saver.py", line 39, in batch_save
+    self.save_symbol_data(symbol, data)
+    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "/home/viktor/trading_bot_v2/src/core/api/tradingview_client/analysis_saver.py", line 32, in save_symbol_data
+    f.write(json.dumps(transformed) + "\n")
+            ~~~~~~~~~~^^^^^^^^^^^^^
+  File "/usr/lib64/python3.13/json/__init__.py", line 231, in dumps
+    return _default_encoder.encode(obj)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "/usr/lib64/python3.13/json/encoder.py", line 200, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "/usr/lib64/python3.13/json/encoder.py", line 261, in iterencode
+    return _iterencode(o, 0)
+  File "/usr/lib64/python3.13/json/encoder.py", line 180, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+                    f'is not JSON serializable')
+TypeError: Object of type Decimal is not JSON serializable
+2025-04-28 21:11:42,392 - root - CRITICAL - Main loop error: No valid data available
+Traceback (most recent call last):
+  File "/home/viktor/trading_bot_v2/src/main.py", line 174, in run
+    raise ValueError("No valid data available")
+ValueError: No valid data available
+2025-04-28 21:11:51,058 - root - INFO - Trading bot shutdown completed
+2025-04-28 21:15:39,029 - root - INFO - Starting trading bot
+2025-04-28 21:16:15,457 - root - ERROR - Data processing failed: 'AnalysisSaver' object has no attribute 'batch_save'
+Traceback (most recent call last):
+  File "/home/viktor/trading_bot_v2/src/main.py", line 113, in _fetch_and_process_data
+    self.analysis_saver.batch_save(raw_data)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'AnalysisSaver' object has no attribute 'batch_save'
+2025-04-28 21:16:15,458 - root - CRITICAL - Main loop error: No valid data available
+Traceback (most recent call last):
+  File "/home/viktor/trading_bot_v2/src/main.py", line 174, in run
+    raise ValueError("No valid data available")
+ValueError: No valid data available
+2025-04-28 21:16:59,008 - root - INFO - Trading bot shutdown completed
+2025-04-28 21:17:19,989 - root - INFO - Starting trading bot
+2025-04-28 21:17:57,958 - root - CRITICAL - Main loop error: ScoreProcessor() takes no arguments
+Traceback (most recent call last):
+  File "/home/viktor/trading_bot_v2/src/main.py", line 178, in run
+    self.score_processor = ScoreProcessor(
+                           ~~~~~~~~~~~~~~^
+        calculate_timeframe_weights(timeframes)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+TypeError: ScoreProcessor() takes no arguments
+2025-04-28 21:18:06,024 - root - INFO - Trading bot shutdown completed
+2025-04-28 21:20:39,922 - root - INFO - Starting trading bot
+2025-04-28 21:21:18,406 - root - INFO - BTCUSDT | Score: -0.24 | Signal: NEUTRAL
+2025-04-28 21:21:18,406 - root - INFO - ETHUSDT | Score: -0.97 | Signal: SELL
+2025-04-28 21:21:19,193 - src.core.data_logic.decision_processor.decision_maker - ERROR - Decision process failed: 'BinanceInfoFetcher' object has no attribute 'get_current_price'
+Traceback (most recent call last):
+  File "/home/viktor/trading_bot_v2/src/core/data_logic/decision_processor/decision_maker.py", line 36, in process_signal
+    allocation = self.strategy.calculate_allocation(score, signal)
+  File "/home/viktor/trading_bot_v2/src/core/data_logic/decision_processor/allocation_strategy.py", line 26, in calculate_allocation
+    current_price = self.info_fetcher.get_current_price(self.symbol)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'BinanceInfoFetcher' object has no attribute 'get_current_price'. Did you mean: 'get_current_prices'?
+2025-04-28 21:21:19,194 - root - ERROR - Error processing ETHUSDT: 'RiskEngine' object has no attribute 'update_risk_parameters'
+Traceback (most recent call last):
+  File "/home/viktor/trading_bot_v2/src/main.py", line 159, in _process_symbol
+    self.risk_engines[symbol].update_risk_parameters()
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'RiskEngine' object has no attribute 'update_risk_parameters'
+2025-04-28 21:21:19,194 - root - INFO - BNBUSDT | Score: -0.97 | Signal: SELL
+2025-04-28 21:21:19,194 - src.core.data_logic.decision_processor.decision_maker - ERROR - Decision process failed: 'BinanceInfoFetcher' object has no attribute 'get_current_price'
+Traceback (most recent call last):
+  File "/home/viktor/trading_bot_v2/src/core/data_logic/decision_processor/decision_maker.py", line 36, in process_signal
+    allocation = self.strategy.calculate_allocation(score, signal)
+  File "/home/viktor/trading_bot_v2/src/core/data_logic/decision_processor/allocation_strategy.py", line 26, in calculate_allocation
+    current_price = self.info_fetcher.get_current_price(self.symbol)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'BinanceInfoFetcher' object has no attribute 'get_current_price'. Did you mean: 'get_current_prices'?
+2025-04-28 21:21:19,194 - root - ERROR - Error processing BNBUSDT: 'RiskEngine' object has no attribute 'update_risk_parameters'
+Traceback (most recent call last):
+  File "/home/viktor/trading_bot_v2/src/main.py", line 159, in _process_symbol
+    self.risk_engines[symbol].update_risk_parameters()
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'RiskEngine' object has no attribute 'update_risk_parameters'
+2025-04-28 21:21:19,195 - root - INFO - Iteration completed in 39.3s. Sleeping for 255.7s
+2025-04-28 21:21:31,107 - root - INFO - Bot stopped by user
+2025-04-28 21:21:31,107 - root - INFO - Trading bot shutdown completed
+2025-04-28 21:30:32,569 - root - INFO - Starting trading bot
+2025-04-28 21:31:08,464 - root - INFO - BTCUSDT | Score: -0.24 | Signal: NEUTRAL
+2025-04-28 21:31:08,464 - root - INFO - ETHUSDT | Score: -0.99 | Signal: SELL
+2025-04-28 21:31:08,872 - src.core.data_logic.decision_processor.decision_maker - ERROR - Decision process failed: name 'logging' is not defined
+Traceback (most recent call last):
+  File "/home/viktor/trading_bot_v2/src/core/data_logic/decision_processor/allocation_strategy.py", line 27, in calculate_allocation
+    current_price = Decimal(str(self.info_fetcher.get_current_price(self.symbol)))
+                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'BinanceInfoFetcher' object has no attribute 'get_current_price'. Did you mean: 'get_current_prices'?
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/viktor/trading_bot_v2/src/core/data_logic/decision_processor/decision_maker.py", line 28, in process_signal
+    allocation = self.strategy.calculate_allocation(score, signal)
+  File "/home/viktor/trading_bot_v2/src/core/data_logic/decision_processor/allocation_strategy.py", line 36, in calculate_allocation
+    logging.error(f"Allocation error: {str(e)}")
+    ^^^^^^^
+NameError: name 'logging' is not defined. Did you forget to import 'logging'?
+2025-04-28 21:31:08,873 - root - INFO - BNBUSDT | Score: -1.00 | Signal: SELL
+2025-04-28 21:31:08,873 - src.core.data_logic.decision_processor.decision_maker - ERROR - Decision process failed: name 'logging' is not defined
+Traceback (most recent call last):
+  File "/home/viktor/trading_bot_v2/src/core/data_logic/decision_processor/allocation_strategy.py", line 27, in calculate_allocation
+    current_price = Decimal(str(self.info_fetcher.get_current_price(self.symbol)))
+                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'BinanceInfoFetcher' object has no attribute 'get_current_price'. Did you mean: 'get_current_prices'?
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/viktor/trading_bot_v2/src/core/data_logic/decision_processor/decision_maker.py", line 28, in process_signal
+    allocation = self.strategy.calculate_allocation(score, signal)
+  File "/home/viktor/trading_bot_v2/src/core/data_logic/decision_processor/allocation_strategy.py", line 36, in calculate_allocation
+    logging.error(f"Allocation error: {str(e)}")
+    ^^^^^^^
+NameError: name 'logging' is not defined. Did you forget to import 'logging'?
+2025-04-28 21:31:08,874 - root - INFO - Iteration completed in 36.3s. Sleeping for 258.7s
+2025-04-28 21:31:17,977 - root - INFO - Bot stopped by user
+2025-04-28 21:31:17,977 - root - INFO - Trading bot shutdown completed
+2025-04-28 21:32:00,411 - root - INFO - Starting trading bot
+2025-04-28 21:32:37,234 - root - INFO - BTCUSDT | Score: -0.22 | Signal: NEUTRAL
+2025-04-28 21:32:37,234 - root - INFO - ETHUSDT | Score: -0.97 | Signal: SELL
+2025-04-28 21:32:38,330 - src.core.data_logic.decision_processor.decision_maker - INFO - No allocation calculated
+2025-04-28 21:32:38,330 - root - INFO - BNBUSDT | Score: -0.99 | Signal: SELL
+2025-04-28 21:32:38,617 - src.core.data_logic.decision_processor.decision_maker - INFO - No allocation calculated
+2025-04-28 21:32:38,617 - root - INFO - Iteration completed in 38.2s. Sleeping for 256.8s
+2025-04-28 21:34:31,423 - root - INFO - Bot stopped by user
+2025-04-28 21:34:31,423 - root - INFO - Trading bot shutdown completed
+2025-04-28 21:41:49,689 - root - CRITICAL - Critical startup error: 'TradingBot' object has no attribute 'position_managers'
+Traceback (most recent call last):
+  File "/home/viktor/trading_bot_v2/src/main.py", line 215, in <module>
+    bot = TradingBot()
+  File "/home/viktor/trading_bot_v2/src/main.py", line 92, in __init__
+    self.position_managers[symbol].sync_with_exchange()
+    ^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'TradingBot' object has no attribute 'position_managers'
+2025-04-28 21:46:30,158 - root - CRITICAL - Startup failed: PositionManager.__init__() takes 2 positional arguments but 3 were given
+Traceback (most recent call last):
+  File "/home/viktor/trading_bot_v2/src/main.py", line 197, in <module>
+    bot = TradingBot()
+  File "/home/viktor/trading_bot_v2/src/main.py", line 65, in __init__
+    symbol: PositionManager(symbol, self.info_fetcher)
+            ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: PositionManager.__init__() takes 2 positional arguments but 3 were given
+2025-04-28 21:49:50,976 - root - CRITICAL - Startup failed: DecisionMaker.__init__() got an unexpected keyword argument 'position_manager'
+Traceback (most recent call last):
+  File "/home/viktor/trading_bot_v2/src/main.py", line 200, in <module>
+    bot = TradingBot()
+  File "/home/viktor/trading_bot_v2/src/main.py", line 74, in __init__
+    symbol: DecisionMaker(
+            ~~~~~~~~~~~~~^
+        symbol=symbol,
+        ^^^^^^^^^^^^^^
+        info_fetcher=self.info_fetcher,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        position_manager=self.position_managers[symbol]
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+TypeError: DecisionMaker.__init__() got an unexpected keyword argument 'position_manager'
+2025-04-28 21:52:12,984 - root - CRITICAL - Startup failed: PositionManager.__init__() missing 1 required positional argument: 'info_fetcher'
+Traceback (most recent call last):
+  File "/home/viktor/trading_bot_v2/src/main.py", line 200, in <module>
+    bot = TradingBot()
+  File "/home/viktor/trading_bot_v2/src/main.py", line 74, in __init__
+    symbol: DecisionMaker(
+            ~~~~~~~~~~~~~^
+        symbol=symbol,
+        ^^^^^^^^^^^^^^
+        info_fetcher=self.info_fetcher,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        position_manager=self.position_managers[symbol]
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/viktor/trading_bot_v2/src/core/data_logic/decision_processor/decision_maker.py", line 23, in __init__
+    self.strategy = AllocationStrategy(
+                    ~~~~~~~~~~~~~~~~~~^
+        symbol=symbol,
+        ^^^^^^^^^^^^^^
+        info_fetcher=info_fetcher
+        ^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/viktor/trading_bot_v2/src/core/data_logic/decision_processor/allocation_strategy.py", line 15, in __init__
+    self.position_manager = PositionManager(symbol)
+                            ~~~~~~~~~~~~~~~^^^^^^^^
+TypeError: PositionManager.__init__() missing 1 required positional argument: 'info_fetcher'
+2025-04-28 21:55:36,775 - root - CRITICAL - Startup failed: PositionManager.__init__() missing 1 required positional argument: 'info_fetcher'
+Traceback (most recent call last):
+  File "/home/viktor/trading_bot_v2/src/main.py", line 200, in <module>
+    bot = TradingBot()
+  File "/home/viktor/trading_bot_v2/src/main.py", line 74, in __init__
+    symbol: DecisionMaker(
+            ~~~~~~~~~~~~~^
+        symbol=symbol,
+        ^^^^^^^^^^^^^^
+        info_fetcher=self.info_fetcher,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        position_manager=self.position_managers[symbol]
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/viktor/trading_bot_v2/src/core/data_logic/decision_processor/decision_maker.py", line 29, in __init__
+    self.risk_engine = RiskEngine(
+                       ~~~~~~~~~~^
+        symbol=symbol,
+        ^^^^^^^^^^^^^^
+        info_fetcher=info_fetcher
+        ^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/viktor/trading_bot_v2/src/core/data_logic/decision_processor/risk_engine.py", line 12, in __init__
+    self.position_manager = PositionManager(symbol)
+                            ~~~~~~~~~~~~~~~^^^^^^^^
+TypeError: PositionManager.__init__() missing 1 required positional argument: 'info_fetcher'
+2025-04-28 21:59:00,404 - root - CRITICAL - Startup failed: PositionManager.__init__() missing 1 required positional argument: 'info_fetcher'
+Traceback (most recent call last):
+  File "/home/viktor/trading_bot_v2/src/main.py", line 200, in <module>
+    bot = TradingBot()
+  File "/home/viktor/trading_bot_v2/src/main.py", line 74, in __init__
+    symbol: DecisionMaker(
+            ~~~~~~~~~~~~~^
+        symbol=symbol,
+        ^^^^^^^^^^^^^^
+        info_fetcher=self.info_fetcher,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        position_manager=self.position_managers[symbol]
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/viktor/trading_bot_v2/src/core/data_logic/decision_processor/decision_maker.py", line 29, in __init__
+    self.risk_engine = RiskEngine(
+                       ~~~~~~~~~~^
+        symbol=symbol,
+        ^^^^^^^^^^^^^^
+        info_fetcher=info_fetcher
+        ^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/viktor/trading_bot_v2/src/core/data_logic/decision_processor/risk_engine.py", line 12, in __init__
+    self.position_manager = PositionManager(symbol)
+                            ~~~~~~~~~~~~~~~^^^^^^^^
+TypeError: PositionManager.__init__() missing 1 required positional argument: 'info_fetcher'
+2025-04-28 22:03:55,708 - root - CRITICAL - Startup failed: 'PositionManager' object has no attribute 'sync_with_exchange'
+Traceback (most recent call last):
+  File "/home/viktor/trading_bot_v2/src/main.py", line 201, in <module>
+    bot = TradingBot()
+  File "/home/viktor/trading_bot_v2/src/main.py", line 95, in __init__
+    self.position_managers[symbol].sync_with_exchange()
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'PositionManager' object has no attribute 'sync_with_exchange'
+2025-04-28 22:11:50,838 - root - CRITICAL - Startup failed: 'PositionManager' object has no attribute 'sync_with_exchange'
+Traceback (most recent call last):
+  File "/home/viktor/trading_bot_v2/src/main.py", line 201, in <module>
+    bot = TradingBot()
+  File "/home/viktor/trading_bot_v2/src/main.py", line 95, in __init__
+    self.position_managers[symbol].sync_with_exchange()
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'PositionManager' object has no attribute 'sync_with_exchange'
+2025-04-28 22:12:40,978 - root - ERROR - Sync error: Prices and quantities must be positive
+2025-04-28 22:12:40,978 - root - INFO - Starting trading bot
+2025-04-28 22:13:22,771 - root - INFO - BTCUSDT | Score: 1.25 | Signal: BUY
+2025-04-28 22:13:23,837 - src.core.data_logic.decision_processor.decision_maker - ERROR - Decision process failed: name 'logging' is not defined
+Traceback (most recent call last):
+  File "/home/viktor/trading_bot_v2/src/core/data_logic/decision_processor/allocation_strategy.py", line 30, in calculate_allocation
+    return self._calculate_buy_size(score, symbol_info, current_price)
+           ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/viktor/trading_bot_v2/src/core/data_logic/decision_processor/allocation_strategy.py", line 39, in _calculate_buy_size
+    balance = Decimal(str(self.info_fetcher.get_available_balance(quote_asset)))
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'BinanceInfoFetcher' object has no attribute 'get_available_balance'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/viktor/trading_bot_v2/src/core/data_logic/decision_processor/decision_maker.py", line 45, in process_signal
+    allocation = self.strategy.calculate_allocation(score, signal)
+  File "/home/viktor/trading_bot_v2/src/core/data_logic/decision_processor/allocation_strategy.py", line 34, in calculate_allocation
+    logging.error(f"Allocation error: {str(e)}")
+    ^^^^^^^
+NameError: name 'logging' is not defined. Did you forget to import 'logging'?
+2025-04-28 22:13:24,431 - root - INFO - ETHUSDT | Score: 1.00 | Signal: BUY
+2025-04-28 22:13:24,728 - src.core.data_logic.decision_processor.decision_maker - ERROR - Decision process failed: name 'logging' is not defined
+Traceback (most recent call last):
+  File "/home/viktor/trading_bot_v2/src/core/data_logic/decision_processor/allocation_strategy.py", line 30, in calculate_allocation
+    return self._calculate_buy_size(score, symbol_info, current_price)
+           ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/viktor/trading_bot_v2/src/core/data_logic/decision_processor/allocation_strategy.py", line 39, in _calculate_buy_size
+    balance = Decimal(str(self.info_fetcher.get_available_balance(quote_asset)))
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'BinanceInfoFetcher' object has no attribute 'get_available_balance'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/viktor/trading_bot_v2/src/core/data_logic/decision_processor/decision_maker.py", line 45, in process_signal
+    allocation = self.strategy.calculate_allocation(score, signal)
+  File "/home/viktor/trading_bot_v2/src/core/data_logic/decision_processor/allocation_strategy.py", line 34, in calculate_allocation
+    logging.error(f"Allocation error: {str(e)}")
+    ^^^^^^^
+NameError: name 'logging' is not defined. Did you forget to import 'logging'?
+2025-04-28 22:13:25,316 - root - ERROR - Sync error: Prices and quantities must be positive
+2025-04-28 22:13:25,317 - root - INFO - BNBUSDT | Score: 1.00 | Signal: BUY
+2025-04-28 22:13:25,612 - src.core.data_logic.decision_processor.decision_maker - ERROR - Decision process failed: name 'logging' is not defined
+Traceback (most recent call last):
+  File "/home/viktor/trading_bot_v2/src/core/data_logic/decision_processor/allocation_strategy.py", line 30, in calculate_allocation
+    return self._calculate_buy_size(score, symbol_info, current_price)
+           ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/viktor/trading_bot_v2/src/core/data_logic/decision_processor/allocation_strategy.py", line 39, in _calculate_buy_size
+    balance = Decimal(str(self.info_fetcher.get_available_balance(quote_asset)))
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'BinanceInfoFetcher' object has no attribute 'get_available_balance'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/viktor/trading_bot_v2/src/core/data_logic/decision_processor/decision_maker.py", line 45, in process_signal
+    allocation = self.strategy.calculate_allocation(score, signal)
+  File "/home/viktor/trading_bot_v2/src/core/data_logic/decision_processor/allocation_strategy.py", line 34, in calculate_allocation
+    logging.error(f"Allocation error: {str(e)}")
+    ^^^^^^^
+NameError: name 'logging' is not defined. Did you forget to import 'logging'?
+2025-04-28 22:13:25,614 - root - INFO - Sleeping for 250.4 seconds
+2025-04-28 22:15:46,830 - root - INFO - Bot stopped by user
+2025-04-28 22:15:46,830 - root - INFO - Trading bot stopped
+2025-04-28 22:22:16,480 - root - INFO - Starting trading bot
+2025-04-28 22:22:51,195 - root - INFO - BTCUSDT | Score: 1.42 | Signal: BUY
+2025-04-28 22:22:52,207 - root - ERROR - Allocation error: unsupported operand type(s) for *: 'decimal.Decimal' and 'float'
+2025-04-28 22:22:52,207 - src.core.data_logic.decision_processor.decision_maker - INFO - No allocation calculated
+2025-04-28 22:22:52,795 - root - INFO - ETHUSDT | Score: 1.48 | Signal: BUY
+2025-04-28 22:22:53,437 - root - ERROR - Allocation error: unsupported operand type(s) for *: 'decimal.Decimal' and 'float'
+2025-04-28 22:22:53,437 - src.core.data_logic.decision_processor.decision_maker - INFO - No allocation calculated
+2025-04-28 22:22:54,019 - root - INFO - BNBUSDT | Score: 1.41 | Signal: BUY
+2025-04-28 22:22:54,608 - root - ERROR - Allocation error: unsupported operand type(s) for *: 'decimal.Decimal' and 'float'
+2025-04-28 22:22:54,608 - src.core.data_logic.decision_processor.decision_maker - INFO - No allocation calculated
+2025-04-28 22:22:54,608 - root - INFO - Sleeping for 256.9 seconds
+2025-04-28 22:23:04,333 - root - INFO - Bot stopped by user
+2025-04-28 22:23:04,333 - root - INFO - Trading bot stopped
+2025-04-28 22:26:42,783 - root - INFO - Starting trading bot
+2025-04-28 22:27:18,389 - root - INFO - BTCUSDT | Score: 1.41 | Signal: BUY
+2025-04-28 22:27:19,764 - src.core.data_logic.decision_processor.decision_maker - INFO - No allocation calculated
+2025-04-28 22:27:20,347 - root - INFO - ETHUSDT | Score: 1.48 | Signal: BUY
+2025-04-28 22:27:20,934 - src.core.data_logic.decision_processor.decision_maker - INFO - No allocation calculated
+2025-04-28 22:27:21,520 - root - INFO - BNBUSDT | Score: 1.99 | Signal: BUY
+2025-04-28 22:27:22,108 - src.core.data_logic.decision_processor.decision_maker - INFO - No allocation calculated
+2025-04-28 22:27:22,108 - root - INFO - Sleeping for 255.7 seconds
+2025-04-28 22:32:13,554 - root - INFO - BTCUSDT | Score: 1.48 | Signal: BUY
+2025-04-28 22:32:14,406 - src.core.data_logic.decision_processor.decision_maker - INFO - No allocation calculated
+2025-04-28 22:32:15,247 - root - INFO - ETHUSDT | Score: 1.00 | Signal: BUY
+2025-04-28 22:32:15,832 - src.core.data_logic.decision_processor.decision_maker - INFO - No allocation calculated
+2025-04-28 22:32:16,642 - root - INFO - BNBUSDT | Score: 1.96 | Signal: BUY
+2025-04-28 22:32:17,224 - src.core.data_logic.decision_processor.decision_maker - INFO - No allocation calculated
+2025-04-28 22:32:17,224 - root - INFO - Sleeping for 255.6 seconds
+2025-04-28 22:34:22,006 - root - INFO - Bot stopped by user
+2025-04-28 22:34:22,006 - root - INFO - Trading bot stopped
+2025-04-28 22:35:44,441 - root - INFO - Starting trading bot
+2025-04-28 22:36:21,886 - root - INFO - BTCUSDT | Score: 1.48 | Signal: BUY
+2025-04-28 22:36:22,877 - root - INFO - Available USDT balance: 5.56937350
+2025-04-28 22:36:22,877 - root - WARNING - Risk amount 0.4114931610475000037594139890 < min order 10.0
+2025-04-28 22:36:22,877 - src.core.data_logic.decision_processor.decision_maker - INFO - No allocation calculated
+2025-04-28 22:36:23,459 - root - INFO - ETHUSDT | Score: 1.48 | Signal: BUY
+2025-04-28 22:36:24,042 - root - INFO - Available USDT balance: 5.56937350
+2025-04-28 22:36:24,043 - root - WARNING - Risk amount 0.4114931610475000037594139890 < min order 10.0
+2025-04-28 22:36:24,043 - src.core.data_logic.decision_processor.decision_maker - INFO - No allocation calculated
+2025-04-28 22:36:24,631 - root - INFO - BNBUSDT | Score: 1.99 | Signal: BUY
+2025-04-28 22:36:25,213 - root - INFO - Available USDT balance: 5.56937350
+2025-04-28 22:36:25,213 - root - WARNING - Risk amount 0.5534007978275000185002741038 < min order 10.0
+2025-04-28 22:36:25,213 - src.core.data_logic.decision_processor.decision_maker - INFO - No allocation calculated
+2025-04-28 22:36:25,213 - root - INFO - Sleeping for 254.2 seconds
+2025-04-28 22:40:16,909 - root - INFO - Bot stopped by user
+2025-04-28 22:40:16,909 - root - INFO - Trading bot stopped
+2025-04-28 22:40:25,318 - root - INFO - Starting trading bot
+2025-04-28 22:41:00,505 - root - INFO - BTCUSDT | Score: 1.48 | Signal: BUY
+2025-04-28 22:41:01,951 - root - INFO - Available USDT balance: 5.56937350
+2025-04-28 22:41:01,951 - root - WARNING - Risk amount 0.4114931610475000037594139890 < min order 10.0
+2025-04-28 22:41:01,951 - src.core.data_logic.decision_processor.decision_maker - INFO - No allocation calculated
+2025-04-28 22:41:02,542 - root - INFO - ETHUSDT | Score: 1.48 | Signal: BUY
+2025-04-28 22:41:03,123 - root - INFO - Available USDT balance: 5.56937350
+2025-04-28 22:41:03,123 - root - WARNING - Risk amount 0.4114931610475000037594139890 < min order 10.0
+2025-04-28 22:41:03,123 - src.core.data_logic.decision_processor.decision_maker - INFO - No allocation calculated
+2025-04-28 22:41:03,691 - root - INFO - BNBUSDT | Score: 1.99 | Signal: BUY
+2025-04-28 22:41:04,273 - root - INFO - Available USDT balance: 5.56937350
+2025-04-28 22:41:04,273 - root - WARNING - Risk amount 0.5534007978275000185002741038 < min order 10.0
+2025-04-28 22:41:04,273 - src.core.data_logic.decision_processor.decision_maker - INFO - No allocation calculated
+2025-04-28 22:41:04,273 - root - INFO - Sleeping for 256.0 seconds
+2025-04-28 22:45:55,977 - root - INFO - BTCUSDT | Score: 1.45 | Signal: BUY
+2025-04-28 22:45:56,804 - root - INFO - Available USDT balance: 5.56937350
+2025-04-28 22:45:56,805 - root - WARNING - Risk amount 0.4026378571824999897110775038 < min order 10.0
+2025-04-28 22:45:56,805 - src.core.data_logic.decision_processor.decision_maker - INFO - No allocation calculated
+2025-04-28 22:45:57,636 - root - INFO - ETHUSDT | Score: 1.45 | Signal: BUY
+2025-04-28 22:45:58,220 - root - INFO - Available USDT balance: 5.56937350
+2025-04-28 22:45:58,221 - root - WARNING - Risk amount 0.4026378571824999897110775038 < min order 10.0
+2025-04-28 22:45:58,221 - src.core.data_logic.decision_processor.decision_maker - INFO - No allocation calculated
+2025-04-28 22:45:59,048 - root - INFO - BNBUSDT | Score: 1.96 | Signal: BUY
+2025-04-28 22:45:59,638 - root - INFO - Available USDT balance: 5.56937350
+2025-04-28 22:45:59,638 - root - WARNING - Risk amount 0.5445176470950000075188279780 < min order 10.0
+2025-04-28 22:45:59,638 - src.core.data_logic.decision_processor.decision_maker - INFO - No allocation calculated
+2025-04-28 22:45:59,638 - root - INFO - Sleeping for 255.7 seconds
+2025-04-28 22:49:10,563 - root - INFO - Bot stopped by user
+2025-04-28 22:49:10,563 - root - INFO - Trading bot stopped
