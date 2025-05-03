@@ -1,3 +1,4 @@
+#src/core/settings/config.py
 from decimal import Decimal
 
 TELEGRAM_BOT_TOKEN = "your_telegram_bot_token"
@@ -43,8 +44,8 @@ RECOMMENDATION_SCORE_MAP = {
 }
 
 # Пороги для классификации
-BUY_THRESHOLD = 1
-SELL_THRESHOLD = -0.45
+BUY_THRESHOLD = Decimal("1.0")         # Минимальный score для BUY (рекомендуется: 0.5-2.0)
+SELL_THRESHOLD = Decimal("-0.45")      # Максимальный score для SELL (рекомендуется: -2.0-0.0)
 
 # Симулятор
 INITIAL_BALANCE = 100000.0
@@ -63,9 +64,9 @@ PROFIT_TAKE_LEVELS = {
 }
 
 # Allocation Strategy
-ALLOCATION_MAX_PERCENT = Decimal("5.0")  # 5% от баланса
+ALLOCATION_MAX_PERCENT = Decimal('30.0')  # Максимальная доля баланса на сделку (1-100%)
 ALLOCATION_SCALE_FACTOR = Decimal("1.0")
-MIN_ORDER_SIZE = Decimal("10.0")  # Минимум $10 на сделку
+MIN_ORDER_SIZE = Decimal("10.0")  # Минимальная сумма ордера в USDT (>=10)
 
 # API Binance
 BINANCE_API_KEY = "PYhZh79fjkjagiPN1snTsIWU8bDULYh9iSlDCYy9iWlLW5S3gd3psKP9RSJ40iza"
@@ -75,3 +76,8 @@ SAFETY_MARGIN = 1.05
 
 # Технические константы
 INF = 10**9
+
+MIN_BALANCE_TO_SHOW = Decimal('0.001')
+
+DEFAULT_HISTORY_LIMIT = 10  # Количество записей по умолчанию
+MAX_HISTORY_LIMIT = 300     # Максимальное допустимое количество

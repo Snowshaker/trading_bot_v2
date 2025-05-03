@@ -1,4 +1,4 @@
-# position_manager.py
+#src/core/utils/positions_sync.py
 from binance import Client
 from decimal import Decimal
 import logging
