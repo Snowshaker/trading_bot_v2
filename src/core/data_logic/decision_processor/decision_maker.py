@@ -1,3 +1,4 @@
+# src/core/data_logic/decision_processor/decision_maker.py
 import logging
 from decimal import Decimal
 from typing import Optional, Dict
@@ -48,7 +49,7 @@ class DecisionMaker:
                 return False
 
             validated_quantity = self.risk_engine.validate_quantity(
-                allocation["quantity"],
+                Decimal(str(allocation["quantity"])),  # Конвертируем обратно в Decimal
                 allocation["action"]
             )
             if not validated_quantity:

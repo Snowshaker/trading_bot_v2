@@ -1,0 +1,870 @@
+2025-05-02 00:04:38,360 - __main__ - INFO - Bot started polling...
+2025-05-02 00:04:41,513 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getMe "HTTP/1.1 200 OK"
+2025-05-02 00:04:41,580 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/deleteWebhook "HTTP/1.1 200 OK"
+2025-05-02 00:04:41,581 - telegram.ext.Application - INFO - Application started
+2025-05-02 00:04:48,936 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:04:48,937 - telegram.ext.Application - INFO - Application is stopping. This might take a moment.
+2025-05-02 00:04:48,937 - telegram.ext.Application - INFO - Application.stop() complete
+2025-05-02 00:06:03,230 - __main__ - INFO - Bot started polling...
+2025-05-02 00:06:03,548 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getMe "HTTP/1.1 200 OK"
+2025-05-02 00:06:03,613 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/deleteWebhook "HTTP/1.1 200 OK"
+2025-05-02 00:06:03,614 - telegram.ext.Application - INFO - Application started
+2025-05-02 00:06:13,923 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:06:19,692 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:06:20,009 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/sendMessage "HTTP/1.1 200 OK"
+2025-05-02 00:06:29,764 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:06:39,907 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:06:49,977 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:07:00,082 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:07:02,219 - __main__ - INFO - Bot started polling...
+2025-05-02 00:07:02,589 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getMe "HTTP/1.1 200 OK"
+2025-05-02 00:07:02,658 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/deleteWebhook "HTTP/1.1 200 OK"
+2025-05-02 00:07:02,659 - telegram.ext.Application - INFO - Application started
+2025-05-02 00:07:06,374 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:07:06,463 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/sendMessage "HTTP/1.1 200 OK"
+2025-05-02 00:07:16,461 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:07:26,727 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:07:36,797 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:07:46,984 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:07:57,052 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:08:07,125 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:08:17,190 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:08:27,302 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:08:37,370 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:08:47,623 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:08:57,720 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:09:07,877 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:09:18,020 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:09:28,177 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:09:38,249 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:09:48,316 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:09:58,384 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:10:08,503 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:10:18,572 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:10:28,653 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:10:38,810 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:10:48,880 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:10:51,955 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:10:51,956 - telegram.ext.Application - INFO - Application is stopping. This might take a moment.
+2025-05-02 00:10:51,956 - telegram.ext.Application - INFO - Application.stop() complete
+2025-05-02 00:10:55,567 - __main__ - INFO - Bot started polling...
+2025-05-02 00:10:55,883 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getMe "HTTP/1.1 200 OK"
+2025-05-02 00:10:55,948 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/deleteWebhook "HTTP/1.1 200 OK"
+2025-05-02 00:10:55,950 - telegram.ext.Application - INFO - Application started
+2025-05-02 00:11:06,254 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:11:16,317 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:11:19,029 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:11:19,030 - src.telegram_bot.handlers.info_handlers - INFO - User 123456789 requested balance info.
+2025-05-02 00:11:20,605 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/sendMessage "HTTP/1.1 400 Bad Request"
+2025-05-02 00:11:20,606 - src.telegram_bot.handlers.info_handlers - ERROR - Error fetching balance for user 123456789: Can't parse entities: can't find end tag corresponding to start tag "code"
+Traceback (most recent call last):
+  File "/home/viktor/PycharmProjects/PythonProject6/src/telegram_bot/handlers/info_handlers.py", line 45, in show_balance
+    await update.message.reply_text(message_text, parse_mode=ParseMode.HTML)
+  File "/home/viktor/PycharmProjects/PythonProject6/.venv/lib/python3.13/site-packages/telegram/_message.py", line 1775, in reply_text
+    return await self.get_bot().send_message(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<20 lines>...
+    )
+    ^
+  File "/home/viktor/PycharmProjects/PythonProject6/.venv/lib/python3.13/site-packages/telegram/ext/_extbot.py", line 2977, in send_message
+    return await super().send_message(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<21 lines>...
+    )
+    ^
+  File "/home/viktor/PycharmProjects/PythonProject6/.venv/lib/python3.13/site-packages/telegram/_bot.py", line 1091, in send_message
+    return await self._send_message(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<19 lines>...
+    )
+    ^
+  File "/home/viktor/PycharmProjects/PythonProject6/.venv/lib/python3.13/site-packages/telegram/ext/_extbot.py", line 618, in _send_message
+    result = await super()._send_message(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<21 lines>...
+    )
+    ^
+  File "/home/viktor/PycharmProjects/PythonProject6/.venv/lib/python3.13/site-packages/telegram/_bot.py", line 803, in _send_message
+    result = await self._post(
+             ^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "/home/viktor/PycharmProjects/PythonProject6/.venv/lib/python3.13/site-packages/telegram/_bot.py", line 691, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/home/viktor/PycharmProjects/PythonProject6/.venv/lib/python3.13/site-packages/telegram/ext/_extbot.py", line 362, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/home/viktor/PycharmProjects/PythonProject6/.venv/lib/python3.13/site-packages/telegram/_bot.py", line 720, in _do_post
+    result = await request.post(
+             ^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/home/viktor/PycharmProjects/PythonProject6/.venv/lib/python3.13/site-packages/telegram/request/_baserequest.py", line 197, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "/home/viktor/PycharmProjects/PythonProject6/.venv/lib/python3.13/site-packages/telegram/request/_baserequest.py", line 353, in _request_wrapper
+    raise BadRequest(message)
+telegram.error.BadRequest: Can't parse entities: can't find end tag corresponding to start tag "code"
+2025-05-02 00:11:20,691 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/sendMessage "HTTP/1.1 200 OK"
+2025-05-02 00:11:30,426 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:11:34,978 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:11:34,980 - src.telegram_bot.handlers.info_handlers - INFO - User 123456789 requested market analysis.
+2025-05-02 00:11:35,289 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/sendMessage "HTTP/1.1 200 OK"
+2025-05-02 00:11:45,045 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:11:55,111 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:12:05,172 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:12:15,236 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:12:25,298 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:12:35,362 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:12:45,424 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:12:55,520 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:13:05,596 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:13:15,657 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:13:18,626 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:13:18,627 - src.telegram_bot.handlers.info_handlers - INFO - User 123456789 requested market analysis.
+2025-05-02 00:13:19,497 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/sendMessage "HTTP/1.1 200 OK"
+2025-05-02 00:13:27,273 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:13:27,275 - src.telegram_bot.handlers.info_handlers - INFO - User 123456789 requested balance info.
+2025-05-02 00:13:29,240 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/sendMessage "HTTP/1.1 400 Bad Request"
+2025-05-02 00:13:29,240 - src.telegram_bot.handlers.info_handlers - ERROR - Error fetching balance for user 123456789: Can't parse entities: can't find end tag corresponding to start tag "code"
+Traceback (most recent call last):
+  File "/home/viktor/PycharmProjects/PythonProject6/src/telegram_bot/handlers/info_handlers.py", line 45, in show_balance
+    await update.message.reply_text(message_text, parse_mode=ParseMode.HTML)
+  File "/home/viktor/PycharmProjects/PythonProject6/.venv/lib/python3.13/site-packages/telegram/_message.py", line 1775, in reply_text
+    return await self.get_bot().send_message(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<20 lines>...
+    )
+    ^
+  File "/home/viktor/PycharmProjects/PythonProject6/.venv/lib/python3.13/site-packages/telegram/ext/_extbot.py", line 2977, in send_message
+    return await super().send_message(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<21 lines>...
+    )
+    ^
+  File "/home/viktor/PycharmProjects/PythonProject6/.venv/lib/python3.13/site-packages/telegram/_bot.py", line 1091, in send_message
+    return await self._send_message(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<19 lines>...
+    )
+    ^
+  File "/home/viktor/PycharmProjects/PythonProject6/.venv/lib/python3.13/site-packages/telegram/ext/_extbot.py", line 618, in _send_message
+    result = await super()._send_message(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<21 lines>...
+    )
+    ^
+  File "/home/viktor/PycharmProjects/PythonProject6/.venv/lib/python3.13/site-packages/telegram/_bot.py", line 803, in _send_message
+    result = await self._post(
+             ^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "/home/viktor/PycharmProjects/PythonProject6/.venv/lib/python3.13/site-packages/telegram/_bot.py", line 691, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/home/viktor/PycharmProjects/PythonProject6/.venv/lib/python3.13/site-packages/telegram/ext/_extbot.py", line 362, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/home/viktor/PycharmProjects/PythonProject6/.venv/lib/python3.13/site-packages/telegram/_bot.py", line 720, in _do_post
+    result = await request.post(
+             ^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/home/viktor/PycharmProjects/PythonProject6/.venv/lib/python3.13/site-packages/telegram/request/_baserequest.py", line 197, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "/home/viktor/PycharmProjects/PythonProject6/.venv/lib/python3.13/site-packages/telegram/request/_baserequest.py", line 353, in _request_wrapper
+    raise BadRequest(message)
+telegram.error.BadRequest: Can't parse entities: can't find end tag corresponding to start tag "code"
+2025-05-02 00:13:29,324 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/sendMessage "HTTP/1.1 200 OK"
+2025-05-02 00:13:34,320 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:13:34,321 - src.telegram_bot.handlers.info_handlers - INFO - User 123456789 requested market analysis.
+2025-05-02 00:13:34,460 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/sendMessage "HTTP/1.1 200 OK"
+2025-05-02 00:13:44,383 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:13:54,446 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:14:04,541 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:14:14,604 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:14:24,674 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:14:34,737 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:14:44,904 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:14:54,967 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:15:05,057 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:15:15,120 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:15:18,593 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:15:18,594 - src.telegram_bot.handlers.info_handlers - INFO - User 123456789 requested balance info.
+2025-05-02 00:15:20,087 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/sendMessage "HTTP/1.1 400 Bad Request"
+2025-05-02 00:15:20,088 - src.telegram_bot.handlers.info_handlers - ERROR - Error fetching balance for user 123456789: Can't parse entities: can't find end tag corresponding to start tag "code"
+Traceback (most recent call last):
+  File "/home/viktor/PycharmProjects/PythonProject6/src/telegram_bot/handlers/info_handlers.py", line 45, in show_balance
+    await update.message.reply_text(message_text, parse_mode=ParseMode.HTML)
+  File "/home/viktor/PycharmProjects/PythonProject6/.venv/lib/python3.13/site-packages/telegram/_message.py", line 1775, in reply_text
+    return await self.get_bot().send_message(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<20 lines>...
+    )
+    ^
+  File "/home/viktor/PycharmProjects/PythonProject6/.venv/lib/python3.13/site-packages/telegram/ext/_extbot.py", line 2977, in send_message
+    return await super().send_message(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<21 lines>...
+    )
+    ^
+  File "/home/viktor/PycharmProjects/PythonProject6/.venv/lib/python3.13/site-packages/telegram/_bot.py", line 1091, in send_message
+    return await self._send_message(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<19 lines>...
+    )
+    ^
+  File "/home/viktor/PycharmProjects/PythonProject6/.venv/lib/python3.13/site-packages/telegram/ext/_extbot.py", line 618, in _send_message
+    result = await super()._send_message(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<21 lines>...
+    )
+    ^
+  File "/home/viktor/PycharmProjects/PythonProject6/.venv/lib/python3.13/site-packages/telegram/_bot.py", line 803, in _send_message
+    result = await self._post(
+             ^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "/home/viktor/PycharmProjects/PythonProject6/.venv/lib/python3.13/site-packages/telegram/_bot.py", line 691, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/home/viktor/PycharmProjects/PythonProject6/.venv/lib/python3.13/site-packages/telegram/ext/_extbot.py", line 362, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/home/viktor/PycharmProjects/PythonProject6/.venv/lib/python3.13/site-packages/telegram/_bot.py", line 720, in _do_post
+    result = await request.post(
+             ^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/home/viktor/PycharmProjects/PythonProject6/.venv/lib/python3.13/site-packages/telegram/request/_baserequest.py", line 197, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "/home/viktor/PycharmProjects/PythonProject6/.venv/lib/python3.13/site-packages/telegram/request/_baserequest.py", line 353, in _request_wrapper
+    raise BadRequest(message)
+telegram.error.BadRequest: Can't parse entities: can't find end tag corresponding to start tag "code"
+2025-05-02 00:15:20,167 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/sendMessage "HTTP/1.1 200 OK"
+2025-05-02 00:15:22,285 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:15:22,286 - src.telegram_bot.handlers.info_handlers - INFO - User 123456789 requested market analysis.
+2025-05-02 00:15:22,368 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/sendMessage "HTTP/1.1 200 OK"
+2025-05-02 00:15:32,401 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:15:42,479 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:15:52,540 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:16:02,603 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:16:12,665 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:16:22,727 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:16:32,789 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:16:42,854 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:16:52,992 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:17:03,128 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:17:13,226 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:17:23,301 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:17:33,442 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:17:43,505 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:17:53,567 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:18:03,648 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:18:13,790 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:18:23,851 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:18:33,913 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:18:43,995 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:18:54,058 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:19:04,120 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:19:14,184 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:19:24,250 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:19:34,316 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:19:44,385 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:19:54,450 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:20:04,513 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:20:14,576 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:20:24,639 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:20:34,796 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:20:44,861 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:20:54,922 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:21:04,984 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:21:15,048 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:21:25,112 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:21:35,213 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:21:45,277 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:21:55,387 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:22:05,449 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:22:15,561 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:22:25,698 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:22:35,876 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:22:45,975 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:22:56,117 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:23:06,256 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:23:16,318 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:23:26,380 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:23:36,444 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:23:46,506 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:23:56,570 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:24:06,640 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:24:16,704 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:24:26,841 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:24:36,997 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:24:47,061 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:24:57,126 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:25:07,192 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:25:17,351 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:25:27,417 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:25:37,479 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:25:47,543 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:25:57,608 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:26:07,710 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:26:17,772 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:26:27,836 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:26:37,922 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:26:47,986 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:26:58,093 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:27:08,158 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:27:18,673 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:27:28,739 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:27:38,803 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:27:48,986 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:27:59,149 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:28:09,220 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:28:19,287 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:28:29,434 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:28:39,498 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:28:49,565 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:28:59,631 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:29:09,780 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:29:19,923 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:29:30,025 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:29:40,091 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:29:50,155 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:30:00,222 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:30:10,428 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:30:20,541 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:30:30,606 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:30:40,716 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:30:50,780 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:31:00,843 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:31:10,908 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:31:20,972 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:31:31,101 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:31:41,216 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:31:51,281 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:32:01,410 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:32:11,546 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:32:21,685 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:32:31,749 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:32:41,814 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:32:51,879 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:33:02,035 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:33:12,099 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:33:22,163 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:33:32,226 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:33:42,291 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:33:52,355 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:34:02,419 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:34:12,588 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:34:22,652 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:34:32,716 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:34:42,780 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:34:52,845 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:35:02,908 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:35:12,971 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:35:23,035 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:35:33,099 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:35:43,163 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:35:53,252 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:36:03,319 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:36:13,383 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:36:23,448 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:36:33,514 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:36:43,581 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:36:53,656 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:37:03,722 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:37:13,785 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:37:23,850 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:37:33,937 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:37:44,054 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:37:54,117 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:38:04,222 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:38:14,286 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:38:24,350 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:38:34,412 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:38:44,477 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:38:54,602 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:39:04,745 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:39:14,810 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:39:24,874 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:39:35,058 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:39:45,122 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:39:55,232 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:40:05,365 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:40:15,438 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:40:25,543 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:40:35,607 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:40:45,674 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:40:55,855 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:41:05,920 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:41:15,985 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:41:26,186 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:41:36,250 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:41:46,315 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:41:56,475 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:42:06,610 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:42:16,675 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:42:26,741 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:42:36,937 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:42:47,002 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:42:57,067 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:43:07,131 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:43:17,273 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:43:27,419 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:43:37,485 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:43:47,579 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:43:57,737 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:44:08,248 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:44:18,427 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:44:28,493 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:44:38,564 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:44:48,633 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:44:58,708 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:45:08,777 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:45:18,928 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:45:28,993 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:45:39,070 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:45:49,138 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:45:59,274 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:46:09,342 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:46:19,413 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:46:29,483 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:46:39,551 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:46:49,630 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:46:59,811 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:47:09,889 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:47:19,955 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:47:30,088 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:47:40,239 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:47:50,309 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:48:00,398 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:48:10,497 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:48:20,566 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:48:30,632 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:48:40,764 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:48:50,832 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:49:00,899 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:49:10,993 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:49:21,061 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:49:31,145 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:49:41,214 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:49:51,286 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:50:01,353 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:50:11,492 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:50:21,556 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:50:31,630 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:50:41,798 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:50:51,938 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:51:02,005 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:51:12,115 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:51:22,186 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:51:32,286 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:51:42,355 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:51:52,482 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:52:02,554 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:52:12,625 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:52:22,776 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:52:32,844 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:52:43,067 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:52:53,185 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:53:03,249 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:53:13,461 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:53:23,538 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:53:33,633 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:53:43,700 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:53:53,804 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:54:03,872 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:54:13,950 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:54:24,017 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:54:34,107 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:54:44,177 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:54:54,453 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:55:04,523 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:55:14,589 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:55:24,766 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:55:34,839 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:55:45,018 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:55:55,152 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:56:05,217 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:56:15,285 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:56:25,351 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:56:35,417 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:56:45,537 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:56:55,612 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:57:05,707 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:57:15,773 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:57:25,843 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:57:35,918 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:57:46,058 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:57:56,134 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:58:06,233 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:58:16,302 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:58:26,403 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:58:36,468 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:58:46,535 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:58:56,710 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:59:06,850 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:59:16,921 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:59:27,009 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:59:37,081 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:59:47,223 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 00:59:57,293 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 01:00:07,442 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 01:00:17,509 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 01:00:27,614 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 01:00:37,682 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 01:00:47,758 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 01:00:58,273 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 01:01:08,339 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 01:01:18,404 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 01:01:28,472 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 01:01:38,546 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 01:01:48,610 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 01:01:58,677 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 01:02:08,749 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 01:02:18,817 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 01:02:28,998 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 01:02:39,064 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 01:02:49,169 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 01:02:59,240 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 01:03:09,307 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 01:03:19,443 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 01:03:29,621 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 01:03:39,688 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 01:03:49,756 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 01:03:59,911 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 01:04:09,977 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 01:04:20,043 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 01:04:30,114 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 01:04:40,179 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 01:04:50,244 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 01:05:00,312 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 01:05:10,378 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 01:05:20,446 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 01:05:30,519 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 01:05:40,586 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 01:05:50,654 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 01:06:00,720 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 01:06:10,802 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 01:06:20,867 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 01:06:30,939 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 01:06:41,008 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 01:06:51,072 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 01:07:01,138 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 01:07:11,203 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 01:07:21,270 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 01:07:31,336 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 01:07:41,425 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 01:07:51,507 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 01:08:01,577 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 01:08:11,649 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 01:08:21,717 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 01:08:31,783 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 01:08:41,948 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 01:08:52,019 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 01:09:02,084 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 01:09:12,207 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 01:09:22,295 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 01:09:32,362 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 01:09:42,430 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 01:09:52,504 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 01:10:02,576 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 01:10:12,643 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 01:10:22,710 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 01:10:32,849 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 01:10:42,947 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 01:10:53,012 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 01:11:03,163 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 01:11:13,309 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 01:11:23,375 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 01:11:33,492 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 01:11:43,610 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 01:11:53,675 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 01:12:03,741 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 01:12:13,940 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 01:12:24,007 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 01:12:34,074 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 01:12:44,142 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 01:12:54,207 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 01:13:04,271 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 01:13:14,336 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 01:13:24,403 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 01:13:34,469 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 01:13:44,537 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 01:13:54,614 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 01:14:04,706 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 01:14:14,772 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 01:14:24,838 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 01:14:34,907 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 01:14:45,007 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 01:14:55,105 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 01:15:05,171 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 01:15:15,245 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 01:15:25,313 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 01:15:35,382 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 01:15:45,451 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 01:15:55,517 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 01:16:05,582 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 01:16:15,647 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 01:16:25,713 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 01:16:35,778 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 01:16:45,844 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 01:16:55,909 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 01:17:06,074 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 01:17:16,139 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 01:17:26,250 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 01:17:36,319 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 01:17:46,846 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 01:17:56,911 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 01:18:06,977 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 01:18:17,043 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 01:18:27,110 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 01:18:37,180 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 01:18:47,244 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 01:18:57,315 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 01:19:07,379 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 01:19:17,446 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 01:19:27,513 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 01:19:37,579 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 01:19:47,648 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 01:19:57,715 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 01:20:07,786 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 01:20:17,852 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 01:20:27,921 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 01:20:37,989 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 01:20:48,055 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 01:20:58,222 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 01:21:08,330 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 01:21:18,397 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 01:21:28,463 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 01:21:38,528 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 01:21:48,597 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 01:21:58,744 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 01:22:08,821 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 01:22:18,893 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 01:22:29,054 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 01:22:39,123 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 01:22:49,192 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 01:22:59,258 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 01:23:09,329 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 01:23:19,396 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 01:23:29,466 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 01:23:39,533 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 01:23:49,599 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 01:23:59,666 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 01:24:09,765 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 01:24:19,831 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 01:24:29,896 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 01:24:40,028 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 01:24:50,098 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 01:25:00,163 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 01:25:10,229 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 01:25:20,295 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 01:25:30,361 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 01:25:40,433 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 01:25:50,511 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 01:26:00,578 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 01:26:10,661 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 01:26:20,792 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 01:26:30,859 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 01:26:40,929 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 01:26:51,000 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 01:27:01,067 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 01:27:11,132 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 01:27:21,199 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 01:27:31,350 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 01:27:41,419 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 01:27:51,485 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 01:28:01,660 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 01:28:11,734 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 01:28:21,801 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 01:28:31,869 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 01:28:41,938 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 01:29:00,368 - telegram.ext.Application - ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "/home/viktor/PycharmProjects/PythonProject6/.venv/lib/python3.13/site-packages/httpx/_transports/default.py", line 101, in map_httpcore_exceptions
+    yield
+  File "/home/viktor/PycharmProjects/PythonProject6/.venv/lib/python3.13/site-packages/httpx/_transports/default.py", line 394, in handle_async_request
+    resp = await self._pool.handle_async_request(req)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/viktor/PycharmProjects/PythonProject6/.venv/lib/python3.13/site-packages/httpcore/_async/connection_pool.py", line 256, in handle_async_request
+    raise exc from None
+  File "/home/viktor/PycharmProjects/PythonProject6/.venv/lib/python3.13/site-packages/httpcore/_async/connection_pool.py", line 236, in handle_async_request
+    response = await connection.handle_async_request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        pool_request.request
+        ^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/viktor/PycharmProjects/PythonProject6/.venv/lib/python3.13/site-packages/httpcore/_async/connection.py", line 101, in handle_async_request
+    raise exc
+  File "/home/viktor/PycharmProjects/PythonProject6/.venv/lib/python3.13/site-packages/httpcore/_async/connection.py", line 78, in handle_async_request
+    stream = await self._connect(request)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/viktor/PycharmProjects/PythonProject6/.venv/lib/python3.13/site-packages/httpcore/_async/connection.py", line 124, in _connect
+    stream = await self._network_backend.connect_tcp(**kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/viktor/PycharmProjects/PythonProject6/.venv/lib/python3.13/site-packages/httpcore/_backends/auto.py", line 31, in connect_tcp
+    return await self._backend.connect_tcp(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<5 lines>...
+    )
+    ^
+  File "/home/viktor/PycharmProjects/PythonProject6/.venv/lib/python3.13/site-packages/httpcore/_backends/anyio.py", line 113, in connect_tcp
+    with map_exceptions(exc_map):
+         ~~~~~~~~~~~~~~^^^^^^^^^
+  File "/usr/lib64/python3.13/contextlib.py", line 162, in __exit__
+    self.gen.throw(value)
+    ~~~~~~~~~~~~~~^^^^^^^
+  File "/home/viktor/PycharmProjects/PythonProject6/.venv/lib/python3.13/site-packages/httpcore/_exceptions.py", line 14, in map_exceptions
+    raise to_exc(exc) from exc
+httpcore.ConnectError: [Errno -3] Temporary failure in name resolution
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/viktor/PycharmProjects/PythonProject6/.venv/lib/python3.13/site-packages/telegram/request/_httpxrequest.py", line 277, in do_request
+    res = await self._client.request(
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/home/viktor/PycharmProjects/PythonProject6/.venv/lib/python3.13/site-packages/httpx/_client.py", line 1540, in request
+    return await self.send(request, auth=auth, follow_redirects=follow_redirects)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/viktor/PycharmProjects/PythonProject6/.venv/lib/python3.13/site-packages/httpx/_client.py", line 1629, in send
+    response = await self._send_handling_auth(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    )
+    ^
+  File "/home/viktor/PycharmProjects/PythonProject6/.venv/lib/python3.13/site-packages/httpx/_client.py", line 1657, in _send_handling_auth
+    response = await self._send_handling_redirects(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "/home/viktor/PycharmProjects/PythonProject6/.venv/lib/python3.13/site-packages/httpx/_client.py", line 1694, in _send_handling_redirects
+    response = await self._send_single_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/viktor/PycharmProjects/PythonProject6/.venv/lib/python3.13/site-packages/httpx/_client.py", line 1730, in _send_single_request
+    response = await transport.handle_async_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/viktor/PycharmProjects/PythonProject6/.venv/lib/python3.13/site-packages/httpx/_transports/default.py", line 393, in handle_async_request
+    with map_httpcore_exceptions():
+         ~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/usr/lib64/python3.13/contextlib.py", line 162, in __exit__
+    self.gen.throw(value)
+    ~~~~~~~~~~~~~~^^^^^^^
+  File "/home/viktor/PycharmProjects/PythonProject6/.venv/lib/python3.13/site-packages/httpx/_transports/default.py", line 118, in map_httpcore_exceptions
+    raise mapped_exc(message) from exc
+httpx.ConnectError: [Errno -3] Temporary failure in name resolution
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/viktor/PycharmProjects/PythonProject6/.venv/lib/python3.13/site-packages/telegram/ext/_utils/networkloop.py", line 115, in network_retry_loop
+    if not await do_action():
+           ^^^^^^^^^^^^^^^^^
+  File "/home/viktor/PycharmProjects/PythonProject6/.venv/lib/python3.13/site-packages/telegram/ext/_utils/networkloop.py", line 108, in do_action
+    return action_cb_task.result()
+           ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/viktor/PycharmProjects/PythonProject6/.venv/lib/python3.13/site-packages/telegram/ext/_updater.py", line 335, in polling_action_cb
+    updates = await self.bot.get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "/home/viktor/PycharmProjects/PythonProject6/.venv/lib/python3.13/site-packages/telegram/ext/_extbot.py", line 658, in get_updates
+    updates = await super().get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<9 lines>...
+    )
+    ^
+  File "/home/viktor/PycharmProjects/PythonProject6/.venv/lib/python3.13/site-packages/telegram/_bot.py", line 4593, in get_updates
+    await self._post(
+    ^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    ),
+    ^
+  File "/home/viktor/PycharmProjects/PythonProject6/.venv/lib/python3.13/site-packages/telegram/_bot.py", line 691, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/home/viktor/PycharmProjects/PythonProject6/.venv/lib/python3.13/site-packages/telegram/ext/_extbot.py", line 362, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/home/viktor/PycharmProjects/PythonProject6/.venv/lib/python3.13/site-packages/telegram/_bot.py", line 720, in _do_post
+    result = await request.post(
+             ^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/home/viktor/PycharmProjects/PythonProject6/.venv/lib/python3.13/site-packages/telegram/request/_baserequest.py", line 197, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "/home/viktor/PycharmProjects/PythonProject6/.venv/lib/python3.13/site-packages/telegram/request/_baserequest.py", line 304, in _request_wrapper
+    code, payload = await self.do_request(
+                    ^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "/home/viktor/PycharmProjects/PythonProject6/.venv/lib/python3.13/site-packages/telegram/request/_httpxrequest.py", line 301, in do_request
+    raise NetworkError(f"httpx.{err.__class__.__name__}: {err}") from err
+telegram.error.NetworkError: httpx.ConnectError: [Errno -3] Temporary failure in name resolution
+2025-05-02 01:29:01,954 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 01:29:01,955 - telegram.ext.Application - INFO - Application is stopping. This might take a moment.
+2025-05-02 01:29:01,955 - telegram.ext.Application - INFO - Application.stop() complete
+2025-05-02 01:59:39,028 - __main__ - INFO - Bot started polling...
+2025-05-02 01:59:39,802 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getMe "HTTP/1.1 200 OK"
+2025-05-02 01:59:39,909 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/deleteWebhook "HTTP/1.1 200 OK"
+2025-05-02 01:59:39,910 - telegram.ext.Application - INFO - Application started
+2025-05-02 01:59:50,328 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 01:59:54,809 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botВАШ_ТЕЛЕГРАМ_ТОКЕН/getUpdates "HTTP/1.1 200 OK"
+2025-05-02 01:59:54,810 - telegram.ext.Application - INFO - Application is stopping. This might take a moment.
+2025-05-02 01:59:54,810 - telegram.ext.Application - INFO - Application.stop() complete

@@ -5,6 +5,9 @@ from datetime import datetime
 from pathlib import Path
 from typing import Dict
 
+from src.core.paths import TW_ANALYSIS
+
+
 class DecimalEncoder(json.JSONEncoder):
     def default(self, o):
         if isinstance(o, Decimal):
@@ -12,7 +15,7 @@ class DecimalEncoder(json.JSONEncoder):
         return super().default(o)
 
 class AnalysisSaver:
-    def __init__(self, storage_path: Path = Path("collected_data/tradingview_analysis")):
+    def __init__(self, storage_path: Path = TW_ANALYSIS):
         self.storage = storage_path
         self.storage.mkdir(parents=True, exist_ok=True)
 

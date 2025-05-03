@@ -1,71 +1,88 @@
-from src.core.api.binance_client.info_fetcher import BinanceInfoFetcher, BinanceConnectionError
-from src.core.settings.config import SYMBOLS
-import time
+# tests/info_fetcher_test.py
+import pytest
+from decimal import Decimal
+from src.core.api.binance_client.info_fetcher import BinanceInfoFetcher
+from src.core.settings.config import BINANCE_API_KEY, BINANCE_SECRET_KEY, TESTNET
 
 
-def test_info_fetcher_demo():
-  print("\n=== ДЕМО РАБОТЫ INFO FETCHER ===")
-  print("Цель: показать получение базовой информации с Binance\n")
-
-  try:
-    # Инициализация
-    print("[1] Создание клиента...")
-    start_time = time.time()
-    fetcher = BinanceInfoFetcher()
-    init_time = time.time() - start_time
-    print(f"✓ Клиент создан за {init_time:.2f} сек")
-
-    # Получение цен
-    print("\n[2] Запрос текущих цен...")
-    print(f"Запрошены символы: {', '.join(SYMBOLS)}")
-
-    price_start = time.time()
-    prices = fetcher.get_current_prices(SYMBOLS)
-    elapsed = time.time() - price_start
-
-    print(f"\nРезультаты:")
-    print(f"- Время выполнения: {elapsed:.2f} сек")
-    print(f"- Получено цен: {len(prices)} из {len(SYMBOLS)}")
-
-    if prices:
-      print("\nПример цен:")
-      for symbol, price in list(prices.items())[:3]:
-        print(f"  {symbol}: {price:.2f}")
-
-    # Получение баланса
-    print("\n[3] Запрос баланса...")
-    balance_start = time.time()
-    usdt_balance = fetcher.get_asset_balance("USDT")
-    elapsed = time.time() - balance_start
-
-    print(f"\nБаланс USDT:")
-    print(f"- Свободные: {usdt_balance['free']:.2f}")
-    print(f"- Заблокированные: {usdt_balance['locked']:.2f}")
-    print(f"- Время запроса: {elapsed:.2f} сек")
-
-    # Получение информации о символе
-    print("\n[4] Информация о торговой паре:")
-    symbol = SYMBOLS[0]
-    info = fetcher.get_symbol_info(symbol)
-
-    if info:
-      print(f"Детали для {symbol}:")
-      print(f"- Базовый актив: {info['base_asset']}")
-      print(f"- Котирующий актив: {info['quote_asset']}")
-      print(f"- Фильтры: {len(info['filters'])}")
-
-      lot_size = fetcher.get_lot_size(symbol)
-      if lot_size:
-        print("\nПараметры лота:")
-        print(f"- minQty: {lot_size['minQty']}")
-        print(f"- maxQty: {lot_size['maxQty']}")
-        print(f"- stepSize: {lot_size['stepSize']}")
-
-  except BinanceConnectionError as e:
-    print(f"\n❌ Ошибка подключения: {e}")
-  except Exception as e:
-    print(f"\n❌ Неожиданная ошибка: {str(e)}")
+@pytest.fixture
+def fetcher():
+  return BinanceInfoFetcher()
 
 
-if __name__ == "__main__":
-  test_info_fetcher_demo()
+def test_get_symbol_info_valid_symbol(fetcher):
+  # Проверка для известной торговой пары
+  symbol = "BTCUSDT"
+  result = fetcher.get_symbol_info(symbol)
+
+  assert result is not None
+  assert result['base_asset'] == 'BTC'
+  assert result['quote_asset'] == 'USDT'
+  assert 'LOT_SIZE' in result['filters']
+
+  lot_size = result['filters']['LOT_SIZE']
+  assert 'minQty' in lot_size
+  assert 'stepSize' in lot_size
+
+
+def test_get_current_price_valid_symbol(fetcher):
+  symbol = "BTCUSDT"
+  price = fetcher.get_current_price(symbol)
+
+  assert isinstance(price, Decimal)
+  assert price > Decimal('0')
+
+  # Проверка формата цены
+  str_price = format(price, 'f')
+  assert '.' in str_price
+  assert len(str_price.split('.')[1]) >= 4  # Проверка точности
+
+
+def test_get_asset_balance_smoke_test(fetcher):
+  # Тест на структуру ответа (не проверяет реальный баланс)
+  asset = "USDT"
+  balance = fetcher.get_asset_balance(asset)
+
+  assert isinstance(balance, dict)
+  assert 'free' in balance
+  assert 'locked' in balance
+  assert isinstance(balance['free'], Decimal)
+  assert isinstance(balance['locked'], Decimal)
+
+
+def test_get_lot_size_for_known_symbol(fetcher):
+  symbol = "BTCUSDT"
+  lot_size = fetcher.get_lot_size(symbol)
+
+  assert lot_size is not None
+  assert 'minQty' in lot_size
+  assert 'maxQty' in lot_size
+  assert 'stepSize' in lot_size
+
+  # Проверка числовых значений
+  assert Decimal(lot_size['minQty']) > Decimal('0')
+  assert Decimal(lot_size['stepSize']) > Decimal('0')
+
+
+def test_error_handling_for_invalid_symbol(fetcher):
+  invalid_symbol = "INVALID_SYMBOL_123"
+
+  # Проверка информации о символе
+  assert fetcher.get_symbol_info(invalid_symbol) is None
+
+  # Проверка цены
+  price = fetcher.get_current_price(invalid_symbol)
+  assert price == Decimal('0')
+
+  # Проверка параметров лота
+  assert fetcher.get_lot_size(invalid_symbol) is None
+
+
+def test_api_authentication():
+  # Проверка корректности аутентификации
+  fetcher = BinanceInfoFetcher()
+  account = fetcher.client.get_account()
+
+  assert 'balances' in account
+  assert isinstance(account['balances'], list)
+  assert 'makerCommission' in account

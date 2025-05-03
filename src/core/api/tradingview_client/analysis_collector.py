@@ -3,9 +3,10 @@ from pathlib import Path
 import json
 from typing import Dict, Optional, List
 from src.core.settings.config import SYMBOLS
+from src.core.paths import TW_ANALYSIS
 
 class AnalysisCollector:
-    def __init__(self, storage_path: Path = Path("collected_data/tradingview_analysis")):
+    def __init__(self, storage_path: Path = TW_ANALYSIS):
         self.storage = storage_path
 
     def get_latest_for_symbol(self, symbol: str) -> Optional[Dict]:

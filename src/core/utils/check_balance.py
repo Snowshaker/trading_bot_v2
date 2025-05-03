@@ -1,3 +1,4 @@
+#src/core/utils/check_balance.py
 from binance import Client
 from src.core.settings.config import BINANCE_API_KEY, BINANCE_SECRET_KEY, TESTNET
 
