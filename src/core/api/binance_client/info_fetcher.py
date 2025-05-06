@@ -42,25 +42,27 @@ class BinanceInfoFetcher:
     try:
       filters = {f['filterType']: f for f in raw_info['filters']}
 
-      return {
+      processed = {
         'symbol': raw_info['symbol'],
         'base_asset': raw_info['baseAsset'],
         'quote_asset': raw_info['quoteAsset'],
         'filters': {
           'LOT_SIZE': {
-            'min_qty': Decimal(filters['LOT_SIZE']['minQty']),
-            'step_size': Decimal(filters['LOT_SIZE']['stepSize'])
+            'minQty': Decimal(filters.get('LOT_SIZE', {}).get('minQty', '0.001')),
+            'stepSize': Decimal(filters.get('LOT_SIZE', {}).get('stepSize', '0.001'))
           },
           'PRICE_FILTER': {
-            'tick_size': Decimal(filters['PRICE_FILTER']['tickSize'])
+            'tickSize': Decimal(filters.get('PRICE_FILTER', {}).get('tickSize', '0.01'))
           },
-          'MIN_NOTIONAL': {
-            'min_notional': self._get_min_notional(filters, raw_info['symbol'])
+          'NOTIONAL': {
+            'minNotional': Decimal(filters.get('NOTIONAL', {}).get('minNotional', '5.0')),
+            'applyToMarket': filters.get('NOTIONAL', {}).get('applyToMarket', False)
           }
         }
       }
+      return processed
     except KeyError as e:
-      self.logger.error(f"Missing key in symbol data: {e}")
+      self.logger.error(f"Critical symbol processing error: {str(e)}")
       return None
 
   def _get_min_notional(self, filters: Dict, symbol: str) -> Decimal:
