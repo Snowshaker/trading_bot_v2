@@ -1,6 +1,4 @@
-      
 # Основные зависимости приложения
-aiogram==3.20.0.post0
 python-binance==1.0.28
 python-dotenv==1.1.0
 python-telegram-bot==22.0
@@ -11,6 +9,4 @@ tradingview-ta==3.3.0
 
 # Зависимости для тестирования (лучше вынести в requirements-dev.txt)
 pytest==8.3.5
-
-    
 pytest-mock~=3.14.0

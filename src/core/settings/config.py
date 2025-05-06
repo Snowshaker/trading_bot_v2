@@ -1,14 +1,10 @@
 #src/core/settings/config.py
 from decimal import Decimal
 
-TELEGRAM_BOT_TOKEN = "your_telegram_bot_token"
-TELEGRAM_ADMINS = [123456789]  # Список ID администраторов
-BOT_ENABLED = True  # Флаг активности основного бота
-
 # Временные интервалы
 BOT_SLEEP_INTERVAL = 0.5          # Основной интервал между итерациями (минуты) 5.0
 BOT_SLEEP_BUFFER_SEC = 2.0        # Буфер между итерациями (секунды) 5.0
-ERROR_RETRY_DELAY = 10.0         # Задержка при ошибках (секунды) 60.0
+ERROR_RETRY_DELAY = 10.0          # Задержка при ошибках (секунды) 60.0
 API_RATE_LIMIT_DELAY = 1.0        # Задержка между API запросами (секунды) 1.0
 INIT_SYNC_DELAY = 3.0             # Задержка при стартовой синхронизации (секунды) 3.0
 
@@ -16,9 +12,9 @@ INIT_SYNC_DELAY = 3.0             # Задержка при стартовой �
 TV_FETCH_DELAY = 2.0              # Задержка между запросами к TradingView (секунды)
 
 # Основные настройки
-SYMBOLS = ["BTCUSDT", "ETHUSDT", "BNBUSDT"]
+SYMBOLS = ["BTCUSDT", "ETHUSDT", "BNBUSDT", "SOLUSDT", "ADAUSDT"]
 TIMEFRAMES = ["1m", "5m", "15m", "30m", "1h", "2h", "4h"]
-DATA_STALE_MINUTES = 10  # Время устаревания данных в минутах
+DATA_STALE_MINUTES = 10                   # Время устаревания данных в минутах
 MIN_SCORE_FOR_EXECUTION = Decimal('0.5')  # Минимальный порог для исполнения
 
 # Настройки логирования
@@ -44,7 +40,7 @@ RECOMMENDATION_SCORE_MAP = {
 }
 
 # Пороги для классификации
-BUY_THRESHOLD = Decimal("1.0")       # Минимальный score для BUY (рекомендуется: 0.5-2.0)
+BUY_THRESHOLD = Decimal("1.0")        # Минимальный score для BUY (рекомендуется: 0.5-2.0)
 SELL_THRESHOLD = Decimal("-0.45")     # Максимальный score для SELL (рекомендуется: -2.0-0.0)
 
 # Симулятор
@@ -67,11 +63,11 @@ PROFIT_TAKE_LEVELS = {
 # Allocation Strategy
 ALLOCATION_MAX_PERCENT = Decimal('30.0')  # Максимальная доля баланса на сделку (1-100%)
 ALLOCATION_SCALE_FACTOR = Decimal("1.0")
-MIN_ORDER_SIZE = Decimal("10.0")  # Минимальная сумма ордера в USDT (>=10)
+MIN_ORDER_SIZE = Decimal("10.0")          # Минимальная сумма ордера в USDT (>=10)
 
 # API Binance
-BINANCE_API_KEY = "PYhZh79fjkjagiPN1snTsIWU8bDULYh9iSlDCYy9iWlLW5S3gd3psKP9RSJ40iza"
-BINANCE_SECRET_KEY = "ohvP3vkPZxJG84B3lXBXPuDJFVrhiDWP8wvPPiSMzNoLrMIevbKvopsQBLQdO6E6"
+BINANCE_API_KEY = "замените_меня"     # ВАЖНО: замените на свой открытый Binance ключ
+BINANCE_SECRET_KEY = "замените_меня"  # ВАЖНО: замените на свой закрытый Binance ключ
 TESTNET = True
 SAFETY_MARGIN = 1.05
 
@@ -81,7 +77,7 @@ INF = 10**9
 MIN_BALANCE_TO_SHOW = Decimal('0.001')
 
 DEFAULT_HISTORY_LIMIT = 10  # Количество записей по умолчанию
-MAX_HISTORY_LIMIT = 300     # Максимальное допустимое количество
+MAX_HISTORY_LIMIT = 48      # Максимальное допустимое количество
 
 SYMBOL_FILTERS_KEYS = {
     'LOT_SIZE': ['minQty', 'stepSize'],
