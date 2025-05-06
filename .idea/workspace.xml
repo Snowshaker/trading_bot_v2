@@ -7,6 +7,19 @@
     <list default="true" id="d63f7b03-5d5b-48a2-b8d7-f04c42c4a150" name="Changes" comment="may be the first stable version">
       <changelist_data name="Виктор Павлов" email="pavlov.vp@phystech.edu" automatic="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/collected_data/positions/ADAUSDT.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/collected_data/positions/BNBUSDT.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/collected_data/positions/BTCUSDT.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/collected_data/positions/ETHUSDT.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/collected_data/positions/SOLUSDT.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/collected_data/tradingview_analysis/ADAUSDT.jsonl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/collected_data/tradingview_analysis/BNBUSDT.jsonl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/collected_data/tradingview_analysis/BTCUSDT.jsonl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/collected_data/tradingview_analysis/ETHUSDT.jsonl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/collected_data/tradingview_analysis/SOLUSDT.jsonl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tests/test_data/BNBUSDT.jsonl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tests/test_data/BTCUSDT.jsonl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tests/test_data/ETHUSDT.jsonl" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,7 +103,7 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/viktor/PycharmProjects/PythonProject6&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/viktor/trading_bot_v2&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -133,6 +146,8 @@
       <workItem from="1745871308096" duration="2429000" />
       <workItem from="1746121934798" duration="927000" />
       <workItem from="1746122868672" duration="4000" />
+      <workItem from="1746555108825" duration="74000" />
+      <workItem from="1746555198141" duration="23000" />
     </task>
     <task id="LOCAL-00001" summary="first save">
       <option name="closed" value="true" />
