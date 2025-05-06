@@ -1,70 +1,70 @@
-from src.core.api.tradingview_client.analysis_fetcher import TradingViewFetcher
-from src.core.settings.config import SYMBOLS, TIMEFRAMES
-import time
+# tests/core/api/tradingview_client/test_analysis_fetcher.py
 import pytest
-from unittest.mock import patch, MagicMock
+from unittest.mock import Mock
+import logging
+from tradingview_ta import TA_Handler
+from src.core.api.tradingview_client.analysis_fetcher import TradingViewFetcher
+
 
 @pytest.fixture
 def fetcher():
-    """Фикстура для создания TradingViewFetcher с уменьшенной задержкой."""
-    return TradingViewFetcher(rate_limit_delay=0.1)  # Уменьшаем задержку для тестов
+  return TradingViewFetcher(rate_limit_delay=0)
+
 
 @pytest.fixture
-def mock_ta_handler():
-    """Фикстура для мокирования TA_Handler."""
-    with patch("src.core.api.tradingview_client.analysis_fetcher.TA_Handler") as mock:
-        yield mock
+def mock_ta_handler(mocker):
+  return mocker.patch('src.core.api.tradingview_client.analysis_fetcher.TA_Handler')
 
-def mock_analysis_result(recommendation="BUY", score=1):
-    """Вспомогательная функция для создания мокированных результатов анализа."""
-    mock_analysis = MagicMock()
-    mock_analysis.summary = {"RECOMMENDATION": recommendation}
-    mock_analysis.get_analysis.return_value = mock_analysis
-    return mock_analysis
 
-def test_fetch_single_success(fetcher, mock_ta_handler):
-    """Тест успешного получения данных для одного символа и таймфрейма."""
+@pytest.fixture
+def mock_config(monkeypatch):
+  monkeypatch.setattr('src.core.api.tradingview_client.analysis_fetcher.SYMBOLS', ['BTCUSD', 'ETHUSD'])
+  monkeypatch.setattr('src.core.api.tradingview_client.analysis_fetcher.TIMEFRAMES', ['1H', '4H'])
+  monkeypatch.setattr(
+    'src.core.api.tradingview_client.analysis_fetcher.RECOMMENDATION_SCORE_MAP',
+    {'STRONG_BUY': 2, 'BUY': 1, 'NEUTRAL': 0}
+  )
 
-    mock_ta_handler.return_value = mock_analysis_result()
-    result = fetcher._fetch_single("BTCUSDT", "1m")
-    assert result == {"timeframe": "1m", "recommendation": "BUY", "score": 1}
 
-def test_fetch_single_failure(fetcher, mock_ta_handler, caplog):
-    """Тест обработки ошибки при получении данных."""
+def test_fetch_single_success(fetcher, mock_ta_handler, mock_config):
+  mock_instance = Mock()
+  mock_instance.get_analysis.return_value.summary = {"RECOMMENDATION": "STRONG_BUY"}
+  mock_ta_handler.return_value = mock_instance
 
-    mock_ta_handler.side_effect = Exception("API Error")
-    result = fetcher._fetch_single("BTCUSDT", "1m")
-    assert result is None
-    assert "Failed to fetch BTCUSDT 1m" in caplog.text
+  result = fetcher._fetch_single("BTCUSD", "1H")
 
-def test_fetch_all_data(fetcher, mock_ta_handler):
-    """Тест получения данных для всех символов и таймфреймов."""
+  assert result == {
+    "timeframe": "1H",
+    "recommendation": "STRONG_BUY",
+    "score": 2
+  }
+  mock_ta_handler.assert_called_with(
+    symbol="BTCUSD",
+    screener="crypto",
+    exchange="BINANCE",
+    interval="1H"
+  )
 
-    mock_ta_handler.return_value = mock_analysis_result()
-    data = fetcher.fetch_all_data()
 
-    assert len(data) == len(SYMBOLS)
-    for symbol, timeframes_data in data.items():
-        assert len(timeframes_data) == len(TIMEFRAMES)
-        for tf, analysis in timeframes_data.items():
-            assert analysis["recommendation"] == "BUY"
-            assert analysis["score"] == 1
+def test_fetch_single_default_recommendation(fetcher, mock_ta_handler, mock_config):
+  mock_instance = Mock()
+  mock_instance.get_analysis.return_value.summary = {}
+  mock_ta_handler.return_value = mock_instance
 
-def test_fetch_all_data_partial_failure(fetcher, mock_ta_handler, caplog):
-    """Тест обработки частичных сбоев при получении данных."""
+  result = fetcher._fetch_single("BTCUSD", "1H")
 
-    mock_ta_handler.side_effect = [
-        mock_analysis_result(),  # First call succeeds
-        Exception("API Error"),  # Second call fails
-        mock_analysis_result(recommendation="SELL", score=-1),  # Third call succeeds
-        mock_analysis_result()
-    ]
+  assert result["recommendation"] == "NEUTRAL"
+  assert result["score"] == 0
 
-    data = fetcher.fetch_all_data()
-    assert len(data) == len(SYMBOLS)
-    assert "BTCUSDT" in data
-    assert "1m" in data["BTCUSDT"]
-    assert "5m" in data["BTCUSDT"]
-    assert data["BTCUSDT"]["1m"]["recommendation"] == "BUY"
-    assert data["BTCUSDT"]["5m"]["recommendation"] == "SELL"
-    assert "Failed to fetch BTCUSDT 5m" in caplog.text
+
+def test_fetch_all_data_partial_failure(fetcher, mock_ta_handler, mock_config, caplog):
+  mock_instance = Mock()
+  mock_instance.get_analysis.side_effect = Exception("Error")
+  mock_ta_handler.return_value = mock_instance
+
+  result = fetcher.fetch_all_data()
+
+  assert 'BTCUSD' not in result
+  assert 'ETHUSD' not in result
+  assert "No data for BTCUSD" in caplog.text
+  assert "No data for ETHUSD" in caplog.text

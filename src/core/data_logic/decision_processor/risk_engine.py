@@ -50,13 +50,13 @@ class RiskEngine:
   def _validate_structure(self, data: Dict) -> bool:
     """Валидация структуры данных символа"""
     required_structure = {
-      'filters': {
-        'LOT_SIZE': ['min_qty', 'step_size'],
-        'PRICE_FILTER': ['tick_size'],
-        'MIN_NOTIONAL': ['min_notional']
-      },
-      'base_asset': None,
-      'quote_asset': None
+        'filters': {
+            'LOT_SIZE': {'minQty': Decimal, 'stepSize': Decimal},
+            'PRICE_FILTER': {'tickSize': Decimal},
+            'minNotional': {'minNotional': Decimal}
+        },
+        'base_asset': str,
+        'quote_asset': str
     }
 
     def check_nested(data, structure, path=""):
@@ -83,84 +83,96 @@ class RiskEngine:
 
   def validate_quantity(self, quantity: Decimal, action: str) -> Optional[Decimal]:
     """Основной метод валидации количества"""
+    logger = self.logger.getChild("QuantityValidator")
+
     try:
-      # Валидация входных параметров
+      # Валидация базовых параметров
       if not isinstance(quantity, Decimal):
-        self.logger.error("Invalid quantity type, expected Decimal")
+        logger.error("Invalid quantity type. Expected Decimal")
         return None
 
       if quantity <= Decimal(0):
-        self.logger.warning("Non-positive quantity")
+        logger.warning("Non-positive quantity")
         return None
 
       # Получение информации о символе
       symbol_info = self._get_symbol_info()
       if not symbol_info:
-        self.logger.error("Symbol info unavailable")
+        logger.error("Symbol info not available")
         return None
 
-      # Проверка структуры данных
-      if not self._validate_structure(symbol_info):
-        self.logger.error("Invalid symbol info structure")
-        self._log_data_structure(symbol_info, "Invalid Symbol Info")
-        return None
+      # Извлечение фильтров со значениями по умолчанию
+      filters = symbol_info.get('filters', {})
+      lot_size = filters.get('LOT_SIZE', {'minQty': '0.001', 'stepSize': '0.001'})
+      price_filter = filters.get('PRICE_FILTER', {'tickSize': '0.01'})
+      notional_filter = filters.get('NOTIONAL', {'minNotional': '5.0', 'applyToMarket': True})
 
-      # Извлечение параметров
-      filters = symbol_info['filters']
-      lot_size = filters['LOT_SIZE']
-      price_filter = filters['PRICE_FILTER']
-      min_notional = filters['MIN_NOTIONAL']['min_notional']
+      # Параметры символа
+      min_qty = Decimal(lot_size.get('minQty', '0.001'))
+      step_size = Decimal(lot_size.get('stepSize', '0.001'))
+      tick_size = Decimal(price_filter.get('tickSize', '0.01'))
+      min_notional = Decimal(notional_filter.get('minNotional', '5.0'))
+      apply_to_market = notional_filter.get('applyToMarket', False)
 
-      # Преобразование параметров
-      min_qty = Decimal(str(lot_size['min_qty']))
-      step_size = Decimal(str(lot_size['step_size']))
-      tick_size = Decimal(str(price_filter['tick_size']))
-      min_notional_val = Decimal(str(min_notional))
+      logger.debug(
+        f"Validation params for {self.symbol}: "
+        f"minQty={min_qty}, stepSize={step_size}, "
+        f"minNotional={min_notional}, applyToMarket={apply_to_market}"
+      )
 
       # Проверка минимального количества
       if quantity < min_qty:
-        self.logger.warning(f"Quantity below minimum: {quantity} < {min_qty}")
+        logger.warning(f"Quantity {quantity} < minQty {min_qty}")
         return None
 
-      # Приведение к шагу размера
+      # Квантование количества
       try:
         valid_qty = quantity.quantize(step_size, rounding=ROUND_DOWN)
+        logger.debug(f"Quantized quantity: {quantity} → {valid_qty}")
       except Exception as e:
-        self.logger.error(f"Quantization error: {str(e)}")
+        logger.error(f"Quantization error: {str(e)}")
         return None
 
-      # Проверка минимальной стоимости ордера
+      # Получение текущей цены
       current_price = self._get_current_price()
       if not current_price or current_price <= Decimal(0):
-        self.logger.error("Invalid price for notional calculation")
+        logger.error("Invalid current price")
         return None
 
-      notional_value = valid_qty * current_price
-      if notional_value < min_notional_val:
-        self.logger.warning(
-          f"Notional value too low: {notional_value:.4f} < {min_notional_val:.4f}"
-        )
-        return None
+      # Проверка минимальной стоимости для BUY
+      if action == "BUY" and apply_to_market:
+        notional_value = valid_qty * current_price
+        if notional_value < min_notional:
+          logger.warning(
+            f"Notional value {notional_value:.4f} < min {min_notional:.4f}"
+          )
+          return None
 
       # Проверка баланса
       asset_type = 'quote_asset' if action == "BUY" else 'base_asset'
-      asset = symbol_info[asset_type]
-      balance_info = self.info_fetcher.get_asset_balance(asset)
+      asset = symbol_info[asset_type].upper()
 
+      balance_info = self.info_fetcher.get_asset_balance(asset)
       if not balance_info:
-        self.logger.error(f"Balance check failed for {asset}")
+        logger.error(f"Balance check failed for {asset}")
         return None
 
       available = Decimal(str(balance_info['free']))
       if valid_qty > available:
-        self.logger.warning(
-          f"Insufficient funds: {valid_qty} > {available} {asset}"
+        logger.warning(
+          f"Insufficient funds: {valid_qty} {asset} > {available} available"
         )
         return None
 
-      self.logger.info(f"Validated quantity: {valid_qty} for {action}")
+      logger.info(
+        f"Validation passed: {valid_qty} {self.symbol} "
+        f"(Notional: {valid_qty * current_price:.2f})"
+      )
       return valid_qty
 
+    except KeyError as e:
+      logger.error(f"Key error: {str(e)}", exc_info=True)
+      return None
     except Exception as e:
-      self.logger.error(f"Validation error: {str(e)}", exc_info=True)
+      logger.error(f"Unexpected error: {str(e)}", exc_info=True)
       return None

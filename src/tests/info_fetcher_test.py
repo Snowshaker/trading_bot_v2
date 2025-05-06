@@ -1,88 +1,121 @@
-# tests/info_fetcher_test.py
+# tests/core/api/binance_client/test_info_fetcher.py
 import pytest
 from decimal import Decimal
+from unittest.mock import MagicMock
+from binance import Client, exceptions
+import logging
 from src.core.api.binance_client.info_fetcher import BinanceInfoFetcher
-from src.core.settings.config import BINANCE_API_KEY, BINANCE_SECRET_KEY, TESTNET
-
+import pytest_mock
 
 @pytest.fixture
-def fetcher():
-  return BinanceInfoFetcher()
+def mock_binance_client(mocker: pytest_mock.MockerFixture):
+    mock_client = mocker.MagicMock(spec=Client)
+    mocker.patch(
+        'src.core.api.binance_client.info_fetcher.Client',
+        return_value=mock_client
+    )
+    return mock_client
 
+@pytest.fixture
+def binance_info_fetcher(mock_binance_client):
+    return BinanceInfoFetcher(
+        api_key='test-key',
+        api_secret='test-secret',
+        testnet=True
+    )
 
-def test_get_symbol_info_valid_symbol(fetcher):
-  # Проверка для известной торговой пары
-  symbol = "BTCUSDT"
-  result = fetcher.get_symbol_info(symbol)
+def test_initialization(mock_binance_client):
+    mock_binance_client.testnet = True  # Явно задаем атрибут
+    fetcher = BinanceInfoFetcher('key', 'secret', testnet=True)
+    assert fetcher.client.testnet is True
+    mock_binance_client.get_exchange_info.assert_called_once()
 
-  assert result is not None
-  assert result['base_asset'] == 'BTC'
-  assert result['quote_asset'] == 'USDT'
-  assert 'LOT_SIZE' in result['filters']
+def test_load_symbols_info_success(mock_binance_client, binance_info_fetcher, caplog):
+    caplog.set_level(logging.INFO)
+    mock_binance_client.get_exchange_info.return_value = {
+        'symbols': [
+            {
+                'symbol': 'BTCUSDT',
+                'baseAsset': 'BTC',
+                'quoteAsset': 'USDT',
+                'filters': [
+                    {'filterType': 'LOT_SIZE', 'minQty': '0.001', 'stepSize': '0.001'},
+                    {'filterType': 'PRICE_FILTER', 'tickSize': '0.01'},
+                    {'filterType': 'NOTIONAL', 'minNotional': '10.0', 'applyToMarket': True}
+                ]
+            }
+        ]
+    }
+    binance_info_fetcher._load_symbols_info()
+    assert 'BTCUSDT' in binance_info_fetcher.symbols_info
+    assert 'Loaded info for 1 symbols' in caplog.text
 
-  lot_size = result['filters']['LOT_SIZE']
-  assert 'minQty' in lot_size
-  assert 'stepSize' in lot_size
+def test_process_symbol_success(binance_info_fetcher):
+    raw_info = {
+        'symbol': 'BTCUSDT',
+        'baseAsset': 'BTC',
+        'quoteAsset': 'USDT',
+        'filters': [
+            {'filterType': 'LOT_SIZE', 'minQty': '0.001', 'stepSize': '0.001'},
+            {'filterType': 'PRICE_FILTER', 'tickSize': '0.01'},
+            {'filterType': 'NOTIONAL', 'minNotional': '10.0', 'applyToMarket': True}
+        ]
+    }
+    processed = binance_info_fetcher._process_symbol(raw_info)
+    assert processed['symbol'] == 'BTCUSDT'
+    assert processed['filters']['LOT_SIZE']['minQty'] == Decimal('0.001')
 
+def test_process_symbol_missing_filters(binance_info_fetcher):
+    raw_info = {
+        'symbol': 'BTCUSDT',
+        'baseAsset': 'BTC',
+        'quoteAsset': 'USDT',
+        'filters': [
+            {'filterType': 'PRICE_FILTER', 'tickSize': '0.01'}
+        ]
+    }
+    processed = binance_info_fetcher._process_symbol(raw_info)
+    assert processed['filters']['LOT_SIZE']['minQty'] == Decimal('0.001')
 
-def test_get_current_price_valid_symbol(fetcher):
-  symbol = "BTCUSDT"
-  price = fetcher.get_current_price(symbol)
+def test_process_symbol_key_error(binance_info_fetcher, caplog):
+    raw_info = {
+        'symbol': 'BTCUSDT',
+        'filters': []
+    }
+    processed = binance_info_fetcher._process_symbol(raw_info)
+    assert processed is None
+    assert 'Critical symbol processing error' in caplog.text
 
-  assert isinstance(price, Decimal)
-  assert price > Decimal('0')
+def test_get_symbol_info(binance_info_fetcher):
+    binance_info_fetcher.symbols_info = {'BTCUSDT': 'test_info'}
+    assert binance_info_fetcher.get_symbol_info('BTCUSDT') == 'test_info'
+    assert binance_info_fetcher.get_symbol_info('UNKNOWN') is None
 
-  # Проверка формата цены
-  str_price = format(price, 'f')
-  assert '.' in str_price
-  assert len(str_price.split('.')[1]) >= 4  # Проверка точности
+def test_get_current_price_success(mock_binance_client, binance_info_fetcher):
+    mock_binance_client.get_symbol_ticker.return_value = {'price': '50000.0'}
+    price = binance_info_fetcher.get_current_price('BTCUSDT')
+    assert price == Decimal('50000.0')
 
+def test_get_asset_balance_found(mock_binance_client, binance_info_fetcher):
+    mock_binance_client.get_account.return_value = {
+        'balances': [
+            {'asset': 'BTC', 'free': '1.5', 'locked': '0.5'}
+        ]
+    }
+    balance = binance_info_fetcher.get_asset_balance('BTC')
+    assert balance['free'] == Decimal('1.5')
+    assert balance['locked'] == Decimal('0.5')
 
-def test_get_asset_balance_smoke_test(fetcher):
-  # Тест на структуру ответа (не проверяет реальный баланс)
-  asset = "USDT"
-  balance = fetcher.get_asset_balance(asset)
+def test_get_asset_balance_not_found(mock_binance_client, binance_info_fetcher):
+    mock_binance_client.get_account.return_value = {'balances': []}
+    assert binance_info_fetcher.get_asset_balance('BTC') is None
 
-  assert isinstance(balance, dict)
-  assert 'free' in balance
-  assert 'locked' in balance
-  assert isinstance(balance['free'], Decimal)
-  assert isinstance(balance['locked'], Decimal)
+def test_get_min_notional_fallback(binance_info_fetcher, caplog):
+    caplog.set_level(logging.INFO)
+    result = binance_info_fetcher._get_min_notional({}, 'BTCUSDT')
+    assert result == Decimal('5')
+    assert 'Using default MIN_NOTIONAL=5 for BTCUSDT' in caplog.text
 
-
-def test_get_lot_size_for_known_symbol(fetcher):
-  symbol = "BTCUSDT"
-  lot_size = fetcher.get_lot_size(symbol)
-
-  assert lot_size is not None
-  assert 'minQty' in lot_size
-  assert 'maxQty' in lot_size
-  assert 'stepSize' in lot_size
-
-  # Проверка числовых значений
-  assert Decimal(lot_size['minQty']) > Decimal('0')
-  assert Decimal(lot_size['stepSize']) > Decimal('0')
-
-
-def test_error_handling_for_invalid_symbol(fetcher):
-  invalid_symbol = "INVALID_SYMBOL_123"
-
-  # Проверка информации о символе
-  assert fetcher.get_symbol_info(invalid_symbol) is None
-
-  # Проверка цены
-  price = fetcher.get_current_price(invalid_symbol)
-  assert price == Decimal('0')
-
-  # Проверка параметров лота
-  assert fetcher.get_lot_size(invalid_symbol) is None
-
-
-def test_api_authentication():
-  # Проверка корректности аутентификации
-  fetcher = BinanceInfoFetcher()
-  account = fetcher.client.get_account()
-
-  assert 'balances' in account
-  assert isinstance(account['balances'], list)
-  assert 'makerCommission' in account
+def test_get_exchange_info(mock_binance_client, binance_info_fetcher):
+    mock_binance_client.get_exchange_info.return_value = {'timezone': 'UTC'}
+    assert binance_info_fetcher.get_exchange_info() == {'timezone': 'UTC'}

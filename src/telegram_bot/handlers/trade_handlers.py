@@ -13,7 +13,6 @@ from decimal import Decimal
 from src.core.settings.telegram_config import TELEGRAM_ADMINS
 from src.core.api.binance_client.transactions_executor import TransactionsExecutor
 from src.core.api.binance_client.info_fetcher import BinanceInfoFetcher
-from src.telegram_bot.services.formatters import format_balance
 from src.core.settings.config import SYMBOLS, BINANCE_API_KEY, BINANCE_SECRET_KEY, TESTNET
 
 logger = logging.getLogger(__name__)

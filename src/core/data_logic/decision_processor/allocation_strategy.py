@@ -21,9 +21,9 @@ class AllocationStrategy:
   def _validate_symbol_info(self, symbol_info: Dict) -> bool:
     required_structure = {
       'filters': {
-        'LOT_SIZE': {'min_qty': Decimal, 'step_size': Decimal},
-        'PRICE_FILTER': {'tick_size': Decimal},
-        'MIN_NOTIONAL': {'min_notional': Decimal}
+        'LOT_SIZE': {'minQty': Decimal, 'stepSize': Decimal},  # camelCase
+        'PRICE_FILTER': {'tickSize': Decimal},
+        'NOTIONAL': {'minNotional': Decimal}
       },
       'base_asset': str,
       'quote_asset': str,
@@ -104,142 +104,172 @@ class AllocationStrategy:
                          f"{str(e)}", exc_info=True)
         return None
 
-  def _calculate_buy(self, score: Decimal, symbol_info: Dict) -> Optional[Dict]:
-    """Расчет объема для покупки с нормализацией score [-2, 2]"""
+  def _get_min_notional(self, symbol_info: Dict) -> Decimal:
+    """Получение минимальной суммы ордера с учетом фильтров"""
     try:
-      # Конвертация параметров в Decimal
-      BUY_THRESHOLD_DEC = Decimal(str(BUY_THRESHOLD))
-      TWO_DEC = Decimal('2')
-      ZERO_DEC = Decimal('0')
-      ONE_DEC = Decimal('1')
-      HUNDRED_DEC = Decimal('100')
+      filters = symbol_info.get('filters', {})
+      notional_filter = filters.get('NOTIONAL') or filters.get('MIN_NOTIONAL')
 
+      if not notional_filter:
+        self.logger.warning("Using fallback MIN_NOTIONAL=5")
+        return Decimal('5')
+
+      min_notional = Decimal(str(notional_filter.get('minNotional', '5')))
+      apply_to_market = notional_filter.get('applyToMarket', False)
+
+      self.logger.debug(f"MinNotional config: {min_notional} (applyToMarket: {apply_to_market})")
+
+      return min_notional if apply_to_market else Decimal(0)
+
+    except Exception as e:
+      self.logger.error(f"MinNotional error: {str(e)}")
+      return Decimal('5')
+
+  def _calculate_buy(self, score: Decimal, symbol_info: Dict) -> Optional[Dict]:
+    """Расчет объема для покупки с актуальными параметрами Binance"""
+    try:
+      # Константы и проверка порога
+      BUY_THRESHOLD_DEC = Decimal(str(BUY_THRESHOLD))
       if score < BUY_THRESHOLD_DEC:
-        self.logger.debug(f"Score {score} < buy threshold {BUY_THRESHOLD_DEC}")
         return None
+
+      # Получение параметров с защитой от отсутствия ключей
+      filters = symbol_info.get('filters', {})
+      lot_size = filters.get('LOT_SIZE', {'minQty': '0.001', 'stepSize': '0.001'})
+      notional_filter = filters.get('NOTIONAL', {'minNotional': '5.0', 'applyToMarket': True})
+
+      # Параметры символа
+      min_qty = Decimal(lot_size.get('minQty', '0.001'))
+      step_size = Decimal(lot_size.get('stepSize', '0.001'))
+      min_notional = Decimal(notional_filter.get('minNotional', '5.0'))
+      apply_to_market = notional_filter.get('applyToMarket', False)
+      quote_asset = symbol_info.get('quote_asset', 'USDT')
 
       # Получение цены
       price = self.info_fetcher.get_current_price(self.symbol)
-      if not price or price <= ZERO_DEC:
+      if not price or price <= Decimal(0):
         self.logger.error("Invalid price")
         return None
 
-      # Извлечение параметров символа
-      filters = symbol_info['filters']
-      lot_size = filters['LOT_SIZE']
-      step_size = Decimal(str(lot_size['step_size']))
-      min_qty = Decimal(str(lot_size['min_qty']))
-      min_notional = Decimal(str(filters['MIN_NOTIONAL']['min_notional']))
-      quote_asset = symbol_info['quote_asset']
-
-      # Получение баланса
-      balance = self.info_fetcher.get_asset_balance(quote_asset)
-      if not balance or balance['free'] <= ZERO_DEC:
-        self.logger.warning(f"No balance for {quote_asset}")
-        return None
-      free_balance = balance['free']
-
-      # Нормализация score
-      buy_range = TWO_DEC - BUY_THRESHOLD_DEC
-      if buy_range <= ZERO_DEC:
-        self.logger.error("Invalid buy range calculation")
-        return None
-
-      normalized_score = (score - BUY_THRESHOLD_DEC) / buy_range
-      normalized_score = max(min(normalized_score, ONE_DEC), ZERO_DEC)
-
       # Расчет рискового капитала
-      risk_capital = free_balance * (ALLOCATION_MAX_PERCENT / HUNDRED_DEC)
-      allocation = risk_capital * normalized_score
+      balance = self.info_fetcher.get_asset_balance(quote_asset)
+      if not balance or balance['free'] <= Decimal(0):
+        return None
 
+      free_balance = balance['free']
+      risk_capital = free_balance * (ALLOCATION_MAX_PERCENT / Decimal('100'))
+      allocation = risk_capital * score
+
+      # Проверка минимального объема
       if allocation < MIN_ORDER_SIZE:
-        self.logger.debug(f"Allocation {allocation} < MIN_ORDER_SIZE {MIN_ORDER_SIZE}")
         return None
 
       # Расчет количества
       raw_quantity = allocation / price
       quantity = raw_quantity.quantize(step_size, rounding=ROUND_DOWN)
 
-      # Корректировка под MIN_NOTIONAL
-      calculated_notional = quantity * price
-      if calculated_notional < min_notional:
-        self.logger.info("Adjusting to min notional")
+      # Проверка минимальной стоимости
+      final_notional = quantity * price
+      if apply_to_market and final_notional < min_notional:
+        self.logger.debug(f"Adjusting to min notional {min_notional}")
         min_quantity = (min_notional / price).quantize(step_size, rounding=ROUND_UP)
-
         if min_quantity * price > free_balance:
-          self.logger.error("Insufficient funds after adjustment")
           return None
-
         quantity = min_quantity
 
-      if quantity < min_qty:
-        self.logger.warning(f"Quantity {quantity} < min {min_qty}")
+      # Финальные проверки
+      if quantity < min_qty or quantity * price < min_notional:
         return None
 
       return {
         'action': 'BUY',
         'quantity': float(quantity),
-        'score': float(score),
-        'normalized_score': float(normalized_score),
-        'risk_percent': float(ALLOCATION_MAX_PERCENT)
+        'calculated_notional': float(quantity * price),
+        'min_notional': float(min_notional)
       }
 
     except Exception as e:
-      self.logger.error(f"Buy calculation failed: {str(e)}", exc_info=True)
+      self.logger.error(f"Buy calculation error: {str(e)}", exc_info=True)
       return None
 
   def _calculate_sell(self, score: Decimal, symbol_info: Dict) -> Optional[Dict]:
-    """Расчет объема для продажи с нормализацией score [-2, 2]"""
+    """Расчет объема для продажи с полной диагностикой"""
     try:
-      # Конвертация параметров в Decimal
+      self.logger.debug(f"[SELL] Starting calculation for {self.symbol}")
+      self.logger.debug(f"[SELL] Raw score: {score}")
+
+      # 1. Проверка порога
       SELL_THRESHOLD_DEC = Decimal(str(SELL_THRESHOLD))
-      TWO_DEC = Decimal('2')
-      ZERO_DEC = Decimal('0')
-      ONE_DEC = Decimal('1')
-
       if score > SELL_THRESHOLD_DEC:
-        self.logger.debug(f"Score {score} > sell threshold {SELL_THRESHOLD_DEC}")
+        self.logger.debug(f"[SELL] Score {score} > threshold {SELL_THRESHOLD_DEC}")
         return None
 
-      # Извлечение параметров символа
-      filters = symbol_info['filters']
-      lot_size = filters['LOT_SIZE']
-      step_size = Decimal(str(lot_size['step_size']))
-      min_qty = Decimal(str(lot_size['min_qty']))
-      base_asset = symbol_info['base_asset']
+      # 2. Получение параметров символа
+      filters = symbol_info.get('filters', {})
+      lot_size = filters.get('LOT_SIZE', {})
+      base_asset = symbol_info.get('base_asset', "").upper()
 
-      # Нормализация score
-      sell_range = abs(SELL_THRESHOLD_DEC - TWO_DEC)
-      if sell_range <= ZERO_DEC:
-        self.logger.error("Invalid sell range calculation")
+      if not base_asset:
+        self.logger.error("[SELL] Missing base_asset in symbol info")
         return None
 
-      normalized_score = (abs(score) - abs(SELL_THRESHOLD_DEC)) / sell_range
-      normalized_score = max(min(normalized_score, ONE_DEC), ZERO_DEC)
+      # 3. Параметры фильтров
+      min_qty = Decimal(lot_size.get('minQty', '0.001'))
+      step_size = Decimal(lot_size.get('stepSize', '0.001'))
+      self.logger.debug(f"[SELL] MinQty: {min_qty} | StepSize: {step_size}")
 
-      # Получение баланса
-      balance = self.info_fetcher.get_asset_balance(base_asset)
-      if not balance or balance['free'] <= ZERO_DEC:
-        self.logger.warning(f"No available balance for {base_asset}")
+      # 4. Получение баланса
+      balance_info = self.info_fetcher.get_asset_balance(base_asset)
+      self.logger.debug(f"[SELL] Raw balance response: {balance_info}")
+
+      if not balance_info:
+        self.logger.error("[SELL] Failed to fetch balance")
         return None
-      available_qty = balance['free']
 
-      # Расчет количества
-      raw_quantity = available_qty * normalized_score
+      available_qty = balance_info.get('free', Decimal(0))
+      self.logger.info(f"[SELL] Available {base_asset}: {available_qty}")
+
+      # 5. Проверка доступного количества
+      if available_qty <= Decimal(0):
+        self.logger.warning(f"[SELL] Zero balance for {base_asset}")
+        return None
+
+      # 6. Расчет объема
+      raw_quantity = available_qty * abs(score)
       quantity = raw_quantity.quantize(step_size, rounding=ROUND_DOWN)
+      self.logger.debug(f"[SELL] Raw: {raw_quantity} | Quantized: {quantity}")
 
+      # 7. Проверка минимального объема
       if quantity < min_qty:
-        self.logger.debug(f"Quantity {quantity} < min {min_qty}")
+        self.logger.warning(
+          f"[SELL] Quantity {quantity} < min {min_qty} | "
+          f"Available: {available_qty} | Score: {score}"
+        )
         return None
+
+      # 8. Проверка минимальной стоимости
+      price = self.info_fetcher.get_current_price(self.symbol)
+      if not price:
+        self.logger.error("[SELL] Failed to get current price")
+        return None
+
+      notional_value = quantity * price
+      self.logger.debug(f"[SELL] Notional value: {notional_value}")
+
+      # 9. Формирование результата
+      self.logger.info(
+        f"[SELL] Calculated: {quantity} {self.symbol} "
+        f"(Value: {notional_value:.2f} USDT)"
+      )
 
       return {
         'action': 'SELL',
         'quantity': float(quantity),
-        'score': float(score),
-        'normalized_score': float(normalized_score),
-        'available_qty': float(available_qty)
+        'calculated_notional': float(notional_value),
+        'available': float(available_qty),
+        'current_price': float(price)
       }
 
     except Exception as e:
-      self.logger.error(f"Sell calculation failed: {str(e)}", exc_info=True)
+      self.logger.error(f"[SELL] Critical error: {str(e)}", exc_info=True)
       return None

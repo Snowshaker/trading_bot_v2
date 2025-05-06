@@ -2,7 +2,7 @@
 import json
 import uuid
 from pathlib import Path
-from decimal import Decimal
+from decimal import Decimal, InvalidOperation
 from datetime import datetime
 from binance import Client
 import logging
@@ -14,6 +14,7 @@ from src.core.settings.config import (
     PROFIT_TAKE_LEVELS
 )
 from src.core.paths import POSITIONS
+import logging
 
 
 class PositionManager:
@@ -32,6 +33,7 @@ class PositionManager:
     def __init__(self, symbol: str, info_fetcher):
         self.symbol = symbol
         self.info_fetcher = info_fetcher
+        self.logger = logging.getLogger(self.__class__.__name__)  # <-- Добавьте эту строку
         self.client = Client(
             api_key=BINANCE_API_KEY,
             api_secret=BINANCE_SECRET_KEY,
@@ -150,23 +152,61 @@ class PositionManager:
 
     def sync_with_exchange(self):
         try:
-            base_asset = self.symbol.replace("USDT", "")
-            balance = self.client.get_asset_balance(asset=base_asset)
-            free_balance = Decimal(balance['free'])
+            # 1. Получаем информацию о символе для правильного определения базового актива
+            symbol_info = self.info_fetcher.get_symbol_info(self.symbol)
+            if not symbol_info:
+                self.logger.error(f"Symbol info not found for {self.symbol}")
+                return
 
-            if free_balance > 0:
+            base_asset = symbol_info['base_asset']  # Вместо грубой замены USDT
+
+            # 2. Получаем и валидируем баланс
+            balance = self.client.get_asset_balance(asset=base_asset)
+            self.logger.debug(f"Raw balance response: {balance}")
+
+            if not balance or not isinstance(balance, dict):
+                self.logger.warning(f"Invalid balance format for {base_asset}")
+                return
+
+            # 3. Безопасное извлечение и конвертация значений
+            free_str = balance.get('free', '0')
+            try:
+                free_balance = Decimal(free_str)
+            except InvalidOperation:
+                self.logger.error(f"Invalid balance value: {free_str}")
+                free_balance = Decimal(0)
+
+            # 4. Логика создания позиции
+            if free_balance > Decimal(0):
                 avg_price = self._get_avg_price()
-                if avg_price > 0:
+                if avg_price and avg_price > Decimal(0):
+                    self.logger.info(f"Creating position for {free_balance} {base_asset}")
                     self.create_position(
                         entry_price=avg_price,
                         quantity=free_balance,
                         position_type="LONG"
                     )
-        except Exception as e:
-            logging.error(f"Sync error: {str(e)}")
 
-    def _get_avg_price(self) -> Decimal:
-        trades = self.client.get_my_trades(symbol=self.symbol)
-        total_qty = sum(Decimal(trade['qty']) for trade in trades)
-        total_cost = sum(Decimal(trade['qty']) * Decimal(trade['price']) for trade in trades)
-        return total_cost / total_qty if total_qty > 0 else Decimal(0)
+        except Exception as e:
+            self.logger.error(f"Sync error: {str(e)}", exc_info=True)
+
+    def _get_avg_price(self) -> Optional[Decimal]:
+        try:
+            trades = self.client.get_my_trades(symbol=self.symbol)
+            if not trades:
+                return None
+
+            total_qty = Decimal(0)
+            total_cost = Decimal(0)
+
+            for trade in trades:
+                qty = Decimal(trade['qty'])
+                price = Decimal(trade['price'])
+                total_qty += qty
+                total_cost += qty * price
+
+            return total_cost / total_qty if total_qty > 0 else None
+
+        except Exception as e:
+            self.logger.error(f"Error calculating avg price: {str(e)}")
+            return None

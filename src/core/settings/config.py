@@ -24,7 +24,7 @@ MIN_SCORE_FOR_EXECUTION = Decimal('0.5')  # Минимальный порог д
 # Настройки логирования
 LOGGING_CONFIG = {
     'filename': 'bot.log',
-    'level': 'INFO',
+    'level': 'DEBUG',
     'format': '%(asctime)s - %(name)s - %(levelname)s - %(message)s'
 }
 
@@ -44,8 +44,8 @@ RECOMMENDATION_SCORE_MAP = {
 }
 
 # Пороги для классификации
-BUY_THRESHOLD = Decimal("1.0")         # Минимальный score для BUY (рекомендуется: 0.5-2.0)
-SELL_THRESHOLD = Decimal("-0.45")      # Максимальный score для SELL (рекомендуется: -2.0-0.0)
+BUY_THRESHOLD = Decimal("1.0")       # Минимальный score для BUY (рекомендуется: 0.5-2.0)
+SELL_THRESHOLD = Decimal("-0.45")     # Максимальный score для SELL (рекомендуется: -2.0-0.0)
 
 # Симулятор
 INITIAL_BALANCE = 100000.0
@@ -55,7 +55,8 @@ REBALANCE_INTERVAL = "1m"
 # Риск-менеджмент
 TRAILING_STOP_PERCENT = Decimal('1.5')
 MIN_PROFIT_TO_TRAIL = Decimal('2.0')
-MIN_ORDER_SIZE = Decimal('0.001')
+MIN_ORDER_SIZE = Decimal('5.0')
+PROCESS_NOTIONAL_FILTER = True
 
 PROFIT_TAKE_LEVELS = {
     2.0: 0.3,   # 30% at +2%
@@ -81,3 +82,9 @@ MIN_BALANCE_TO_SHOW = Decimal('0.001')
 
 DEFAULT_HISTORY_LIMIT = 10  # Количество записей по умолчанию
 MAX_HISTORY_LIMIT = 300     # Максимальное допустимое количество
+
+SYMBOL_FILTERS_KEYS = {
+    'LOT_SIZE': ['minQty', 'stepSize'],
+    'PRICE_FILTER': ['tickSize'],
+    'NOTIONAL': ['minNotional']
+}

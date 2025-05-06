@@ -1,72 +1,136 @@
-# tests/test_allocation_strategy.py
+# tests/unit/core/data_logic/decision_processor/test_allocation_strategy.py
 import pytest
 from decimal import Decimal
-from unittest.mock import Mock
+from unittest.mock import Mock, patch
 from src.core.data_logic.decision_processor.allocation_strategy import AllocationStrategy
+from src.core.settings.config import BUY_THRESHOLD, SELL_THRESHOLD, ALLOCATION_MAX_PERCENT, MIN_ORDER_SIZE
 
 
 @pytest.fixture
-def mock_fetcher():
-  mock = Mock()
-  mock.get_symbol_info.return_value = {
+def allocation_strategy():
+  info_fetcher = Mock()
+  position_manager = Mock()
+  return AllocationStrategy(
+    symbol="BTCUSDT",
+    info_fetcher=info_fetcher,
+    position_manager=position_manager
+  )
+
+
+@pytest.fixture
+def valid_symbol_info():
+  return {
+    'filters': {
+      'LOT_SIZE': {
+        'minQty': Decimal('0.001'),
+        'stepSize': Decimal('0.001')
+      },
+      'PRICE_FILTER': {
+        'tickSize': Decimal('0.01')
+      },
+      'NOTIONAL': {
+        'minNotional': Decimal('10'),
+        'applyToMarket': True
+      }
+    },
     'base_asset': 'BTC',
     'quote_asset': 'USDT',
-    'min_lot': Decimal('0.001'),
-    'step_size': Decimal('0.0001')
-  }
-  mock.get_current_price.return_value = Decimal('50000')
-  return mock
-
-
-def test_buy_allocation(mock_fetcher):
-  # Настройка моков
-  mock_fetcher.get_available_balance.return_value = Decimal('10000')
-
-  strategy = AllocationStrategy("BTCUSDT")
-  strategy.info_fetcher = mock_fetcher
-
-  # Тест 1: Максимальный score
-  result = strategy.calculate_allocation(Decimal('2.0'), "BUY")
-  assert result == {
-    'action': 'BUY',
-    'quantity': Decimal('0.004').quantize(Decimal('0.0001'))
+    'symbol': 'BTCUSDT'
   }
 
-  # Тест 2: Score ниже минимального объема
-  result = strategy.calculate_allocation(Decimal('0.4'), "BUY")
+
+def test_validate_symbol_info_valid(allocation_strategy, valid_symbol_info):
+  assert allocation_strategy._validate_symbol_info(valid_symbol_info) is True
+
+
+def test_validate_symbol_info_missing_key(allocation_strategy, valid_symbol_info):
+  del valid_symbol_info['filters']['LOT_SIZE']['minQty']
+  assert allocation_strategy._validate_symbol_info(valid_symbol_info) is False
+
+
+def test_validate_symbol_info_type_mismatch(allocation_strategy, valid_symbol_info):
+  valid_symbol_info['filters']['LOT_SIZE']['minQty'] = '0.001'
+  assert allocation_strategy._validate_symbol_info(valid_symbol_info) is False
+
+
+def test_calculate_allocation_invalid_signal(allocation_strategy):
+  result = allocation_strategy.calculate_allocation(Decimal('0.5'), "INVALID")
   assert result is None
 
 
-def test_sell_allocation(mock_fetcher):
-  strategy = AllocationStrategy("BTCUSDT")
-  strategy.info_fetcher = mock_fetcher
-  strategy.position_manager.get_active_positions = Mock(return_value=[
-    {'quantity': Decimal('1.5')},
-    {'quantity': Decimal('0.5')}
-  ])
-
-  # Тест 1: Продажа 100% при максимальном score
-  result = strategy.calculate_allocation(Decimal('-2.0'), "SELL")
-  assert result['quantity'] == Decimal('2.0')
-
-  # Тест 2: Частичная продажа
-  result = strategy.calculate_allocation(Decimal('-1.0'), "SELL")
-  assert result['quantity'] == Decimal('1.0')
+def test_calculate_allocation_invalid_score_type(allocation_strategy):
+  result = allocation_strategy.calculate_allocation(0.5, "BUY")
+  assert result is None
 
 
-def test_lot_size_rounding(mock_fetcher):
-  strategy = AllocationStrategy("BTCUSDT")
-  strategy.info_fetcher = mock_fetcher
-  mock_fetcher.get_available_balance.return_value = Decimal('1000000')  # 1M USDT
+def test_calculate_allocation_missing_symbol_info(allocation_strategy):
+  allocation_strategy.info_fetcher.get_symbol_info.return_value = None
+  result = allocation_strategy.calculate_allocation(Decimal('0.5'), "BUY")
+  assert result is None
 
-  # Настройка шага и цены
-  mock_fetcher.get_symbol_info.return_value['step_size'] = Decimal('0.1')
-  mock_fetcher.get_current_price.return_value = Decimal('50000')
 
-  # Максимальный score для гарантии прохождения проверок
-  result = strategy.calculate_allocation(Decimal('2.0'), "BUY")
+def test_calculate_allocation_invalid_structure(allocation_strategy, valid_symbol_info):
+  valid_symbol_info['filters']['PRICE_FILTER']['tickSize'] = '0.01'
+  allocation_strategy.info_fetcher.get_symbol_info.return_value = valid_symbol_info
+  result = allocation_strategy.calculate_allocation(Decimal('0.5'), "BUY")
+  assert result is None
 
-  # Ожидаемый результат:
-  # risk_amount = 1,000,000 * 2% = 20,000 USDT
-  # quantity = 20,000 / 50,000 = 0.4 BTC
-  assert result['quantity'] == Decimal('0.4')
+
+def test_calculate_buy_below_threshold(allocation_strategy, valid_symbol_info):
+  allocation_strategy.info_fetcher.get_symbol_info.return_value = valid_symbol_info
+  result = allocation_strategy._calculate_buy(
+    Decimal(BUY_THRESHOLD) - Decimal('0.1'),
+    valid_symbol_info
+  )
+  assert result is None
+
+
+def test_calculate_sell_above_threshold(allocation_strategy, valid_symbol_info):
+  result = allocation_strategy._calculate_sell(
+    Decimal(SELL_THRESHOLD) + Decimal('0.1'),
+    valid_symbol_info
+  )
+  assert result is None
+
+
+def test_calculate_sell_success(allocation_strategy, valid_symbol_info):
+  allocation_strategy.info_fetcher.get_asset_balance.return_value = {'free': Decimal('1.5')}
+  allocation_strategy.info_fetcher.get_current_price.return_value = Decimal('50000')
+
+  result = allocation_strategy._calculate_sell(Decimal('-0.8'), valid_symbol_info)
+
+  assert result['action'] == 'SELL'
+  assert result['quantity'] == pytest.approx(1.2)  # 1.5 * 0.8 = 1.2
+  assert result['calculated_notional'] == pytest.approx(60000.0)  # 1.2 * 50000
+
+
+def test_calculate_sell_insufficient_balance(allocation_strategy, valid_symbol_info):
+  allocation_strategy.info_fetcher.get_asset_balance.return_value = {'free': Decimal('0')}
+  result = allocation_strategy._calculate_sell(Decimal('-0.8'), valid_symbol_info)
+  assert result is None
+
+
+def test_get_min_notional_fallback(allocation_strategy):
+  symbol_info = {'filters': {}}
+  assert allocation_strategy._get_min_notional(symbol_info) == Decimal('5')
+
+
+@patch.object(AllocationStrategy, '_calculate_buy')
+def test_calculate_allocation_buy_flow(mock_buy, allocation_strategy, valid_symbol_info):
+  allocation_strategy.info_fetcher.get_symbol_info.return_value = valid_symbol_info
+  allocation_strategy.calculate_allocation(Decimal('0.8'), "BUY")
+  mock_buy.assert_called_once()
+
+
+@patch.object(AllocationStrategy, '_calculate_sell')
+def test_calculate_allocation_sell_flow(mock_sell, allocation_strategy, valid_symbol_info):
+  allocation_strategy.info_fetcher.get_symbol_info.return_value = valid_symbol_info
+  allocation_strategy.calculate_allocation(Decimal('-0.8'), "SELL")
+  mock_sell.assert_called_once()
+
+
+def test_calculation_errors_logged(allocation_strategy, valid_symbol_info):
+  allocation_strategy.info_fetcher.get_symbol_info.side_effect = Exception("Test error")
+  with patch.object(allocation_strategy.logger, 'error') as mock_logger:
+    allocation_strategy.calculate_allocation(Decimal('0.5'), "BUY")
+    mock_logger.assert_called()

@@ -4,9 +4,8 @@ import logging
 from tabulate import tabulate
 from telegram import Update
 from telegram.ext import ContextTypes, CommandHandler
-from src.core.api.binance_client.trading_history_fetcher import BinanceTradingHistoryFetcher
 from decimal import Decimal
-from typing import Set, Optional
+from typing import Optional
 
 from src.core.api.binance_client.info_fetcher import BinanceInfoFetcher
 from src.core.api.tradingview_client.analysis_collector import AnalysisCollector

@@ -1,99 +1,161 @@
+# tests/core/api/binance_client/test_trading_history_fetcher.py
+import pytest
+from unittest.mock import MagicMock, call
+from binance import Client, exceptions
+from datetime import datetime, timezone
+import logging
 from src.core.api.binance_client.trading_history_fetcher import (
   BinanceTradingHistoryFetcher,
   BinanceHistoryError
 )
-from src.core.settings.config import SYMBOLS
-from datetime import datetime, timedelta
-import time
+from src.core.settings.config import SYMBOLS, MAX_HISTORY_LIMIT
 
 
-def test_history_fetcher_demo():
-  print("\n=== ДЕМО РАБОТЫ TRADING HISTORY FETCHER ===")
-  print("Цель: показать получение истории сделок с Binance\n")
-
-  try:
-    # Инициализация
-    print("[1] Инициализация клиента...")
-    start_time = time.time()
-    fetcher = BinanceTradingHistoryFetcher()
-    print(f"✓ Клиент создан за {time.time() - start_time:.2f} сек")
-
-    # Тестовый символ
-    symbol = SYMBOLS[0]
-    print(f"\nИспользуемый символ: {symbol}")
-
-    # Последние 3 сделки
-    print("\n[2] Запрос последних 3 сделок...")
-    trades = fetcher.get_trade_history(
-      symbol=symbol,
-      limit=3
-    )
-    print_trades(trades, "Последние 3 сделки")  # Исправлено здесь
-
-    # Сделки за последний час
-    print("\n[3] Сделки за последний час...")
-    hour_ago = datetime.now() - timedelta(hours=1)
-    trades = fetcher.get_trade_history(
-      symbol=symbol,
-      start_time=hour_ago,
-      limit=10
-    )
-    print_trades(trades, f"Сделки с {hour_ago:%H:%M}")  # Исправлено здесь
-
-    # Проверка ошибок
-    print("\n[4] Тест обработки ошибок...")
-    try:
-      fetcher.get_trade_history(symbol="INVALID_SYMBOL123")
-    except BinanceHistoryError as e:
-      print(f"✓ Корректная обработка неверного символа: {str(e)}")
-
-    try:
-      fetcher.get_trade_history(symbol=symbol, limit=1500)
-    except BinanceHistoryError as e:
-      print(f"✓ Корректная обработка превышения лимита: {str(e)}")
-
-  except BinanceHistoryError as e:
-    print(f"\n❌ Ошибка: {e}")
-  except Exception as e:
-    print(f"\n❌ Неожиданная ошибка: {str(e)}")
+@pytest.fixture
+def mock_client(mocker):
+  mock = MagicMock(spec=Client)
+  mocker.patch(
+    'src.core.api.binance_client.trading_history_fetcher.Client',
+    return_value=mock
+  )
+  return mock
 
 
-# Вынесем функцию отдельно (без self)
-def print_trades(trades: list, title: str):
-  """Вспомогательная функция для вывода сделок"""
-  print(f"\n{title}:")
-  if not trades:
-    print("  Нет сделок в указанном диапазоне")
-    return
-
-  print(f"Найдено сделок: {len(trades)}")
-  print("\nПример последней сделки:")
-  last_trade = trades[-1]
-  print(f"ID: {last_trade['id']}")
-  print(f"Время: {last_trade['time']:%Y-%m-%d %H:%M:%S}")
-  print(f"Тип: {'Покупка' if last_trade['is_buyer'] else 'Продажа'}")
-  print(f"Количество: {last_trade['qty']:.6f}")
-  print(f"Цена: {last_trade['price']:.2f}")
-  print(f"Комиссия: {last_trade['commission']:.6f} {last_trade['commission_asset']}")
+@pytest.fixture
+def history_fetcher(mock_client):
+  fetcher = BinanceTradingHistoryFetcher()
+  mock_client.get_symbol_info.return_value = {'symbol': 'MOCKED'}
+  return fetcher
 
 
-def _print_trades(trades: list, title: str):
-  """Вспомогательная функция для вывода сделок"""
-  print(f"\n{title}:")
-  if not trades:
-    print("  Нет сделок в указанном диапазоне")
-    return
-
-  print(f"Найдено сделок: {len(trades)}")
-  print("\nПример последней сделки:")
-  last_trade = trades[-1]
-  print(f"ID: {last_trade['id']}")
-  print(f"Время: {last_trade['time']:%Y-%m-%d %H:%M:%S}")
-  print(f"Тип: {'Покупка' if last_trade['is_buyer'] else 'Продажа'}")
-  print(f"Количество: {last_trade['qty']:.6f}")
-  print(f"Цена: {last_trade['price']:.2f}")
-  print(f"Комиссия: {last_trade['commission']:.6f} {last_trade['commission_asset']}")
+def create_mock_trade(symbol: str, timestamp: int):
+  return {
+    'id': 123,
+    'symbol': symbol,
+    'price': '50000.0',
+    'qty': '0.1',
+    'quoteQty': '5000.0',
+    'time': timestamp,
+    'isBuyer': True,
+    'commission': '0.001',
+    'commissionAsset': 'BTC'
+  }
 
 
-if __name__ == "__main__":
-  test_history_fetcher_demo()
+def test_get_trade_history_success(mock_client, history_fetcher):
+  # Arrange
+  mock_trade = create_mock_trade('BTCUSDT', 1630000000000)
+  mock_client.get_my_trades.return_value = [mock_trade]
+
+  # Act
+  start_time = datetime(2023, 1, 1, tzinfo=timezone.utc)
+  end_time = datetime(2023, 1, 2, tzinfo=timezone.utc)
+  result = history_fetcher.get_trade_history(
+    symbol='BTCUSDT',
+    start_time=start_time,
+    end_time=end_time,
+    limit=1000
+  )
+
+  # Assert
+  assert len(result) == 1
+  assert result[0]['price'] == 50000.0
+  mock_client.get_my_trades.assert_called_once_with(
+    symbol='BTCUSDT',
+    limit=1000,
+    startTime=int(start_time.timestamp() * 1000),
+    endTime=int(end_time.timestamp() * 1000)
+  )
+
+
+def test_get_trade_history_validation_error(history_fetcher):
+  # Act & Assert
+  with pytest.raises(BinanceHistoryError):
+    history_fetcher.get_trade_history('INVALID', limit=0)
+
+
+def test_get_all_trades_history_success(mock_client, history_fetcher):
+  # Arrange
+  mock_client.get_my_trades.side_effect = [
+    [create_mock_trade('BTCUSDT', 1630000001000)],
+    [create_mock_trade('ETHUSDT', 1630000002000)]
+  ]
+
+  # Act
+  result = history_fetcher.get_all_trades_history(limit=2)
+
+  # Assert
+  assert len(result) == 2
+  assert result[0]['symbol'] == 'ETHUSDT'
+  assert result[1]['symbol'] == 'BTCUSDT'
+  assert mock_client.get_my_trades.call_args_list == [
+    call(symbol=symbol, limit=2) for symbol in SYMBOLS
+  ]
+
+
+def test_validate_params_valid(history_fetcher):
+  history_fetcher._validate_params('BTCUSDT', 500)
+
+
+def test_validate_params_invalid_symbol(history_fetcher):
+  with pytest.raises(ValueError):
+    history_fetcher._validate_params('INVALID', 100)
+
+
+def test_validate_params_invalid_limit(history_fetcher):
+  with pytest.raises(ValueError):
+    history_fetcher._validate_params('BTCUSDT', 0)
+
+
+def test_process_trades_success(history_fetcher):
+  # Arrange
+  raw_trades = [create_mock_trade('BTCUSDT', 1630000000000)]
+
+  # Act
+  result = history_fetcher._process_trades(raw_trades)
+
+  # Assert
+  assert len(result) == 1
+  assert result[0]['time'].year == 2021
+
+
+def test_process_trades_missing_key(history_fetcher, caplog):
+  # Arrange
+  invalid_trade = {'id': 1, 'price': '50000'}
+
+  # Act
+  with caplog.at_level(logging.WARNING):
+    result = history_fetcher._process_trades([invalid_trade])
+
+  # Assert
+  assert len(result) == 0
+  assert 'Missing key in trade data' in caplog.text
+
+
+def test_process_trades_unexpected_error(history_fetcher, mocker, caplog):
+  # Arrange
+  mock_trade = mocker.MagicMock()
+  mock_trade.__getitem__.side_effect = Exception('Test error')
+
+  # Act
+  with caplog.at_level(logging.ERROR):
+    result = history_fetcher._process_trades([mock_trade])
+
+  # Assert
+  assert len(result) == 0
+  assert 'Error processing trade' in caplog.text
+
+
+def test_custom_exception_handling(mock_client, history_fetcher):
+  # Arrange
+  mock_client.get_my_trades.side_effect = Exception('Test error')
+
+  # Act & Assert
+  with pytest.raises(BinanceHistoryError):
+    history_fetcher.get_trade_history('BTCUSDT')
+
+
+def test_max_limit_config(history_fetcher):
+  # Act & Assert
+  with pytest.raises(ValueError):
+    history_fetcher.get_all_trades_history(limit=MAX_HISTORY_LIMIT + 100)
