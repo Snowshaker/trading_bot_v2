@@ -1,0 +1,124 @@
+Тестирование можно запустить командой pytest --cov
+Настройки тестирования можно изменить в .coveragerc
+
+========================================== test session starts ==========================================
+platform linux -- Python 3.13.3, pytest-8.3.5, pluggy-1.6.0
+rootdir: /home/viktor/trading_bot_v2
+plugins: anyio-4.9.0, mock-3.14.0, cov-6.1.1
+collected 189 items
+
+src/tests/allocation_strategy_test.py ..............                                              [  7%]
+src/tests/analysis_collector_test.py .........                                                    [ 12%]
+src/tests/analysis_fetcher_test.py ...                                                            [ 13%]
+src/tests/analysis_saver_test.py ........                                                         [ 17%]
+src/tests/decision_maker_test.py ............                                                     [ 24%]
+src/tests/info_fetcher_test.py ...........                                                        [ 30%]
+src/tests/position_manager_test.py ...................                                            [ 40%]
+src/tests/risk_engine_test.py ................                                                    [ 48%]
+src/tests/score_processor_test.py ......................                                          [ 60%]
+src/tests/timeframe_weights_calculator_test.py .................................................. [ 86%]
+......                                                                                            [ 89%]
+src/tests/trading_history_fetcher_test.py ...........                                             [ 95%]
+src/tests/transactions_executor_test.py ........                                                  [100%]
+
+=========================================== warnings summary ============================================
+venv/lib64/python3.13/site-packages/binance/ws/websocket_api.py:4
+venv/lib64/python3.13/site-packages/binance/ws/websocket_api.py:4
+  /home/viktor/trading_bot_v2/venv/lib64/python3.13/site-packages/binance/ws/websocket_api.py:4: DeprecationWarning: websockets.WebSocketClientProtocol is deprecated
+    from websockets import WebSocketClientProtocol  # type: ignore
+
+venv/lib64/python3.13/site-packages/websockets/legacy/__init__.py:6
+  /home/viktor/trading_bot_v2/venv/lib64/python3.13/site-packages/websockets/legacy/__init__.py:6: DeprecationWarning: websockets.legacy is deprecated; see https://websockets.readthedocs.io/en/stable/howto/upgrade.html for upgrade instructions
+    warnings.warn(  # deprecated in 14.0 - 2024-11-09
+
+src/tests/analysis_saver_test.py::TestAnalysisSaver::test_save_symbol_data_writes_to_file
+src/tests/analysis_saver_test.py::TestAnalysisSaver::test_save_symbol_data_appends_to_existing_file
+src/tests/analysis_saver_test.py::TestAnalysisSaver::test_save_symbol_data_handles_ioerror
+src/tests/analysis_saver_test.py::TestAnalysisSaver::test_batch_save_calls_save_for_each_symbol
+src/tests/analysis_saver_test.py::TestAnalysisSaver::test_batch_save_calls_save_for_each_symbol
+  /home/viktor/trading_bot_v2/src/core/api/tradingview_client/analysis_saver.py:24: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+    "timestamp": datetime.utcnow().isoformat() + "Z",
+
+src/tests/decision_maker_test.py::test_process_signal_invalid_signal
+  /home/viktor/trading_bot_v2/venv/lib64/python3.13/site-packages/binance/helpers.py:96: DeprecationWarning: There is no current event loop
+    loop = asyncio.get_event_loop()
+
+src/tests/position_manager_test.py: 11 warnings
+  /home/viktor/trading_bot_v2/src/core/data_logic/decision_processor/position_manager.py:77: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+    "entry_time": datetime.utcnow().isoformat(),
+
+src/tests/position_manager_test.py::test_close_position_success
+src/tests/position_manager_test.py::test_close_position_already_closed
+src/tests/position_manager_test.py::test_get_active_positions
+  /home/viktor/trading_bot_v2/src/core/data_logic/decision_processor/position_manager.py:109: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+    positions[idx]["exit_time"] = datetime.utcnow().isoformat()
+
+src/tests/trading_history_fetcher_test.py::test_get_trade_history_success
+src/tests/trading_history_fetcher_test.py::test_get_all_trades_history_success
+src/tests/trading_history_fetcher_test.py::test_get_all_trades_history_success
+src/tests/trading_history_fetcher_test.py::test_process_trades_success
+  /home/viktor/trading_bot_v2/src/core/api/binance_client/trading_history_fetcher.py:104: DeprecationWarning: datetime.datetime.utcfromtimestamp() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.fromtimestamp(timestamp, datetime.UTC).
+    'time': datetime.utcfromtimestamp(trade['time'] / 1000),  # UTC
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+============================================ tests coverage =============================================
+____________________________ coverage: platform linux, python 3.13.3-final-0 ____________________________
+
+Name                                                            Stmts   Miss  Cover   Missing
+---------------------------------------------------------------------------------------------
+src/__init__.py                                                     0      0   100%
+src/collected_data/__init__.py                                      0      0   100%
+src/core/__init__.py                                                0      0   100%
+src/core/api/__init__.py                                            0      0   100%
+src/core/api/binance_client/__init__.py                             0      0   100%
+src/core/api/binance_client/info_fetcher.py                        73     23    68%   34-39, 72, 74, 80-82, 93-98, 111-116
+src/core/api/binance_client/trading_history_fetcher.py             57      2    96%   55, 91
+src/core/api/binance_client/transactions_executor.py              209     94    55%   44-46, 72, 82, 92-94, 97-111, 114-125, 129-138, 177-181, 185-186, 198, 200-202, 241-260, 267, 293-309, 320-322, 333-340, 346-351
+src/core/api/tradingview_client/__init__.py                         0      0   100%
+src/core/api/tradingview_client/analysis_collector.py              30      0   100%
+src/core/api/tradingview_client/analysis_fetcher.py                32      2    94%   48, 52
+src/core/api/tradingview_client/analysis_saver.py                  28      1    96%   15
+src/core/data_logic/__init__.py                                     0      0   100%
+src/core/data_logic/decision_processor/__init__.py                  0      0   100%
+src/core/data_logic/decision_processor/allocation_strategy.py     212    112    47%   25-26, 44-46, 66, 72-73, 76-77, 79-80, 91-95, 104-236, 253-254, 264-272, 296, 307, 320-322, 334-356, 361-362, 366-372, 375-376, 391-393
+src/core/data_logic/decision_processor/decision_maker.py           71      3    96%   73, 141, 152
+src/core/data_logic/decision_processor/position_manager.py        132     24    82%   118, 141, 168-169, 175-177, 181-191, 199-212
+src/core/data_logic/decision_processor/risk_engine.py             110     24    78%   29-30, 66-67, 71-72, 74, 76-79, 101-102, 132-134, 157-158, 173-178
+src/core/data_logic/score_processor.py                             36      0   100%
+src/core/data_logic/timeframe_weights_calculator.py                20      0   100%
+src/core/paths.py                                                  10      0   100%
+src/core/settings/__init__.py                                       0      0   100%
+src/core/settings/config.py                                        36      0   100%
+src/core/settings/telegram_config.py                               10     10     0%   2-26
+src/core/utils/__init__.py                                          0      0   100%
+src/core/utils/analysis_printer.py                                 67     67     0%   2-105
+src/core/utils/positions_sync.py                                   22     22     0%   2-40
+src/main.py                                                       105    105     0%   4-195
+src/telegram_bot/__init__.py                                        0      0   100%
+src/telegram_bot/bot.py                                            26     26     0%   2-49
+src/telegram_bot/handlers/__init__.py                               0      0   100%
+src/telegram_bot/handlers/config_handlers.py                        0      0   100%
+src/telegram_bot/handlers/control_handlers.py                      16     16     0%   2-37
+src/telegram_bot/handlers/info_handlers.py                        117    117     0%   2-208
+src/telegram_bot/handlers/trade_handlers.py                       174    174     0%   2-290
+src/telegram_bot/keyboards/__init__.py                              0      0   100%
+src/telegram_bot/keyboards/trade_menu.py                            3      3     0%   2-5
+src/telegram_bot/services/__init__.py                               0      0   100%
+src/telegram_bot/services/formatters.py                            63     63     0%   2-128
+src/telegram_bot/services/notifications.py                         10     10     0%   2-16
+src/tests/__init__.py                                               0      0   100%
+src/tests/allocation_strategy_test.py                              82      0   100%
+src/tests/analysis_collector_test.py                               79      0   100%
+src/tests/analysis_fetcher_test.py                                 39      0   100%
+src/tests/analysis_saver_test.py                                   72      0   100%
+src/tests/decision_maker_test.py                                  100      0   100%
+src/tests/info_fetcher_test.py                                     64      0   100%
+src/tests/position_manager_test.py                                110      1    99%   18
+src/tests/risk_engine_test.py                                      87      0   100%
+src/tests/score_processor_test.py                                 148      0   100%
+src/tests/timeframe_weights_calculator_test.py                     79      2    97%   96-97
+src/tests/trading_history_fetcher_test.py                          71      0   100%
+src/tests/transactions_executor_test.py                            73      2    97%   145-146
+---------------------------------------------------------------------------------------------
+TOTAL                                                            2673    903    66%
+=================================== 189 passed, 27 warnings in 36.37s ===================================

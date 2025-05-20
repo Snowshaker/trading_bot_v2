@@ -1,2 +1,30 @@
+# Python
 __pycache__/
+*.pyc
+
+# Виртуальное окружение
+venv/
+
+# IDE
 .idea/
+.vscode/ # На всякий случай, если кто-то другой будет использовать VSCode
+
+# Логи проекта
+*.log
+
+# Данные, генерируемые ботом
+src/collected_data/positions/
+src/collected_data/tradingview_analysis/
+src/collected_data/telegram_cache/
+
+# Файлы тестирования и покрытия
+.coverage
+.coverage.*
+.pytest_cache/
+
+# Файлы операционной системы
+.DS_Store
+Thumbs.db
+
+.env
+.env.*
