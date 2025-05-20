@@ -26,11 +26,13 @@ def mock_position_manager():
 
 @pytest.fixture
 def decision_maker(mock_info_fetcher, mock_position_manager):
-  return DecisionMaker(
+  dm = DecisionMaker(
     symbol="BTCUSDT",
     info_fetcher=mock_info_fetcher,
     position_manager=mock_position_manager
   )
+  dm.executor = Mock(spec=TransactionsExecutor)
+  return dm
 
 
 @pytest.fixture
@@ -49,26 +51,21 @@ def mock_risk_engine(decision_maker):
 
 @pytest.fixture
 def mock_executor(decision_maker):
-  executor = Mock(spec=TransactionsExecutor)
-  decision_maker.executor = executor
-  return executor
+  return decision_maker.executor
 
 
 def test_process_signal_invalid_signal(decision_maker, caplog):
   result = decision_maker.process_signal(Decimal('0.5'), "INVALID")
   assert result is False
-  assert "Invalid signal: INVALID" in caplog.text
+  assert "Invalid signal: INVALID for BTCUSDT" in caplog.text
 
 
 def test_process_signal_no_allocation(decision_maker, mock_strategy, caplog):
-  # Устанавливаем уровень логирования для захвата INFO сообщений
   caplog.set_level(logging.INFO)
-
   mock_strategy.calculate_allocation.return_value = None
-
   result = decision_maker.process_signal(Decimal('0.5'), "BUY")
   assert result is False
-  assert "No allocation calculated" in caplog.text
+  assert "No allocation calculated for BTCUSDT with signal BUY and score 0.5" in caplog.text
 
 
 def test_process_signal_risk_validation_failed(
@@ -82,24 +79,27 @@ def test_process_signal_risk_validation_failed(
 
   result = decision_maker.process_signal(Decimal('0.5'), "BUY")
   assert result is False
-  assert "Risk validation failed" in caplog.text
+  assert "Risk validation failed for BTCUSDT" in caplog.text
 
 
 def test_process_signal_successful_flow(
   decision_maker, mock_strategy, mock_risk_engine, mock_executor, mock_position_manager
 ):
-  # Mock allocation calculation
   mock_strategy.calculate_allocation.return_value = {
     "action": "BUY",
     "quantity": Decimal('100')
   }
   mock_risk_engine.validate_quantity.return_value = Decimal('50')
-  mock_executor.execute_order.return_value = {"price": "50000.0", "status": "FILLED"}
+  mock_executor.execute_order.return_value = {
+    "success": True,
+    "avg_price": "50000.0",
+    "price": "50000.0",
+    "status": "FILLED"
+  }
 
   result = decision_maker.process_signal(Decimal('0.7'), "BUY")
   assert result is True
 
-  # Verify execution flow
   mock_strategy.calculate_allocation.assert_called_once_with(Decimal('0.7'), "BUY")
   mock_risk_engine.validate_quantity.assert_called_once_with(Decimal('100'), "BUY")
   mock_executor.execute_order.assert_called_once_with(
@@ -115,7 +115,7 @@ def test_process_signal_successful_flow(
   )
 
 
-def test_process_signal_order_execution_failed(
+def test_process_signal_order_execution_failed_returns_false(
   decision_maker, mock_strategy, mock_risk_engine, mock_executor, caplog
 ):
   mock_strategy.calculate_allocation.return_value = {
@@ -123,11 +123,11 @@ def test_process_signal_order_execution_failed(
     "quantity": Decimal('50')
   }
   mock_risk_engine.validate_quantity.return_value = Decimal('30')
-  mock_executor.execute_order.return_value = None
+  mock_executor.execute_order.return_value = {"success": False, "avg_price": "0"}
 
   result = decision_maker.process_signal(Decimal('0.3'), "SELL")
   assert result is False
-  assert "Order execution failed" not in caplog.text  # Логируется внутри метода
+  assert "Order execution did not return a successful result for BTCUSDT" in caplog.text
 
 
 def test_process_signal_exception_handling(decision_maker, mock_strategy, caplog):
@@ -135,14 +135,17 @@ def test_process_signal_exception_handling(decision_maker, mock_strategy, caplog
 
   result = decision_maker.process_signal(Decimal('0.5'), "BUY")
   assert result is False
-  assert "Decision process failed: Test error" in caplog.text
+  assert "Decision process failed for BTCUSDT: Test error" in caplog.text
 
 
 def test_execute_order_success(mock_executor, decision_maker):
-  mock_executor.execute_order.return_value = {"status": "FILLED", "price": "50000.0"}
+  mock_executor.execute_order.return_value = {"status": "FILLED", "avg_price": "50000.0", "success": True}
 
   result = decision_maker._execute_order("BUY", Decimal('100'))
-  assert result == {"status": "FILLED", "price": "50000.0"}
+  assert result == {"status": "FILLED", "avg_price": "50000.0", "success": True}
+  mock_executor.execute_order.assert_called_once_with(
+      symbol="BTCUSDT", side="BUY", quantity=100.0, order_type="MARKET"
+  )
 
 
 def test_execute_order_failure(mock_executor, decision_maker, caplog):
@@ -150,7 +153,7 @@ def test_execute_order_failure(mock_executor, decision_maker, caplog):
 
   result = decision_maker._execute_order("SELL", Decimal('50'))
   assert result is None
-  assert "Order execution failed: API error" in caplog.text
+  assert "Order execution failed for BTCUSDT SELL 50: API error" in caplog.text
 
 
 def test_update_position_buy(mock_position_manager, decision_maker):
@@ -163,24 +166,27 @@ def test_update_position_buy(mock_position_manager, decision_maker):
   )
 
 
-def test_update_position_sell(mock_position_manager, decision_maker):
+def test_update_position_sell(mock_position_manager, decision_maker, caplog):
+  caplog.set_level(logging.INFO)
   decision_maker._update_position("SELL", Decimal('30'), Decimal('51000.0'))
 
   mock_position_manager.get_active_positions.assert_called_once()
-  mock_position_manager.update_position.assert_has_calls([
-    call(1, {'quantity': Decimal('70')})
-  ])
+  mock_position_manager.update_position.assert_called_once_with(
+    1, {'quantity': Decimal('70')}
+  )
+  assert f"Position UPDATED for BTCUSDT (ID: 1): sold {Decimal('30')}, remaining {Decimal('70')}" in caplog.text
 
 
 def test_update_position_exception_handling(mock_position_manager, decision_maker, caplog):
   mock_position_manager.create_position.side_effect = Exception("DB error")
 
   decision_maker._update_position("BUY", Decimal('100'), Decimal('50000.0'))
-  assert "Position update failed: DB error" in caplog.text
+  assert "Position update failed for BTCUSDT: DB error" in caplog.text
 
 
-def test_update_position_sell_no_active_positions(mock_position_manager, decision_maker):
+def test_update_position_sell_no_active_positions(mock_position_manager, decision_maker, caplog):
   mock_position_manager.get_active_positions.return_value = []
 
   decision_maker._update_position("SELL", Decimal('50'), Decimal('50000.0'))
   mock_position_manager.update_position.assert_not_called()
+  assert "Tried to SELL 50 of BTCUSDT, but no active positions found." in caplog.text
